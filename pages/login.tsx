@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Flex, Box, Heading, FormControl, FormLabel, Input, Button } from '@chakra-ui/react'
-import NavMenu from '../components/NavMenu'
+import NavMenu from '../components/NavBarContainer/NavBarContainer'
 
 export default function Login() {
     const [email, setEmail] = useState('');

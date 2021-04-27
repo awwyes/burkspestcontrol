@@ -1,12 +1,13 @@
-import DarkModeSwitch from '../components/DarkModeSwitch'
-import {Text, Heading, Flex, Stack} from '@chakra-ui/react'
-import NavMenu from '../components/NavMenu'
+import {Flex, Stack} from '@chakra-ui/react'
 import Footer from '../components/FooterLayout/Footer'
-import Testimonals from '../components/TestimonalsLayout/Testimonals';
+import Testimonals from '../components/TestimonalsLayout/Testimonals'
 import Pricing from '../components/PricingLayout/Pricing'
+import NavBar from '../components/NavBar/NavBar';
 
 export default function Home() {
     return (
+        <>
+        <NavBar />
         <Stack
             as="main"
             align="center"
@@ -21,23 +22,12 @@ export default function Home() {
                     pt={4}
                     justify="space-between"
                 >
-                    <NavMenu />
                 </Flex>
-                <Heading
-                    as="h1"
-                    size="2xl"
-                >
-                    Hello, World!
-                </Heading>
-                <Text
-                    my={4}
-                >
-                    Hello, again
-                </Text>
             </Flex>
             <Pricing />
             <Testimonals />
             <Footer />
         </Stack>
+        </>
     );
 }
