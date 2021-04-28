@@ -1,11 +1,12 @@
-import { Button, Checkbox, Flex, FormControl, FormLabel, Heading, Input, Link, Stack, Image, } from '@chakra-ui/react';
+import { Button, Checkbox, Flex, FormControl, FormLabel, Heading, Input, Link, Stack, Image, Text } from '@chakra-ui/react';
   
 export default function SignIn() {
     return (
       <Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }}>
-        <Flex p={8} flex={1} align={'center'} justify={'center'}>
+        <Flex p={8} flex={1} align={'center'} justify={'center'} order={2}>
           <Stack spacing={4} w={'full'} maxW={'md'}>
             <Heading fontSize={'2xl'}>Sign in to your account</Heading>
+            <Text fontSize={'lg'} color={'gray.400'}>Don't have an account? <Link color={'blue.400'} href="/signup">Sign Up</Link></Text>
             <FormControl id="email">
               <FormLabel>Email address</FormLabel>
               <Input type="email" />
@@ -28,7 +29,7 @@ export default function SignIn() {
             </Stack>
           </Stack>
         </Flex>
-        <Flex flex={1}>
+        <Flex flex={1} order={1}>
           <Image
             alt={'Login Image'}
             objectFit={'cover'}
