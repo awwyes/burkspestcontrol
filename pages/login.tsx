@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Flex, Box, Heading, FormControl, FormLabel, Input, Button } from '@chakra-ui/react'
-import NavMenu from '../components/NavBarContainer/NavBarContainer'
+import NavBar from '../components/NavBar/NavBar'
 
 export default function Login() {
     const [email, setEmail] = useState('');
@@ -11,7 +11,7 @@ export default function Login() {
     }
     return (
         <>
-        <NavMenu />
+        <NavBar />
         <Flex width="full" align="center" justifyContent="center">
             <Box mt={60} p={8} maxWidth="500px" borderWidth={1} borderRadius={8} boxShadow="lg">
                 <Box textAlign="center">
