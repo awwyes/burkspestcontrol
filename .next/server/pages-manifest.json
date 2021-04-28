@@ -1,7 +1,10 @@
 {
   "/_app": "pages/_app.js",
+  "/contactus": "pages/contactus.html",
+  "/": "pages/index.html",
+  "/signin": "pages/signin.html",
+  "/signup": "pages/signup.html",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/signin": "pages/signin.js"
+  "/404": "pages/404.html"
 }
