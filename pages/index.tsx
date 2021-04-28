@@ -2,7 +2,7 @@ import {Flex, Stack} from '@chakra-ui/react'
 import Footer from '../components/FooterLayout/Footer'
 import Testimonals from '../components/TestimonalsLayout/Testimonals'
 import Pricing from '../components/PricingLayout/Pricing'
-import NavBar from '../components/NavBar/NavBar';
+import NavBar from '../components/NavBarLayout/NavBar';
 
 export default function Home() {
     return (
@@ -18,7 +18,6 @@ export default function Home() {
             >
                 <Flex
                     flexDirection="row"
-                    w="700px"
                     pt={4}
                     justify="space-between"
                 >
