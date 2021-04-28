@@ -1,6 +1,7 @@
 import { Box, Flex, Text, IconButton, Button, Stack, Collapse, Icon, Link, Popover, PopoverTrigger,
         PopoverContent, useColorModeValue, useBreakpointValue, useDisclosure, } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, ChevronDownIcon, ChevronRightIcon, } from "@chakra-ui/icons";
+import DarkModeSwitch from "../DarkModeSwitch";
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
@@ -74,6 +75,7 @@ export default function WithSubnavigation() {
           >
             Sign Up
           </Button>
+          <DarkModeSwitch />
         </Stack>
       </Flex>
 
