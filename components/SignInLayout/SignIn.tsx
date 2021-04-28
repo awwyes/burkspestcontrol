@@ -6,7 +6,8 @@ export default function SignIn() {
         <Flex p={8} flex={1} align={'center'} justify={'center'} order={2}>
           <Stack spacing={4} w={'full'} maxW={'md'}>
             <Heading fontSize={'2xl'}>Sign in to your account</Heading>
-            <Text fontSize={'lg'} color={'gray.400'}>Don't have an account? <Link color={'blue.400'} href="/signup">Sign Up</Link></Text>
+            <Text fontSize={'lg'} color={'gray.400'}>Don't have an account? <Link color={'blue.400'} href="/signup">Sign Up</Link> 🕷️
+            </Text>
             <FormControl id="email">
               <FormLabel>Email address</FormLabel>
               <Input type="email" />
