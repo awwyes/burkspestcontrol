@@ -30,7 +30,7 @@ export default function SignIn() {
             </Stack>
           </Stack>
         </Flex>
-        <Flex flex={1} order={1}>
+        <Flex flex={1} order={1} m={0}>
           <Image
             alt={'Login Image'}
             objectFit={'cover'}
