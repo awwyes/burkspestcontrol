@@ -101,6 +101,13 @@ module.exports = __webpack_require__("cha2");
 
 /***/ }),
 
+/***/ "4Q3z":
+/***/ (function(module, exports) {
+
+module.exports = require("next/router");
+
+/***/ }),
+
 /***/ "F5FC":
 /***/ (function(module, exports) {
 
@@ -131,6 +138,82 @@ var jsx_runtime_ = __webpack_require__("F5FC");
 // EXTERNAL MODULE: external "@chakra-ui/react"
 var react_ = __webpack_require__("LZ34");
 
+// EXTERNAL MODULE: external "next/head"
+var head_ = __webpack_require__("xnum");
+var head_default = /*#__PURE__*/__webpack_require__.n(head_);
+
+// EXTERNAL MODULE: external "next/router"
+var router_ = __webpack_require__("4Q3z");
+
+// CONCATENATED MODULE: ./components/constants.tsx
+const PRODUCTION_URL = 'https://chakra-templates.dev';
+/**
+ * SEO constants
+ */
+
+const SEO_TITLE = 'Chakra Templates';
+const SEO_DESCRIPTION = 'A growing open-source collection of hand-crafted Chakra UI templates ready to drop into your React project.';
+const SEO_KEYWORDS = 'chakra ui, ui templates, web templates, web design, react templates, react ui templates, chakra ui templates, chakra templates';
+const SEO_OG_IMAGE = 'https://chakra-templates.dev/favicon.png';
+const SEO_TWITTER_IMAGE = 'https://chakra-templates.dev/favicon.png';
+// CONCATENATED MODULE: ./components/SEO/SEO.tsx
+
+
+
+
+
+const SEO = ({
+  description = SEO_DESCRIPTION,
+  keywords = SEO_KEYWORDS,
+  title = SEO_TITLE,
+  ogImage = SEO_OG_IMAGE,
+  ogUrl = PRODUCTION_URL,
+  twitterImage = SEO_TWITTER_IMAGE
+}) => {
+  const router = Object(router_["useRouter"])();
+  return /*#__PURE__*/Object(jsx_runtime_["jsxs"])(head_default.a, {
+    children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
+      name: "description",
+      content: description
+    }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
+      name: "keywords",
+      content: keywords
+    }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("title", {
+      children: title
+    }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
+      property: "og:title",
+      content: title
+    }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
+      property: "og:description",
+      content: description
+    }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
+      property: "og:image",
+      content: ogImage
+    }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
+      property: "og:site_name",
+      content: SEO_TITLE
+    }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
+      property: "og:url",
+      content: `${ogUrl}${router.asPath}`
+    }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
+      property: "og:type",
+      content: 'website'
+    }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
+      name: "twitter:title",
+      content: title
+    }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
+      name: "twitter:description",
+      content: description
+    }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
+      name: "twitter:image",
+      content: twitterImage
+    }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
+      name: "twitter:card",
+      content: "summary_large_image"
+    })]
+  });
+};
+/* harmony default export */ var SEO_SEO = (SEO);
 // CONCATENATED MODULE: ./theme.tsx
 
 const theme = Object(react_["extendTheme"])({
@@ -245,15 +328,23 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+
 function App({
   Component,
   pageProps
 }) {
   return /*#__PURE__*/Object(jsx_runtime_["jsxs"])(react_["ChakraProvider"], {
     theme: theme_0,
-    children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(react_["CSSReset"], {}), /*#__PURE__*/Object(jsx_runtime_["jsx"])(Component, _objectSpread({}, pageProps))]
+    children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(react_["CSSReset"], {}), /*#__PURE__*/Object(jsx_runtime_["jsx"])(SEO_SEO, {}), /*#__PURE__*/Object(jsx_runtime_["jsx"])(Component, _objectSpread({}, pageProps))]
   });
 }
+
+/***/ }),
+
+/***/ "xnum":
+/***/ (function(module, exports) {
+
+module.exports = require("next/head");
 
 /***/ })
 
