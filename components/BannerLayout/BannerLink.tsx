@@ -4,7 +4,7 @@ import * as React from 'react'
 export const BannerLink = (props: HTMLChakraProps<'a'>) => (
   <chakra.a
     {...props}
-    href="#"
+    href="/covid-19"
     px="4"
     py="1.5"
     textAlign="center"
