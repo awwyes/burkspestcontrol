@@ -1,6 +1,7 @@
 {
   "/_app": "pages/_app.js",
   "/contactus": "pages/contactus.html",
+  "/covid-19": "pages/covid-19.html",
   "/": "pages/index.html",
   "/signin": "pages/signin.html",
   "/signup": "pages/signup.html",
