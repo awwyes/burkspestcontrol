@@ -134,13 +134,13 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
       display={"block"}
       p={2}
       rounded={"md"}
-      _hover={{ bg: useColorModeValue("pink.50", "gray.900") }}
+      _hover={{ bg: useColorModeValue("yellow.50", "gray.900") }}
     >
       <Stack direction={"row"} align={"center"}>
         <Box>
           <Text
             transition={"all .3s ease"}
-            _groupHover={{ color: "pink.400" }}
+            _groupHover={{ color: "yellow.400" }}
             fontWeight={500}
           >
             {label}
@@ -156,7 +156,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
           align={"center"}
           flex={1}
         >
-          <Icon color={"pink.400"} w={5} h={5} as={ChevronRightIcon} />
+          <Icon color={"yellow.400"} w={5} h={5} as={ChevronRightIcon} />
         </Flex>
       </Stack>
     </Link>
@@ -239,7 +239,7 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
   {
-    label: "Inspiration",
+    label: "Pest Control",
     children: [
       {
         label: "Explore Design Work",
@@ -254,7 +254,7 @@ const NAV_ITEMS: Array<NavItem> = [
     ],
   },
   {
-    label: "Find Work",
+    label: "Termite Control",
     children: [
       {
         label: "Job Board",
@@ -269,11 +269,23 @@ const NAV_ITEMS: Array<NavItem> = [
     ],
   },
   {
-    label: "Learn Design",
+    label: "Bed Bug Removal",
     href: "#",
   },
   {
-    label: "Hire Designers",
+    label: "Other Services",
     href: "#",
+  },
+  {
+    label: "Commercial",
+    href: "#",
+  },
+  {
+    label: "Why Burks Pest Control",
+    href: "#",
+  },
+  {
+    label: "Contact Us",
+    href: "/contactus",
   },
 ];
