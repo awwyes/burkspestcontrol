@@ -3,7 +3,7 @@ import * as React from 'react'
 
 export const ActionButton = (props: ButtonProps) => (
   <Button
-    colorScheme="blue"
+    colorScheme="yellow"
     size="lg"
     w="full"
     fontWeight="extrabold"
