@@ -54,7 +54,7 @@ export default function Pricing () {
           ],
         }}
         icon={SiHive}
-        button={<ActionButton>Buy now</ActionButton>}
+        button={<ActionButton variant="outline" color="yellow" _active={{bg: 'black'}} _hover={{bg: "black", color: "yellow"}} borderColor="black" borderWidth="2px">Buy now</ActionButton>}
       />
       <PricingCard
         data={{

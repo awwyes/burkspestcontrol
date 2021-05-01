@@ -5,7 +5,7 @@ export const CardBadge = (props: FlexProps) => {
   const { children, ...flexProps } = props
   return (
     <Flex
-      bg={useColorModeValue('blue.500', 'blue.200')}
+      bg={useColorModeValue('yellow.400', 'yellow.200')}
       position="absolute"
       right={-20}
       top={6}
