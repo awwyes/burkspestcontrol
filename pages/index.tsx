@@ -26,7 +26,6 @@ export default function Home() {
                 >
                 </Flex>
             </Flex>
-            
             <Pricing />
             <Features />
             <Testimonals />
