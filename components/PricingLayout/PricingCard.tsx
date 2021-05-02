@@ -28,7 +28,7 @@ import {
   export const PricingCard = (props: PricingCardProps) => {
     const { data, icon, button, ...rest } = props
     const { features, price, name } = data
-    const accentColor = useColorModeValue('blue.600', 'blue.200')
+    const accentColor = useColorModeValue('gray.600', 'yellow.500')
   
     return (
       <Card rounded={{ sm: 'xl' }} {...rest}>

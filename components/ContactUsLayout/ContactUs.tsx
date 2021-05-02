@@ -57,85 +57,85 @@ const validationSchema = Yup.object({
 const ContactUs = () => {
     return (
         <>
-        <Heading
-            as="h1"
-            textAlign="center"
-        >
-            Looking for a well paying opportunity?
-        </Heading>
-        <Formik
-            initialValues={initialValues}
-            onSubmit={onSubmit}
-            validationSchema={validationSchema}
-        >
-            {({ handleSubmit, values, errors }) => (
-                <Box
-                    borderWidth="1px"
-                    rounded="lg"
-                    shadow="1px 1px 3px rgba(0,0,0,0.3)"
-                    maxWidth={800}
-                    p={6}
-                    m="10px auto"
-                    as="form"
-                    onSubmit={handleSubmit as any}
-                >
-                    <InputControl name="firstName" label="First Name" />
-                    <InputControl name="lastName" label="Last Name" />
-                    <NumberInputControl name="age" label="Last Name" />
-                    <CheckboxSingleControl name="employed">
-                        Employed
-                    </CheckboxSingleControl>
-                    <RadioGroupControl name="favoriteColor" label="Favorite Color">
-                        <Radio value="#ff0000">Red</Radio>
-                        <Radio value="#00ff00">Green</Radio>
-                        <Radio value="#0000ff">Blue</Radio>
-                    </RadioGroupControl>
-                    <CheckboxContainer name="toppings" label="Toppings">
-                        <CheckboxControl name="toppings" value="chicken">
-                        Chicken
-                        </CheckboxControl>
-                        <CheckboxControl name="toppings" value="ham">
-                        Ham
-                        </CheckboxControl>
-                        <CheckboxControl name="toppings" value="mushrooms">
-                        Mushrooms
-                        </CheckboxControl>
-                        <CheckboxControl name="toppings" value="cheese">
-                        Cheese
-                        </CheckboxControl>
-                        <CheckboxControl name="toppings" value="tuna">
-                        Tuna
-                        </CheckboxControl>
-                        <CheckboxControl name="toppings" value="pineapple">
-                        Pineapple
-                        </CheckboxControl>
-                    </CheckboxContainer>
-                    <TextareaControl name="notes" label="Notes" />
-                    <SwitchControl name="employedd" label="Employed" />
-                    <SelectControl
-                        name="select"
-                        selectProps={{ placeholder: "Select option" }}
+            <Heading
+                as="h1"
+                textAlign="center"
+            >
+                Looking for a well paying opportunity?
+            </Heading>
+            <Formik
+                initialValues={initialValues}
+                onSubmit={onSubmit}
+                validationSchema={validationSchema}
+            >
+                {({ handleSubmit, values, errors }) => (
+                    <Box
+                        borderWidth="1px"
+                        rounded="lg"
+                        shadow="1px 1px 3px rgba(0,0,0,0.3)"
+                        maxWidth={800}
+                        p={6}
+                        m="10px auto"
+                        as="form"
+                        onSubmit={handleSubmit as any}
                     >
-                        <option value="option1">Option 1</option>
-                        <option value="option2">Option 2</option>
-                        <option value="option3">Option 3</option>
-                    </SelectControl>
-                    <SliderControl name="foo" sliderProps={{ max: 40 }} />
+                        <InputControl name="firstName" label="First Name" />
+                        <InputControl name="lastName" label="Last Name" />
+                        <NumberInputControl name="age" label="Last Name" />
+                        <CheckboxSingleControl name="employed">
+                            Employed
+                        </CheckboxSingleControl>
+                        <RadioGroupControl name="favoriteColor" label="Favorite Color">
+                            <Radio value="#ff0000">Red</Radio>
+                            <Radio value="#00ff00">Green</Radio>
+                            <Radio value="#0000ff">Blue</Radio>
+                        </RadioGroupControl>
+                        <CheckboxContainer name="toppings" label="Toppings">
+                            <CheckboxControl name="toppings" value="chicken">
+                            Chicken
+                            </CheckboxControl>
+                            <CheckboxControl name="toppings" value="ham">
+                            Ham
+                            </CheckboxControl>
+                            <CheckboxControl name="toppings" value="mushrooms">
+                            Mushrooms
+                            </CheckboxControl>
+                            <CheckboxControl name="toppings" value="cheese">
+                            Cheese
+                            </CheckboxControl>
+                            <CheckboxControl name="toppings" value="tuna">
+                            Tuna
+                            </CheckboxControl>
+                            <CheckboxControl name="toppings" value="pineapple">
+                            Pineapple
+                            </CheckboxControl>
+                        </CheckboxContainer>
+                        <TextareaControl name="notes" label="Notes" />
+                        <SwitchControl name="employedd" label="Employed" />
+                        <SelectControl
+                            name="select"
+                            selectProps={{ placeholder: "Select option" }}
+                        >
+                            <option value="option1">Option 1</option>
+                            <option value="option2">Option 2</option>
+                            <option value="option3">Option 3</option>
+                        </SelectControl>
+                        <SliderControl name="foo" sliderProps={{ max: 40 }} />
 
-                    <PercentComplete />
-                    <ButtonGroup>
-                        <SubmitButton>Submit</SubmitButton>
-                        <ResetButton>Reset</ResetButton>
-                    </ButtonGroup>
+                        <PercentComplete />
+                        <ButtonGroup>
+                            <SubmitButton>Submit</SubmitButton>
+                            <ResetButton>Reset</ResetButton>
+                        </ButtonGroup>
 
-                    <Box as="pre" marginY={10}>
-                        {JSON.stringify(values, null, 2)}
-                        <br />
-                        {JSON.stringify(errors, null, 2)}
+                        <Box as="pre" marginY={10}>
+                            {JSON.stringify(values, null, 2)}
+                            <br />
+                            {JSON.stringify(errors, null, 2)}
+                        </Box>
                     </Box>
-                </Box>
-            )}
-        </Formik>
+                )}
+            </Formik>
         </>
     );
 };

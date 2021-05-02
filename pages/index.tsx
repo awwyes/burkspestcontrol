@@ -5,12 +5,14 @@ import Pricing from '../components/PricingLayout/Pricing'
 import NavBar from '../components/NavBarLayout/NavBar'
 import Features from '../components/FeaturesLayout/Features'
 import { Banner } from '../components/BannerLayout/Banner'
+import CTALayout from '../components/ImageCTALayout/CTALayout'
 
 export default function Home() {
     return (
         <>
         <NavBar />
         <Banner />
+        <CTALayout />
         <Stack
             as="main"
             align="center"
