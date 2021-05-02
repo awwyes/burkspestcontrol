@@ -61,11 +61,11 @@ export default function WithSubnavigation() {
             fontSize={"sm"}
             fontWeight={600}
             color={"black"}
-            bg={"yellow.300"}
-            href={"/signup"}
+            bg={"yellow.500"}
+            useRef={"/signup"}
             _hover={{
               bg: "black",
-              color: "yellow.300"
+              color: "yellow.500"
             }}
           >
             Sign Up
@@ -134,7 +134,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
       display={"block"}
       p={2}
       rounded={"md"}
-      _hover={{ bg: useColorModeValue("yellow.50", "gray.900") }}
+      _hover={{ bg: useColorModeValue("yellow.500", "gray.900") }}
     >
       <Stack direction={"row"} align={"center"}>
         <Box>
@@ -156,7 +156,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
           align={"center"}
           flex={1}
         >
-          <Icon color={"yellow.400"} w={5} h={5} as={ChevronRightIcon} />
+          <Icon color={"yellow.500"} w={5} h={5} as={ChevronRightIcon} />
         </Flex>
       </Stack>
     </Link>

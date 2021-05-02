@@ -35,8 +35,8 @@ export default function Covid19() {
       <Container maxW={'5xl'} py={12}>
         <SimpleGrid columns={{ base: 1, md: 1 }} spacing={10}>
           <Stack spacing={4}>
-            <Heading>Dear Burks Pest Control clients,</Heading>
-            <Text color={'gray.500'} fontSize={'lg'}>
+            <Heading color={useColorModeValue("black", "yellow.500")} fontFamily="sans-serif">Dear Burks Pest Control clients,</Heading>
+            <Text color={useColorModeValue("gray.600", 'gray.500')} fontSize={'lg'}>
                 Protecting your family and home is at the heart of everything we do, 
                 and the safety and well-being of our employees, 
                 customers and communities will always be our first priority. 
@@ -77,6 +77,19 @@ export default function Covid19() {
                 text={'Our team members remain vigilant with existing health precautions such as regular hand washing and disinfecting service tools and equipment after every home visit. In addition, our team members know that we are committed to taking care of their needs, and they have been advised to stay home if they feel ill or may have come into contact with someone who has been exposed.'}
               />
             </Stack>
+            <Text color={useColorModeValue("gray.600", 'gray.500')} fontSize={'lg'}>
+                We know the safety of your family and comfort of your home is more important now than ever
+                before. Pest activity doesn’t stop during this time, and neither will we. 
+                We are closely following guidelines from the Centers for Disease 
+                Control and Prevention (CDC), the World Health Organization (WHO) and other local and 
+                federal health officials. We remain committed to responding to the needs of our customers
+                and employees as this situation evolves.
+            </Text>
+            <Text color={useColorModeValue("gray.600", 'gray.500')} fontSize={'lg'}>
+                Thank you for being a valued Burks Pest Control client. We are grateful for the 
+                opportunity to help protect your home and family. Be well and know that Burks Pest Control
+                is here for you.
+            </Text>
           </Stack>
         </SimpleGrid>
       </Container>

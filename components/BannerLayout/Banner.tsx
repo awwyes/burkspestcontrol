@@ -4,7 +4,7 @@ import * as React from 'react'
 import { BannerLink } from './BannerLink'
 
 export const Banner = () => (
-  <Box as="section" pt="0" pb="12">
+  <Box as="section" pt="0" pb="0">
     <Stack
       direction={{ base: 'column', sm: 'row' }}
       justifyContent="center"
