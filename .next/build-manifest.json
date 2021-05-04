@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/z708tipzHrLhYwtsMuUnT/_buildManifest.js",
-    "static/z708tipzHrLhYwtsMuUnT/_ssgManifest.js"
+    "static/PKRtcSmVX_gj1jcGgod3K/_buildManifest.js",
+    "static/PKRtcSmVX_gj1jcGgod3K/_ssgManifest.js"
   ],
   "pages": {
     "/": [
@@ -45,7 +45,7 @@
       "static/chunks/1bcc11d033e12d0ef6f852a5507ca5925601ed62.f8d66fca59b5e537e5f1.js",
       "static/chunks/cfed5e16eac71a3212951d61249f50047bbebf89.4566c8d9335bec73f85f.js",
       "static/chunks/f25944a8a2e39203f0cc825de937ed89cd015a5b.991fcf4cdff804c5487c.js",
-      "static/chunks/pages/contactus-daae3f6ed223f4633ea9.js"
+      "static/chunks/pages/contactus-5c2f19d18310cea1cd20.js"
     ],
     "/covid-19": [
       "static/chunks/webpack-50bee04d1dc61f8adf5b.js",
