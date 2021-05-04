@@ -61,11 +61,11 @@ export default function WithSubnavigation() {
             fontSize={"sm"}
             fontWeight={600}
             color={"black"}
-            bg={"yellow.500"}
-            useRef={"/signup"}
+            bg={"yellow.300"}
+            href={"/signup"}
             _hover={{
               bg: "black",
-              color: "yellow.500"
+              color: "yellow.300"
             }}
           >
             Sign Up
@@ -140,7 +140,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
         <Box>
           <Text
             transition={"all .3s ease"}
-            _groupHover={{ color: "yellow.400" }}
+            _groupHover={{ color: "yellow.500" }}
             fontWeight={500}
           >
             {label}
@@ -270,19 +270,15 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: "Bed Bug Removal",
-    href: "#",
-  },
-  {
-    label: "Other Services",
-    href: "#",
+    href: "/bedbug",
   },
   {
     label: "Commercial",
-    href: "#",
+    href: "/commercial",
   },
   {
-    label: "Why Burks Pest Control",
-    href: "#",
+    label: "About Us",
+    href: "/aboutus",
   },
   {
     label: "Contact Us",

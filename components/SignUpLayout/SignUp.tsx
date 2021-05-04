@@ -21,19 +21,19 @@ export default function SignUp() {
             p={8}>
             <Stack spacing={4}>
               <FormControl id="email">
-                <FormLabel>Email address</FormLabel>
-                <Input type="email" />
+                {/* <FormLabel>Email address</FormLabel> */}
+                <Input type="email" placeholder="Email Address" />
               </FormControl>
               <FormControl id="password">
-                <FormLabel>Password</FormLabel>
-                <Input type="password" />
+                {/* <FormLabel>Password</FormLabel> */}
+                <Input type="password" placeholder="Password" />
               </FormControl>
               <Stack spacing={10}>
                 <Stack
                   direction={{ base: 'column', sm: 'row' }}
                   align={'start'}
                   justify={'space-between'}>
-                  <Checkbox>Remember me</Checkbox>
+                  <Checkbox colorScheme="yellow">Remember me</Checkbox>
                   <Link color={'blue.400'}>Forgot password?</Link>
                 </Stack>
                 <Button

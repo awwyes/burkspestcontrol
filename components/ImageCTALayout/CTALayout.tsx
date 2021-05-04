@@ -11,7 +11,7 @@ import {
     return (
       <Flex
         w={'full'}
-        h={'100vh'}
+        h={'90vh'}
         backgroundImage={
           'url(https://media.gettyimages.com/photos/exterminator-working-picture-id1066978818?s=2048x2048)'
         }

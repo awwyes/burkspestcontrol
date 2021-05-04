@@ -1,6 +1,13 @@
-import { Button, Checkbox, Flex, FormControl, FormLabel, Heading, Input, Link, Stack, Image, Text } from '@chakra-ui/react';
-  
+import React from 'react'
+import { Button, Checkbox, Flex, FormControl, FormLabel, Heading, Input, Link, Stack, Image, Text, InputGroup, InputRightElement } from '@chakra-ui/react';
+import { FaEyeSlash } from 'react-icons/fa'
+import { FiEye } from 'react-icons/fi'
+import SignInSocial from '../SignInSocialLayout/SignInSocial';
+
 export default function SignIn() {
+  const [show, setShow] = React.useState(false)
+  const handleClick = () => setShow(!show)
+
     return (
       <Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }}>
         <Flex p={8} flex={1} align={'center'} justify={'center'} order={2}>
@@ -8,25 +15,33 @@ export default function SignIn() {
             <Heading fontSize={'2xl'}>Sign in to your account</Heading>
             <Text fontSize={'lg'} color={'gray.400'}>Don't have an account? <Link color={'blue.400'} href="/signup">Sign Up</Link> 🕷️
             </Text>
-            <FormControl id="email">
-              <FormLabel>Email address</FormLabel>
-              <Input type="email" />
-            </FormControl>
-            <FormControl id="password">
-              <FormLabel>Password</FormLabel>
-              <Input type="password" />
-            </FormControl>
+              <FormControl id="email">
+                {/* <FormLabel>Email address</FormLabel> */}
+                <Input type="email" placeholder="Email Address" />
+              </FormControl>
+              <InputGroup size="md">
+                <FormControl id="password">
+                  {/* <FormLabel>Password</FormLabel> */}
+                  <Input type={show ? "text" : "password"} placeholder="Password" />
+                  <InputRightElement width="4.5rem" pt="6px">
+                    <Button h="1.75rem" size="sm" onClick={handleClick}>
+                      {show ? <FaEyeSlash /> : <FiEye />}
+                    </Button>
+                  </InputRightElement>
+                </FormControl>
+              </InputGroup>
             <Stack spacing={6}>
               <Stack
                 direction={{ base: 'column', sm: 'row' }}
                 align={'start'}
                 justify={'space-between'}>
-                <Checkbox>Remember me</Checkbox>
+                <Checkbox colorScheme="yellow">Remember me</Checkbox>
                 <Link color={'blue.500'}>Forgot password?</Link>
               </Stack>
               <Button colorScheme={'blue'} variant={'solid'}>
                 Sign in
               </Button>
+              <SignInSocial />
             </Stack>
           </Stack>
         </Flex>
