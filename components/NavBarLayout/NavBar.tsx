@@ -244,18 +244,18 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: "Termites",
-    children: [
-      {
-        label: "Job Board",
-        subLabel: "Find your dream design job",
-        href: "#",
-      },
-      {
-        label: "Freelance Projects",
-        subLabel: "An exclusive list for contract work",
-        href: "#",
-      },
-    ],
+    // children: [
+    //   {
+    //     label: "Job Board",
+    //     subLabel: "Find your dream design job",
+    //     href: "#",
+    //   },
+    //   {
+    //     label: "Freelance Projects",
+    //     subLabel: "An exclusive list for contract work",
+    //     href: "#",
+    //   },
+    // ],
   },
   {
     label: "Specialize Services",
