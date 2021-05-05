@@ -1,7 +1,19 @@
 import { BellIcon } from '@chakra-ui/icons'
-import { Box, HStack, Icon, Stack, Text, useColorModeValue } from '@chakra-ui/react'
+import { Box, HStack, Icon, Stack, Text, useColorModeValue, CloseButton } from '@chakra-ui/react'
 import * as React from 'react'
 import { BannerLink } from './BannerLink'
+
+const onCloseBanner = () => {
+  let isHidden = false;
+  var sheet = document.createElement('style')
+  if(!isHidden){
+    sheet.innerHTML = "section {display:none;}";
+  } else {
+    sheet.innerHTML = "section {display:block;}";
+  }
+  document.body.appendChild(sheet);
+  isHidden = !isHidden;
+}
 
 export const Banner = () => (
   <Box as="section" pt="0" pb="0">
@@ -23,6 +35,7 @@ export const Banner = () => (
       <BannerLink w={{ base: 'full', sm: 'auto' }} flexShrink={0}>
         Learn More
       </BannerLink>
+      <CloseButton variant="md" onClick={onCloseBanner} />
     </Stack>
   </Box>
 )
