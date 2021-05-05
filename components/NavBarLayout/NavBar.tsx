@@ -240,21 +240,10 @@ interface NavItem {
 const NAV_ITEMS: Array<NavItem> = [
   {
     label: "Pest Control",
-    children: [
-      {
-        label: "Explore Design Work",
-        subLabel: "Trending Design to inspire you",
-        href: "#",
-      },
-      {
-        label: "New & Noteworthy",
-        subLabel: "Up-and-coming Designers",
-        href: "#",
-      },
-    ],
+    href: "/",
   },
   {
-    label: "Termite Control",
+    label: "Termites",
     children: [
       {
         label: "Job Board",
@@ -269,16 +258,21 @@ const NAV_ITEMS: Array<NavItem> = [
     ],
   },
   {
-    label: "Bed Bug Removal",
-    href: "/bedbug",
+    label: "Specialize Services",
+    children: [
+      {
+        label: "Mosquito Control",
+        href: "#",
+      },
+      {
+        label: "Beg bug Removal",
+        href: "#",
+      },
+    ],
   },
   {
     label: "Commercial",
     href: "/commercial",
-  },
-  {
-    label: "About Us",
-    href: "/aboutus",
   },
   {
     label: "Contact Us",
