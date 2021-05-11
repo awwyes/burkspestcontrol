@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Flex, Heading, Stack, Image } from '@chakra-ui/react'
 import { 
     SquarePaymentForm,
     CreditCardNumberInput,
@@ -47,37 +48,42 @@ class PaymentPage extends React.Component {
     
     render() {
         return (
-            <>
-                <SquarePaymentForm
-                    sandbox={true}
-                    formId="sq-form-id"
-                    apiWrapper="sq-api-wrapper"
-                    applicationId={'sandbox-sq0idb-IZLBS6FsWlwSg4DPLogkiQ'}
-                    locationId={'LP08XW39WV1AH'}
-                    cardNonceResponseReceived={this.cardNonceResponseReceived}
-                    createVerificationDetails={this.createVerificationDetails}
-                >
+            <Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }}>
+            <Flex p={8} flex={1} align={'center'} justify={'center'}>
+              <Stack spacing={4} w={'full'} maxW={'md'}>
+                <Heading mr={8} fontSize={'4xl'} align={'center'} justify={'center'}>Pay Here!</Heading>
+                    <SquarePaymentForm
+                        sandbox={true}
+                        formId="sq-form-id"
+                        apiWrapper="sq-api-wrapper"
+                        applicationId={'sandbox-sq0idb-IZLBS6FsWlwSg4DPLogkiQ'}
+                        locationId={'LP08XW39WV1AH'}
+                        cardNonceResponseReceived={this.cardNonceResponseReceived}
+                        createVerificationDetails={this.createVerificationDetails}
+                    >
 
-                <fieldset className="sq-fieldset">
-                    <CreditCardNumberInput />
-                    <div className="sq-form-third">
-                        <CreditCardExpirationDateInput />
-                    </div>
+                        <fieldset className="sq-fieldset">
+                            <CreditCardNumberInput />
+                            <div className="sq-form-third">
+                                <CreditCardExpirationDateInput />
+                            </div>
 
-                    <div className="sq-form-third">
-                        <CreditCardPostalCodeInput />
-                    </div>
+                            <div className="sq-form-third">
+                                <CreditCardPostalCodeInput />
+                            </div>
 
-                    <div className="sq-form-third">
-                        <CreditCardCVVInput />
-                    </div>
-                </fieldset>
+                            <div className="sq-form-third">
+                                <CreditCardCVVInput />
+                            </div>
+                        </fieldset>
 
-                <CreditCardSubmitButton>
-                    Pay $1.00
-                </CreditCardSubmitButton>
-            </SquarePaymentForm>
-          </>
+                    <CreditCardSubmitButton>
+                        Pay $1.00
+                    </CreditCardSubmitButton>
+                    </SquarePaymentForm>
+                </Stack>
+            </Flex>
+        </Stack>
         )
     }
 }
