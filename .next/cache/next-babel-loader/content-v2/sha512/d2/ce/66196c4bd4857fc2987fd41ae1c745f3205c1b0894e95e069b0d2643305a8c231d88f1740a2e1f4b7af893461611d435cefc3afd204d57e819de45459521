@@ -1,1 +1,0 @@
-{"ast":null,"code":"","map":{"version":3,"sources":[],"names":[],"mappings":"","sourcesContent":["import React from 'react';\nimport {Box, Text} from '@chakra-ui/react';\n\nexport default function Logo(props)"]},"metadata":{},"sourceType":"module"}

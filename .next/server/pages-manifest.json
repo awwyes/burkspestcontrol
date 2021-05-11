@@ -1,5 +1,6 @@
 {
   "/_app": "pages/_app.js",
+  "/checkout": "pages/checkout.html",
   "/contactus": "pages/contactus.html",
   "/covid-19": "pages/covid-19.html",
   "/": "pages/index.html",

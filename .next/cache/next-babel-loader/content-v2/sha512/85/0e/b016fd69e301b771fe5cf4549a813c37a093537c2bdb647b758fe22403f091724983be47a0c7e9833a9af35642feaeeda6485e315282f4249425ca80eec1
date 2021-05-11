@@ -1,1 +1,0 @@
-{"ast":null,"code":"e;","map":{"version":3,"sources":["/Users/tonyburks/_code/burkspestcontrol/pages/_app.tsx"],"names":["e"],"mappings":"AAKAA,CAAC","sourcesContent":["import React from 'react';\nimport { BrowserRouter as Router, Switch, Route } from 'react-router-dom';\n\nimport Landing from './pages/Landing';\n\ne"]},"metadata":{},"sourceType":"module"}
