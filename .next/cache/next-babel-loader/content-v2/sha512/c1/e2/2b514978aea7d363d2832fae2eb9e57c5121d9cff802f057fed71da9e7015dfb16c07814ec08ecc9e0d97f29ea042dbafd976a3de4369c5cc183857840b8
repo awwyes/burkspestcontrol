@@ -1,1 +1,0 @@
-{"ast":null,"code":"","map":{"version":3,"sources":[],"names":[],"mappings":"","sourcesContent":["import React from 'react';\nimport ReactDOM from 'react-dom';\nimport { ChakraProvider } from '@chakra-ui/react';\n\nimport App from './'"]},"metadata":{},"sourceType":"module"}

@@ -1,1 +1,0 @@
-{"ast":null,"code":"","map":{"version":3,"sources":[],"names":[],"mappings":"","sourcesContent":["import React from 'react';\nimport { BrowserRouter as Router, Switch, Route } from 'react-router-dom';\n\nimport Landing from './pages/Landing'"]},"metadata":{},"sourceType":"module"}
