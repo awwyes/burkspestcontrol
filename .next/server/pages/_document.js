@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 8);
+/******/ 	return __webpack_require__(__webpack_require__.s = 9);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -391,14 +391,6 @@ module.exports = _interopRequireWildcard;
 
 /***/ }),
 
-/***/ 8:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__("VDXt");
-
-
-/***/ }),
-
 /***/ "8OQS":
 /***/ (function(module, exports) {
 
@@ -418,6 +410,14 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 }
 
 module.exports = _objectWithoutPropertiesLoose;
+
+/***/ }),
+
+/***/ 9:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("VDXt");
+
 
 /***/ }),
 
