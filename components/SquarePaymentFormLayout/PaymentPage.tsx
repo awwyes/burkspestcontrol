@@ -25,7 +25,8 @@ class PaymentPage extends React.Component {
         }
     
         this.setState({ errorMessages: [] })
-        alert("nonce created: " + nonce + ", buyerVerificationToken: " + buyerVerificationToken)
+        alert("nonce created: " + nonce)
+        // API.post('/payments', data: { nonce: nonce, token: buyerVerificationToken })
     }
     
     createVerificationDetails() {
