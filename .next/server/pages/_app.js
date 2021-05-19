@@ -1,151 +1,31 @@
-module.exports =
-/******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = require('../ssr-module-cache.js');
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		var threw = true;
-/******/ 		try {
-/******/ 			modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/ 			threw = false;
-/******/ 		} finally {
-/******/ 			if(threw) delete installedModules[moduleId];
-/******/ 		}
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// define __esModule on exports
-/******/ 	__webpack_require__.r = function(exports) {
-/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 		}
-/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 	};
-/******/
-/******/ 	// create a fake namespace object
-/******/ 	// mode & 1: value is a module id, require it
-/******/ 	// mode & 2: merge all properties of value into the ns
-/******/ 	// mode & 4: return value when already ns object
-/******/ 	// mode & 8|1: behave like require
-/******/ 	__webpack_require__.t = function(value, mode) {
-/******/ 		if(mode & 1) value = __webpack_require__(value);
-/******/ 		if(mode & 8) return value;
-/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
-/******/ 		var ns = Object.create(null);
-/******/ 		__webpack_require__.r(ns);
-/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
-/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
-/******/ 		return ns;
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
-/******/
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
-/******/ })
-/************************************************************************/
-/******/ ({
+(function() {
+var exports = {};
+exports.id = 888;
+exports.ids = [888];
+exports.modules = {
 
-/***/ 0:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__("cha2");
-
-
-/***/ }),
-
-/***/ "4Q3z":
-/***/ (function(module, exports) {
-
-module.exports = require("next/router");
-
-/***/ }),
-
-/***/ "F5FC":
-/***/ (function(module, exports) {
-
-module.exports = require("react/jsx-runtime");
-
-/***/ }),
-
-/***/ "LZ34":
-/***/ (function(module, exports) {
-
-module.exports = require("@chakra-ui/react");
-
-/***/ }),
-
-/***/ "cha2":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ 515:
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
-__webpack_require__.d(__webpack_exports__, "default", function() { return /* binding */ App; });
+__webpack_require__.d(__webpack_exports__, {
+  "default": function() { return /* binding */ App; }
+});
 
 // EXTERNAL MODULE: external "react/jsx-runtime"
-var jsx_runtime_ = __webpack_require__("F5FC");
-
+var jsx_runtime_ = __webpack_require__(282);
 // EXTERNAL MODULE: external "@chakra-ui/react"
-var react_ = __webpack_require__("LZ34");
-
-// EXTERNAL MODULE: external "next/head"
-var head_ = __webpack_require__("xnum");
-var head_default = /*#__PURE__*/__webpack_require__.n(head_);
-
-// EXTERNAL MODULE: external "next/router"
-var router_ = __webpack_require__("4Q3z");
-
-// CONCATENATED MODULE: ./components/constants.tsx
+var react_ = __webpack_require__(426);
+;// CONCATENATED MODULE: external "next/head"
+var head_namespaceObject = require("next/head");;
+var head_default = /*#__PURE__*/__webpack_require__.n(head_namespaceObject);
+;// CONCATENATED MODULE: external "next/router"
+var router_namespaceObject = require("next/router");;
+;// CONCATENATED MODULE: ./components/constants.tsx
 const PRODUCTION_URL = 'https://burkspestcontrol.com';
 /**
  * SEO constants
@@ -156,7 +36,7 @@ const SEO_DESCRIPTION = 'A growing open-source collection of hand-crafted Chakra
 const SEO_KEYWORDS = 'burks pest control, burkspest control, burkspestcontrol, ooltewah tn, cleveland tn, ';
 const SEO_OG_IMAGE = '../public/favicon.png';
 const SEO_TWITTER_IMAGE = '../publick/twitter.png';
-// CONCATENATED MODULE: ./components/SEO/SEO.tsx
+;// CONCATENATED MODULE: ./components/SEO/SEO.tsx
 
 
 
@@ -170,53 +50,53 @@ const SEO = ({
   ogUrl = PRODUCTION_URL,
   twitterImage = SEO_TWITTER_IMAGE
 }) => {
-  const router = Object(router_["useRouter"])();
-  return /*#__PURE__*/Object(jsx_runtime_["jsxs"])(head_default.a, {
-    children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
+  const router = (0,router_namespaceObject.useRouter)();
+  return /*#__PURE__*/(0,jsx_runtime_.jsxs)((head_default()), {
+    children: [/*#__PURE__*/jsx_runtime_.jsx("meta", {
       name: "description",
       content: description
-    }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
+    }), /*#__PURE__*/jsx_runtime_.jsx("meta", {
       name: "keywords",
       content: keywords
-    }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("title", {
+    }), /*#__PURE__*/jsx_runtime_.jsx("title", {
       children: title
-    }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
+    }), /*#__PURE__*/jsx_runtime_.jsx("meta", {
       property: "og:title",
       content: title
-    }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
+    }), /*#__PURE__*/jsx_runtime_.jsx("meta", {
       property: "og:description",
       content: description
-    }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
+    }), /*#__PURE__*/jsx_runtime_.jsx("meta", {
       property: "og:image",
       content: ogImage
-    }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
+    }), /*#__PURE__*/jsx_runtime_.jsx("meta", {
       property: "og:site_name",
       content: SEO_TITLE
-    }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
+    }), /*#__PURE__*/jsx_runtime_.jsx("meta", {
       property: "og:url",
       content: `${ogUrl}${router.asPath}`
-    }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
+    }), /*#__PURE__*/jsx_runtime_.jsx("meta", {
       property: "og:type",
       content: 'website'
-    }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
+    }), /*#__PURE__*/jsx_runtime_.jsx("meta", {
       name: "twitter:title",
       content: title
-    }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
+    }), /*#__PURE__*/jsx_runtime_.jsx("meta", {
       name: "twitter:description",
       content: description
-    }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
+    }), /*#__PURE__*/jsx_runtime_.jsx("meta", {
       name: "twitter:image",
       content: twitterImage
-    }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
+    }), /*#__PURE__*/jsx_runtime_.jsx("meta", {
       name: "twitter:card",
       content: "summary_large_image"
     })]
   });
 };
 /* harmony default export */ var SEO_SEO = (SEO);
-// CONCATENATED MODULE: ./theme.tsx
+;// CONCATENATED MODULE: ./theme.tsx
 
-const theme = Object(react_["extendTheme"])({
+const theme = (0,react_.extendTheme)({
   config: {
     cssVarPrefix: "ck",
     initialColorMode: "light",
@@ -316,7 +196,7 @@ const theme = Object(react_["extendTheme"])({
   }
 });
 /* harmony default export */ var theme_0 = (theme);
-// CONCATENATED MODULE: ./pages/_app.tsx
+;// CONCATENATED MODULE: ./pages/_app.tsx
 
 
 
@@ -333,19 +213,38 @@ function App({
   Component,
   pageProps
 }) {
-  return /*#__PURE__*/Object(jsx_runtime_["jsxs"])(react_["ChakraProvider"], {
+  return /*#__PURE__*/(0,jsx_runtime_.jsxs)(react_.ChakraProvider, {
     theme: theme_0,
-    children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(react_["CSSReset"], {}), /*#__PURE__*/Object(jsx_runtime_["jsx"])(SEO_SEO, {}), /*#__PURE__*/Object(jsx_runtime_["jsx"])(Component, _objectSpread({}, pageProps))]
+    children: [/*#__PURE__*/jsx_runtime_.jsx(react_.CSSReset, {}), /*#__PURE__*/jsx_runtime_.jsx(SEO_SEO, {}), /*#__PURE__*/jsx_runtime_.jsx(Component, _objectSpread({}, pageProps))]
   });
 }
 
 /***/ }),
 
-/***/ "xnum":
-/***/ (function(module, exports) {
+/***/ 426:
+/***/ (function(module) {
 
-module.exports = require("next/head");
+"use strict";
+module.exports = require("@chakra-ui/react");;
+
+/***/ }),
+
+/***/ 282:
+/***/ (function(module) {
+
+"use strict";
+module.exports = require("react/jsx-runtime");;
 
 /***/ })
 
-/******/ });
+};
+;
+
+// load runtime
+var __webpack_require__ = require("../webpack-runtime.js");
+__webpack_require__.C(exports);
+var __webpack_exec__ = function(moduleId) { return __webpack_require__(__webpack_require__.s = moduleId); }
+var __webpack_exports__ = (__webpack_exec__(515));
+module.exports = __webpack_exports__;
+
+})();
