@@ -10,8 +10,8 @@ export default function WithSubnavigation() {
   return (
     <Box>
       <Flex
-        bg={useColorModeValue("white", "gray.800")}
-        color={useColorModeValue("gray.600", "white")}
+        bg={useColorModeValue("white", "black")}
+        color={useColorModeValue("black", "yellow.500")}
         minH={"60px"}
         py={{ base: 2 }}
         px={{ base: 4 }}
@@ -93,7 +93,7 @@ const DesktopNav = () => {
                 href={navItem.href ?? "/"}
                 fontSize={"sm"}
                 fontWeight={500}
-                color={useColorModeValue("gray.600", "gray.200")}
+                color={useColorModeValue("black", "yellow.500")}
                 _hover={{
                   textDecoration: "none",
                   color: useColorModeValue("gray.800", "white"),
