@@ -10,8 +10,8 @@ export default function WithSubnavigation() {
   return (
     <Box>
       <Flex
-        bg={useColorModeValue("white", "gray.800")}
-        color={useColorModeValue("gray.600", "white")}
+        bg={useColorModeValue("white", "black")}
+        color={useColorModeValue("black", "yellow.500")}
         minH={"60px"}
         py={{ base: 2 }}
         px={{ base: 4 }}
@@ -52,7 +52,16 @@ export default function WithSubnavigation() {
             fontSize={"sm"}
             fontWeight={400}
             variant={"link"}
+            color={useColorModeValue('black', 'yellow.500')}
             href={"/signin"}
+            textDecoration={'none'}
+            _hover={{
+              color: "yellow.500",
+              textDecoration: 'none',
+            }}
+            _active={{
+              color: "yellow.500",
+            }}
           >
             Sign in
           </Button>
@@ -60,7 +69,7 @@ export default function WithSubnavigation() {
             display={{ base: "none", md: "inline-flex" }}
             fontSize={"sm"}
             fontWeight={600}
-            color={"black"}
+            color={useColorModeValue('black', 'white')}
             bg={"yellow.300"}
             href={"/signup"}
             _hover={{
@@ -93,7 +102,7 @@ const DesktopNav = () => {
                 href={navItem.href ?? "/"}
                 fontSize={"sm"}
                 fontWeight={500}
-                color={useColorModeValue("gray.600", "gray.200")}
+                color={useColorModeValue("black", "yellow.500")}
                 _hover={{
                   textDecoration: "none",
                   color: useColorModeValue("gray.800", "white"),
