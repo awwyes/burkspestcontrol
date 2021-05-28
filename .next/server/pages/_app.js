@@ -1,3 +1,4 @@
+bpc-01
 module.exports =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -93,6 +94,14 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
+(function() {
+var exports = {};
+exports.id = 888;
+exports.ids = [888];
+exports.modules = {
+
+HEAD
+main
 /***/ "./components/SEO/SEO.tsx":
 /*!********************************!*\
   !*** ./components/SEO/SEO.tsx ***!
@@ -138,6 +147,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _chakra_ui_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @chakra-ui/react */ \"@chakra-ui/react\");\n/* harmony import */ var _chakra_ui_react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_0__);\n\nconst theme = Object(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_0__[\"extendTheme\"])({\n  config: {\n    cssVarPrefix: \"ck\",\n    initialColorMode: \"light\",\n    useSystemColorMode: true\n  },\n  colors: {\n    yellow: {\n      500: '#ffff00'\n    }\n  },\n  fonts: {\n    body: \"system-ui, sans-serif\",\n    heading: \"Georiga, serif\",\n    mono: \"Menlo, monospace\"\n  },\n  fontSizes: {\n    xs: \"0.75rem\",\n    sm: \"0.875rem\",\n    md: \"1rem\",\n    lg: \"1.125rem\",\n    xl: \"1.25rem\",\n    \"2xl\": \"1.5rem\",\n    \"3xl\": \"1.875rem\",\n    \"4xl\": \"2.25rem\",\n    \"5xl\": \"3rem\",\n    \"6xl\": \"3.75rem\",\n    \"7xl\": \"4.5rem\",\n    \"8xl\": \"6rem\",\n    \"9xl\": \"8rem\"\n  },\n  fontWeights: {\n    hairline: 100,\n    thin: 200,\n    light: 300,\n    normal: 400,\n    medium: 500,\n    semibold: 600,\n    bold: 700,\n    extrabold: 800,\n    black: 900\n  },\n  lineHeights: {\n    normal: \"normal\",\n    none: 1,\n    shorter: 1.25,\n    short: 1.375,\n    base: 1.5,\n    tall: 1.625,\n    taller: \"2\",\n    \"3\": \".75rem\",\n    \"4\": \"1rem\",\n    \"5\": \"1.25rem\",\n    \"6\": \"1.5rem\",\n    \"7\": \"1.75rem\",\n    \"8\": \"2rem\",\n    \"9\": \"2.25rem\",\n    \"10\": \"2.5rem\"\n  },\n  letterSpacings: {\n    tighter: \"-0.05em\",\n    tight: \"-0.025em\",\n    normal: \"0\",\n    wide: \"0.025em\",\n    wider: \"0.05em\",\n    widest: \"0.1em\"\n  },\n  components: {\n    Button: {\n      // 1. We can update the base styles\n      baseStyle: {\n        fontWeight: \"bold\" // Normally, it is \"semibold\"\n\n      },\n      // 2. We can add a new button size or extend existing\n      sizes: {\n        xl: {\n          h: \"56px\",\n          fontSize: \"lg\",\n          px: \"32px\"\n        }\n      },\n      // 3. We can add a new visual variant\n      variants: {\n        \"with-shadow\": {\n          bg: \"yellow.300\",\n          boxShadow: \"0 0 2px 2px #efdfde\"\n        },\n        \"chakra-icon\": {\n          color: \"black\"\n        },\n        // 4. We can override existing variants\n        solid: props => ({\n          bg: props.colorMode === \"dark\" ? \"yellow.500\" : \"dark\"\n        })\n      }\n    }\n  }\n});\n/* harmony default export */ __webpack_exports__[\"default\"] = (theme);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi90aGVtZS50c3g/NzVlYyJdLCJuYW1lcyI6WyJ0aGVtZSIsImV4dGVuZFRoZW1lIiwiY29uZmlnIiwiY3NzVmFyUHJlZml4IiwiaW5pdGlhbENvbG9yTW9kZSIsInVzZVN5c3RlbUNvbG9yTW9kZSIsImNvbG9ycyIsInllbGxvdyIsImZvbnRzIiwiYm9keSIsImhlYWRpbmciLCJtb25vIiwiZm9udFNpemVzIiwieHMiLCJzbSIsIm1kIiwibGciLCJ4bCIsImZvbnRXZWlnaHRzIiwiaGFpcmxpbmUiLCJ0aGluIiwibGlnaHQiLCJub3JtYWwiLCJtZWRpdW0iLCJzZW1pYm9sZCIsImJvbGQiLCJleHRyYWJvbGQiLCJibGFjayIsImxpbmVIZWlnaHRzIiwibm9uZSIsInNob3J0ZXIiLCJzaG9ydCIsImJhc2UiLCJ0YWxsIiwidGFsbGVyIiwibGV0dGVyU3BhY2luZ3MiLCJ0aWdodGVyIiwidGlnaHQiLCJ3aWRlIiwid2lkZXIiLCJ3aWRlc3QiLCJjb21wb25lbnRzIiwiQnV0dG9uIiwiYmFzZVN0eWxlIiwiZm9udFdlaWdodCIsInNpemVzIiwiaCIsImZvbnRTaXplIiwicHgiLCJ2YXJpYW50cyIsImJnIiwiYm94U2hhZG93IiwiY29sb3IiLCJzb2xpZCIsInByb3BzIiwiY29sb3JNb2RlIl0sIm1hcHBpbmdzIjoiQUFBQTtBQUFBO0FBQUE7QUFBQTtBQUVBLE1BQU1BLEtBQUssR0FBR0Msb0VBQVcsQ0FBQztBQUN0QkMsUUFBTSxFQUFFO0FBQ0pDLGdCQUFZLEVBQUUsSUFEVjtBQUVKQyxvQkFBZ0IsRUFBRSxPQUZkO0FBR0pDLHNCQUFrQixFQUFFO0FBSGhCLEdBRGM7QUFNdEJDLFFBQU0sRUFBRTtBQUNKQyxVQUFNLEVBQUU7QUFDSixXQUFLO0FBREQ7QUFESixHQU5jO0FBV3RCQyxPQUFLLEVBQUU7QUFDSEMsUUFBSSxFQUFFLHVCQURIO0FBRUhDLFdBQU8sRUFBRSxnQkFGTjtBQUdIQyxRQUFJLEVBQUU7QUFISCxHQVhlO0FBZ0J0QkMsV0FBUyxFQUFFO0FBQ1BDLE1BQUUsRUFBRSxTQURHO0FBRVBDLE1BQUUsRUFBRSxVQUZHO0FBR1BDLE1BQUUsRUFBRSxNQUhHO0FBSVBDLE1BQUUsRUFBRSxVQUpHO0FBS1BDLE1BQUUsRUFBRSxTQUxHO0FBTVAsV0FBTyxRQU5BO0FBT1AsV0FBTyxVQVBBO0FBUVAsV0FBTyxTQVJBO0FBU1AsV0FBTyxNQVRBO0FBVVAsV0FBTyxTQVZBO0FBV1AsV0FBTyxRQVhBO0FBWVAsV0FBTyxNQVpBO0FBYVAsV0FBTztBQWJBLEdBaEJXO0FBK0J0QkMsYUFBVyxFQUFFO0FBQ1RDLFlBQVEsRUFBRSxHQUREO0FBRVRDLFFBQUksRUFBRSxHQUZHO0FBR1RDLFNBQUssRUFBRSxHQUhFO0FBSVRDLFVBQU0sRUFBRSxHQUpDO0FBS1RDLFVBQU0sRUFBRSxHQUxDO0FBTVRDLFlBQVEsRUFBRSxHQU5EO0FBT1RDLFFBQUksRUFBRSxHQVBHO0FBUVRDLGFBQVMsRUFBRSxHQVJGO0FBU1RDLFNBQUssRUFBRTtBQVRFLEdBL0JTO0FBMEN0QkMsYUFBVyxFQUFFO0FBQ1ROLFVBQU0sRUFBRSxRQURDO0FBRVRPLFFBQUksRUFBRSxDQUZHO0FBR1RDLFdBQU8sRUFBRSxJQUhBO0FBSVRDLFNBQUssRUFBRSxLQUpFO0FBS1RDLFFBQUksRUFBRSxHQUxHO0FBTVRDLFFBQUksRUFBRSxLQU5HO0FBT1RDLFVBQU0sRUFBRSxHQVBDO0FBUVQsU0FBSyxRQVJJO0FBU1QsU0FBSyxNQVRJO0FBVVQsU0FBSyxTQVZJO0FBV1QsU0FBSyxRQVhJO0FBWVQsU0FBSyxTQVpJO0FBYVQsU0FBSyxNQWJJO0FBY1QsU0FBSyxTQWRJO0FBZVQsVUFBTTtBQWZHLEdBMUNTO0FBMkR0QkMsZ0JBQWMsRUFBRTtBQUNaQyxXQUFPLEVBQUUsU0FERztBQUVaQyxTQUFLLEVBQUUsVUFGSztBQUdaZixVQUFNLEVBQUUsR0FISTtBQUlaZ0IsUUFBSSxFQUFFLFNBSk07QUFLWkMsU0FBSyxFQUFFLFFBTEs7QUFNWkMsVUFBTSxFQUFFO0FBTkksR0EzRE07QUFtRXRCQyxZQUFVLEVBQUU7QUFDUkMsVUFBTSxFQUFFO0FBQ0o7QUFDQUMsZUFBUyxFQUFFO0FBQ1BDLGtCQUFVLEVBQUUsTUFETCxDQUNhOztBQURiLE9BRlA7QUFLSjtBQUNBQyxXQUFLLEVBQUU7QUFDSDVCLFVBQUUsRUFBRTtBQUNBNkIsV0FBQyxFQUFFLE1BREg7QUFFQUMsa0JBQVEsRUFBRSxJQUZWO0FBR0FDLFlBQUUsRUFBRTtBQUhKO0FBREQsT0FOSDtBQWFKO0FBQ0FDLGNBQVEsRUFBRTtBQUNWLHVCQUFlO0FBQ1hDLFlBQUUsRUFBRSxZQURPO0FBRVhDLG1CQUFTLEVBQUU7QUFGQSxTQURMO0FBS1YsdUJBQWU7QUFDWEMsZUFBSyxFQUFFO0FBREksU0FMTDtBQVFOO0FBQ0FDLGFBQUssRUFBR0MsS0FBRCxLQUFZO0FBQ2ZKLFlBQUUsRUFBRUksS0FBSyxDQUFDQyxTQUFOLEtBQW9CLE1BQXBCLEdBQTZCLFlBQTdCLEdBQTRDO0FBRGpDLFNBQVo7QUFURDtBQWROO0FBREE7QUFuRVUsQ0FBRCxDQUF6QjtBQW1HZXZELG9FQUFmIiwiZmlsZSI6Ii4vdGhlbWUudHN4LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgZXh0ZW5kVGhlbWUgfSBmcm9tIFwiQGNoYWtyYS11aS9yZWFjdFwiXG5cbmNvbnN0IHRoZW1lID0gZXh0ZW5kVGhlbWUoe1xuICAgIGNvbmZpZzoge1xuICAgICAgICBjc3NWYXJQcmVmaXg6IFwiY2tcIixcbiAgICAgICAgaW5pdGlhbENvbG9yTW9kZTogXCJsaWdodFwiLFxuICAgICAgICB1c2VTeXN0ZW1Db2xvck1vZGU6IHRydWVcbiAgICB9LFxuICAgIGNvbG9yczoge1xuICAgICAgICB5ZWxsb3c6IHtcbiAgICAgICAgICAgIDUwMDogJyNmZmZmMDAnLFxuICAgICAgICB9XG4gICAgfSxcbiAgICBmb250czoge1xuICAgICAgICBib2R5OiBcInN5c3RlbS11aSwgc2Fucy1zZXJpZlwiLFxuICAgICAgICBoZWFkaW5nOiBcIkdlb3JpZ2EsIHNlcmlmXCIsXG4gICAgICAgIG1vbm86IFwiTWVubG8sIG1vbm9zcGFjZVwiLFxuICAgIH0sXG4gICAgZm9udFNpemVzOiB7XG4gICAgICAgIHhzOiBcIjAuNzVyZW1cIixcbiAgICAgICAgc206IFwiMC44NzVyZW1cIixcbiAgICAgICAgbWQ6IFwiMXJlbVwiLFxuICAgICAgICBsZzogXCIxLjEyNXJlbVwiLFxuICAgICAgICB4bDogXCIxLjI1cmVtXCIsXG4gICAgICAgIFwiMnhsXCI6IFwiMS41cmVtXCIsXG4gICAgICAgIFwiM3hsXCI6IFwiMS44NzVyZW1cIixcbiAgICAgICAgXCI0eGxcIjogXCIyLjI1cmVtXCIsXG4gICAgICAgIFwiNXhsXCI6IFwiM3JlbVwiLFxuICAgICAgICBcIjZ4bFwiOiBcIjMuNzVyZW1cIixcbiAgICAgICAgXCI3eGxcIjogXCI0LjVyZW1cIixcbiAgICAgICAgXCI4eGxcIjogXCI2cmVtXCIsXG4gICAgICAgIFwiOXhsXCI6IFwiOHJlbVwiLFxuICAgIH0sXG4gICAgZm9udFdlaWdodHM6IHtcbiAgICAgICAgaGFpcmxpbmU6IDEwMCxcbiAgICAgICAgdGhpbjogMjAwLFxuICAgICAgICBsaWdodDogMzAwLFxuICAgICAgICBub3JtYWw6IDQwMCxcbiAgICAgICAgbWVkaXVtOiA1MDAsXG4gICAgICAgIHNlbWlib2xkOiA2MDAsXG4gICAgICAgIGJvbGQ6IDcwMCxcbiAgICAgICAgZXh0cmFib2xkOiA4MDAsXG4gICAgICAgIGJsYWNrOiA5MDAsXG4gICAgfSxcbiAgICBsaW5lSGVpZ2h0czoge1xuICAgICAgICBub3JtYWw6IFwibm9ybWFsXCIsXG4gICAgICAgIG5vbmU6IDEsXG4gICAgICAgIHNob3J0ZXI6IDEuMjUsXG4gICAgICAgIHNob3J0OiAxLjM3NSxcbiAgICAgICAgYmFzZTogMS41LFxuICAgICAgICB0YWxsOiAxLjYyNSxcbiAgICAgICAgdGFsbGVyOiBcIjJcIixcbiAgICAgICAgXCIzXCI6IFwiLjc1cmVtXCIsXG4gICAgICAgIFwiNFwiOiBcIjFyZW1cIixcbiAgICAgICAgXCI1XCI6IFwiMS4yNXJlbVwiLFxuICAgICAgICBcIjZcIjogXCIxLjVyZW1cIixcbiAgICAgICAgXCI3XCI6IFwiMS43NXJlbVwiLFxuICAgICAgICBcIjhcIjogXCIycmVtXCIsXG4gICAgICAgIFwiOVwiOiBcIjIuMjVyZW1cIixcbiAgICAgICAgXCIxMFwiOiBcIjIuNXJlbVwiLFxuICAgIH0sXG4gICAgbGV0dGVyU3BhY2luZ3M6IHtcbiAgICAgICAgdGlnaHRlcjogXCItMC4wNWVtXCIsXG4gICAgICAgIHRpZ2h0OiBcIi0wLjAyNWVtXCIsXG4gICAgICAgIG5vcm1hbDogXCIwXCIsXG4gICAgICAgIHdpZGU6IFwiMC4wMjVlbVwiLFxuICAgICAgICB3aWRlcjogXCIwLjA1ZW1cIixcbiAgICAgICAgd2lkZXN0OiBcIjAuMWVtXCIsXG4gICAgfSxcbiAgICBjb21wb25lbnRzOiB7XG4gICAgICAgIEJ1dHRvbjoge1xuICAgICAgICAgICAgLy8gMS4gV2UgY2FuIHVwZGF0ZSB0aGUgYmFzZSBzdHlsZXNcbiAgICAgICAgICAgIGJhc2VTdHlsZToge1xuICAgICAgICAgICAgICAgIGZvbnRXZWlnaHQ6IFwiYm9sZFwiLCAvLyBOb3JtYWxseSwgaXQgaXMgXCJzZW1pYm9sZFwiXG4gICAgICAgICAgICB9LFxuICAgICAgICAgICAgLy8gMi4gV2UgY2FuIGFkZCBhIG5ldyBidXR0b24gc2l6ZSBvciBleHRlbmQgZXhpc3RpbmdcbiAgICAgICAgICAgIHNpemVzOiB7XG4gICAgICAgICAgICAgICAgeGw6IHtcbiAgICAgICAgICAgICAgICAgICAgaDogXCI1NnB4XCIsXG4gICAgICAgICAgICAgICAgICAgIGZvbnRTaXplOiBcImxnXCIsXG4gICAgICAgICAgICAgICAgICAgIHB4OiBcIjMycHhcIixcbiAgICAgICAgICAgICAgICB9LFxuICAgICAgICAgICAgfSxcbiAgICAgICAgICAgIC8vIDMuIFdlIGNhbiBhZGQgYSBuZXcgdmlzdWFsIHZhcmlhbnRcbiAgICAgICAgICAgIHZhcmlhbnRzOiB7XG4gICAgICAgICAgICBcIndpdGgtc2hhZG93XCI6IHtcbiAgICAgICAgICAgICAgICBiZzogXCJ5ZWxsb3cuMzAwXCIsXG4gICAgICAgICAgICAgICAgYm94U2hhZG93OiBcIjAgMCAycHggMnB4ICNlZmRmZGVcIixcbiAgICAgICAgICAgIH0sXG4gICAgICAgICAgICBcImNoYWtyYS1pY29uXCI6IHtcbiAgICAgICAgICAgICAgICBjb2xvcjogXCJibGFja1wiXG4gICAgICAgICAgICB9LFxuICAgICAgICAgICAgICAgIC8vIDQuIFdlIGNhbiBvdmVycmlkZSBleGlzdGluZyB2YXJpYW50c1xuICAgICAgICAgICAgICAgIHNvbGlkOiAocHJvcHMpID0+ICh7XG4gICAgICAgICAgICAgICAgICAgIGJnOiBwcm9wcy5jb2xvck1vZGUgPT09IFwiZGFya1wiID8gXCJ5ZWxsb3cuNTAwXCIgOiBcImRhcmtcIixcbiAgICAgICAgICAgICAgICB9KSxcbiAgICAgICAgICAgIH0sXG4gICAgICAgIH0sXG4gICAgfSxcbn0pXG5cbmV4cG9ydCBkZWZhdWx0IHRoZW1lIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./theme.tsx\n");
+bpc-01
 
 /***/ }),
 
@@ -150,6 +160,212 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _cha
 
 module.exports = __webpack_require__(/*! private-next-pages/_app.tsx */"./pages/_app.tsx");
 
+/***/ 515:
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": function() { return /* binding */ App; }
+});
+
+// EXTERNAL MODULE: external "react/jsx-runtime"
+var jsx_runtime_ = __webpack_require__(282);
+// EXTERNAL MODULE: external "@chakra-ui/react"
+var react_ = __webpack_require__(426);
+;// CONCATENATED MODULE: external "next/head"
+var head_namespaceObject = require("next/head");;
+var head_default = /*#__PURE__*/__webpack_require__.n(head_namespaceObject);
+;// CONCATENATED MODULE: external "next/router"
+var router_namespaceObject = require("next/router");;
+;// CONCATENATED MODULE: ./components/constants.tsx
+const PRODUCTION_URL = 'https://burkspestcontrol.com';
+/**
+ * SEO constants
+ */
+
+const SEO_TITLE = 'Burks Pest Control';
+const SEO_DESCRIPTION = 'A growing open-source collection of hand-crafted Chakra UI templates ready to drop into your React project.';
+const SEO_KEYWORDS = 'burks pest control, burkspest control, burkspestcontrol, ooltewah tn, cleveland tn, ';
+const SEO_OG_IMAGE = '../public/favicon.png';
+const SEO_TWITTER_IMAGE = '../publick/twitter.png';
+;// CONCATENATED MODULE: ./components/SEO/SEO.tsx
+
+
+0dbc9eb53bc978d9e61a291a6ca276f0361aa133
+
+/***/ }),
+
+HEAD
+/***/ 0:
+/*!*****************************************!*\
+  !*** multi private-next-pages/_app.tsx ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! private-next-pages/_app.tsx */"./pages/_app.tsx");
+
+const SEO = ({
+  description = SEO_DESCRIPTION,
+  keywords = SEO_KEYWORDS,
+  title = SEO_TITLE,
+  ogImage = SEO_OG_IMAGE,
+  ogUrl = PRODUCTION_URL,
+  twitterImage = SEO_TWITTER_IMAGE
+}) => {
+  const router = (0,router_namespaceObject.useRouter)();
+  return /*#__PURE__*/(0,jsx_runtime_.jsxs)((head_default()), {
+    children: [/*#__PURE__*/jsx_runtime_.jsx("meta", {
+      name: "description",
+      content: description
+    }), /*#__PURE__*/jsx_runtime_.jsx("meta", {
+      name: "keywords",
+      content: keywords
+    }), /*#__PURE__*/jsx_runtime_.jsx("title", {
+      children: title
+    }), /*#__PURE__*/jsx_runtime_.jsx("meta", {
+      property: "og:title",
+      content: title
+    }), /*#__PURE__*/jsx_runtime_.jsx("meta", {
+      property: "og:description",
+      content: description
+    }), /*#__PURE__*/jsx_runtime_.jsx("meta", {
+      property: "og:image",
+      content: ogImage
+    }), /*#__PURE__*/jsx_runtime_.jsx("meta", {
+      property: "og:site_name",
+      content: SEO_TITLE
+    }), /*#__PURE__*/jsx_runtime_.jsx("meta", {
+      property: "og:url",
+      content: `${ogUrl}${router.asPath}`
+    }), /*#__PURE__*/jsx_runtime_.jsx("meta", {
+      property: "og:type",
+      content: 'website'
+    }), /*#__PURE__*/jsx_runtime_.jsx("meta", {
+      name: "twitter:title",
+      content: title
+    }), /*#__PURE__*/jsx_runtime_.jsx("meta", {
+      name: "twitter:description",
+      content: description
+    }), /*#__PURE__*/jsx_runtime_.jsx("meta", {
+      name: "twitter:image",
+      content: twitterImage
+    }), /*#__PURE__*/jsx_runtime_.jsx("meta", {
+      name: "twitter:card",
+      content: "summary_large_image"
+    })]
+  });
+};
+/* harmony default export */ var SEO_SEO = (SEO);
+;// CONCATENATED MODULE: ./theme.tsx
+
+const theme = (0,react_.extendTheme)({
+  config: {
+    cssVarPrefix: "ck",
+    initialColorMode: "light",
+    useSystemColorMode: true
+  },
+  colors: {
+    yellow: {
+      500: '#ffff00'
+    }
+  },
+  fonts: {
+    body: "system-ui, sans-serif",
+    heading: "Georiga, serif",
+    mono: "Menlo, monospace"
+  },
+  fontSizes: {
+    xs: "0.75rem",
+    sm: "0.875rem",
+    md: "1rem",
+    lg: "1.125rem",
+    xl: "1.25rem",
+    "2xl": "1.5rem",
+    "3xl": "1.875rem",
+    "4xl": "2.25rem",
+    "5xl": "3rem",
+    "6xl": "3.75rem",
+    "7xl": "4.5rem",
+    "8xl": "6rem",
+    "9xl": "8rem"
+  },
+  fontWeights: {
+    hairline: 100,
+    thin: 200,
+    light: 300,
+    normal: 400,
+    medium: 500,
+    semibold: 600,
+    bold: 700,
+    extrabold: 800,
+    black: 900
+  },
+  lineHeights: {
+    normal: "normal",
+    none: 1,
+    shorter: 1.25,
+    short: 1.375,
+    base: 1.5,
+    tall: 1.625,
+    taller: "2",
+    "3": ".75rem",
+    "4": "1rem",
+    "5": "1.25rem",
+    "6": "1.5rem",
+    "7": "1.75rem",
+    "8": "2rem",
+    "9": "2.25rem",
+    "10": "2.5rem"
+  },
+  letterSpacings: {
+    tighter: "-0.05em",
+    tight: "-0.025em",
+    normal: "0",
+    wide: "0.025em",
+    wider: "0.05em",
+    widest: "0.1em"
+  },
+  components: {
+    Button: {
+      // 1. We can update the base styles
+      baseStyle: {
+        fontWeight: "bold" // Normally, it is "semibold"
+
+      },
+      // 2. We can add a new button size or extend existing
+      sizes: {
+        xl: {
+          h: "56px",
+          fontSize: "lg",
+          px: "32px"
+        }
+      },
+      // 3. We can add a new visual variant
+      variants: {
+        "with-shadow": {
+          bg: "yellow.300",
+          boxShadow: "0 0 2px 2px #efdfde"
+        },
+        "chakra-icon": {
+          color: "black"
+        },
+        // 4. We can override existing variants
+        solid: props => ({
+          bg: props.colorMode === "dark" ? "yellow.500" : "dark"
+        })
+      }
+    }
+  }
+});
+/* harmony default export */ var theme_0 = (theme);
+;// CONCATENATED MODULE: ./pages/_app.tsx
+0dbc9eb53bc978d9e61a291a6ca276f0361aa133
+main
 
 /***/ }),
 
@@ -170,6 +386,7 @@ eval("module.exports = require(\"@chakra-ui/react\");//# sourceURL=[module]\n//#
   \****************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
+<bpc-01
 
 eval("module.exports = require(\"next/head\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vZXh0ZXJuYWwgXCJuZXh0L2hlYWRcIj81ZWYyIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBIiwiZmlsZSI6Im5leHQvaGVhZC5qcyIsInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0gcmVxdWlyZShcIm5leHQvaGVhZFwiKTsiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///next/head\n");
 
@@ -194,7 +411,70 @@ eval("module.exports = require(\"next/router\");//# sourceURL=[module]\n//# sour
 /***/ (function(module, exports) {
 
 eval("module.exports = require(\"react/jsx-dev-runtime\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vZXh0ZXJuYWwgXCJyZWFjdC9qc3gtZGV2LXJ1bnRpbWVcIj9jZDkwIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBIiwiZmlsZSI6InJlYWN0L2pzeC1kZXYtcnVudGltZS5qcyIsInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0gcmVxdWlyZShcInJlYWN0L2pzeC1kZXYtcnVudGltZVwiKTsiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///react/jsx-dev-runtime\n");
+=======
+
+eval("module.exports = require(\"next/head\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vZXh0ZXJuYWwgXCJuZXh0L2hlYWRcIj81ZWYyIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBIiwiZmlsZSI6Im5leHQvaGVhZC5qcyIsInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0gcmVxdWlyZShcIm5leHQvaGVhZFwiKTsiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///next/head\n");
+
+/***/ }),
+
+/***/ "next/router":
+/*!******************************!*\
+  !*** external "next/router" ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+<HEAD
+eval("module.exports = require(\"next/router\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vZXh0ZXJuYWwgXCJuZXh0L3JvdXRlclwiP2Q4M2UiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEiLCJmaWxlIjoibmV4dC9yb3V0ZXIuanMiLCJzb3VyY2VzQ29udGVudCI6WyJtb2R1bGUuZXhwb3J0cyA9IHJlcXVpcmUoXCJuZXh0L3JvdXRlclwiKTsiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///next/router\n");
+
+/***/ }),
+
+/***/ "react/jsx-dev-runtime":
+/*!****************************************!*\
+  !*** external "react/jsx-dev-runtime" ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"react/jsx-dev-runtime\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vZXh0ZXJuYWwgXCJyZWFjdC9qc3gtZGV2LXJ1bnRpbWVcIj9jZDkwIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBIiwiZmlsZSI6InJlYWN0L2pzeC1kZXYtcnVudGltZS5qcyIsInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0gcmVxdWlyZShcInJlYWN0L2pzeC1kZXYtcnVudGltZVwiKTsiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///react/jsx-dev-runtime\n");
+function App({
+  Component,
+  pageProps
+}) {
+  return /*#__PURE__*/(0,jsx_runtime_.jsxs)(react_.ChakraProvider, {
+    theme: theme_0,
+    children: [/*#__PURE__*/jsx_runtime_.jsx(react_.CSSReset, {}), /*#__PURE__*/jsx_runtime_.jsx(SEO_SEO, {}), /*#__PURE__*/jsx_runtime_.jsx(Component, _objectSpread({}, pageProps))]
+  });
+}
+
+/***/ }),
+
+/***/ 426:
+/***/ (function(module) {
+
+"use strict";
+module.exports = require("@chakra-ui/react");;
+
+/***/ }),
+
+/***/ 282:
+/***/ (function(module) {
+
+"use strict";
+module.exports = require("react/jsx-runtime");;
+0dbc9eb53bc978d9e61a291a6ca276f0361aa133
+main
 
 /***/ })
 
-/******/ });
+};
+;
+
+// load runtime
+var __webpack_require__ = require("../webpack-runtime.js");
+__webpack_require__.C(exports);
+var __webpack_exec__ = function(moduleId) { return __webpack_require__(__webpack_require__.s = moduleId); }
+var __webpack_exports__ = (__webpack_exec__(515));
+module.exports = __webpack_exports__;
+
+})();

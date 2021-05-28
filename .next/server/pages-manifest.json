@@ -3,5 +3,9 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/": "pages/index.js",
+bpc-01
   "/signin": "pages/signin.js"
+  "/contactus": "pages/contactus.js",
+  "/next/dist/pages/_error": "pages/next/dist/pages/_error.js"
+main
 }
