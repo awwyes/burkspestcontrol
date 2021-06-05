@@ -28,7 +28,7 @@ export const Banner = () => (
     >
       <HStack spacing="3">
         <Icon as={BellIcon} fontSize="2xl" h="10" />
-        <Text fontWeight="medium" marginEnd="2" align="center">
+        <Text fontWeight="medium" marginEnd="2" align="center" fontSize="sm">
         Coronavirus response: Burks Pest Control remains committed and ready to help protect your family and home as an essential service provider in your community.
         </Text>
       </HStack>

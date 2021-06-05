@@ -10,8 +10,8 @@ export default function WithSubnavigation() {
   return (
     <Box>
       <Flex
-        bg={useColorModeValue("white", "gray.800")}
-        color={useColorModeValue("gray.600", "white")}
+        bg={useColorModeValue("white", "black")}
+        color={useColorModeValue("black", "yellow.500")}
         minH={"60px"}
         py={{ base: 2 }}
         px={{ base: 4 }}
@@ -31,6 +31,7 @@ export default function WithSubnavigation() {
               isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
             }
             variant={"ghost"}
+            color={useColorModeValue("black", "yellow.500")}
             aria-label={"Toggle Navigation"}
           />
         </Flex>
@@ -51,8 +52,9 @@ export default function WithSubnavigation() {
             as={"a"}
             fontSize={"sm"}
             fontWeight={400}
-            variant={"link"}
-            href={"/signin"}
+            variant={'link'}
+            href={'/signin'}
+            color={useColorModeValue("black", "yellow.500")}
           >
             Sign in
           </Button>
@@ -61,17 +63,20 @@ export default function WithSubnavigation() {
             fontSize={"sm"}
             fontWeight={600}
             color={"black"}
-            bg={"yellow.300"}
-            href={"/signup"}
+            bg={"yellow.500"}
+            href={'/signup'}
+            alignItems={"center"}
             _hover={{
               bg: "black",
-              color: "yellow.300"
+              color: "yellow.500"
             }}
+            
           >
             Sign Up
           </Button>
-          <DarkModeSwitch />
+          
         </Stack>
+        <DarkModeSwitch />
       </Flex>
 
       <Collapse in={isOpen} animateOpacity>
@@ -93,7 +98,7 @@ const DesktopNav = () => {
                 href={navItem.href ?? "/"}
                 fontSize={"sm"}
                 fontWeight={500}
-                color={useColorModeValue("gray.600", "gray.200")}
+                color={useColorModeValue("black", "yellow.500")}
                 _hover={{
                   textDecoration: "none",
                   color: useColorModeValue("gray.800", "white"),
@@ -107,7 +112,7 @@ const DesktopNav = () => {
               <PopoverContent
                 border={0}
                 boxShadow={"xl"}
-                bg={useColorModeValue("white", "gray.800")}
+                bg={useColorModeValue("white", "black")}
                 p={4}
                 rounded={"xl"}
                 minW={"sm"}
@@ -166,7 +171,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
 const MobileNav = () => {
   return (
     <Stack
-      bg={useColorModeValue("white", "gray.800")}
+      bg={useColorModeValue("white", "black")}
       p={4}
       display={{ md: "none" }}
     >
@@ -194,13 +199,14 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
       >
         <Text
           fontWeight={600}
-          color={useColorModeValue("gray.600", "gray.200")}
+          color={useColorModeValue("black", "yellow.500")}
         >
           {label}
         </Text>
         {children && (
           <Icon
             as={ChevronDownIcon}
+            color={useColorModeValue("black", "yellow.500")}
             transition={"all .25s ease-in-out"}
             transform={isOpen ? "rotate(180deg)" : ""}
             w={6}
@@ -220,7 +226,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
         >
           {children &&
             children.map((child) => (
-              <Link key={child.label} py={2} href={child.href}>
+              <Link key={child.label} py={2} color={useColorModeValue("black", "yellow.500")} href={child.href}>
                 {child.label}
               </Link>
             ))}
