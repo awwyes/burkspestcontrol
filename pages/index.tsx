@@ -1,4 +1,4 @@
-import {Flex, Stack} from '@chakra-ui/react'
+import {Flex, Stack, useColorModeValue} from '@chakra-ui/react'
 import Footer from '../components/FooterLayout/Footer'
 import Testimonals from '../components/TestimonalsLayout/Testimonals'
 import Pricing from '../components/PricingLayout/Pricing'
@@ -16,6 +16,7 @@ export default function Home() {
         <Stack
             as="main"
             align="center"
+            background={useColorModeValue("white", "black")}
         >
             <Flex
                 flexDirection="column"
