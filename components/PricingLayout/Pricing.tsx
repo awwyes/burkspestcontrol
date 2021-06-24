@@ -1,4 +1,4 @@
-import { Box, SimpleGrid, useColorModeValue } from '@chakra-ui/react'
+import { Box, color, SimpleGrid, useColorModeValue } from '@chakra-ui/react'
 import * as React from 'react'
 import { SiHive, SiMarketo, SiMicrosoft } from 'react-icons/si'
 import { ActionButton } from './ActionButton'
@@ -54,6 +54,7 @@ export default function Pricing () {
             'Free Updates',
           ],
         }}
+        color={useColorModeValue("white", "black")}
         icon={SiHive}
         button={<ActionButton variant="outline" borderWidth="2px">Buy now</ActionButton>}
       />
@@ -68,6 +69,7 @@ export default function Pricing () {
             'Free Updates',
           ],
         }}
+        color={useColorModeValue("white", "black")}
         icon={SiMarketo}
         button={
           <ActionButton variant="outline" borderWidth="2px">
