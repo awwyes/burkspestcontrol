@@ -53,10 +53,10 @@ export default function WithSubnavigation() {
             fontSize={"sm"}
             fontWeight={400}
             variant={'link'}
-            href={'/signin'}
+            href={'https://burkspestcontrol.securepayments.cardpointe.com/pay?'}
             color={useColorModeValue("black", "yellow.500")}
           >
-            Sign in
+            Pay Now
           </Button>
           <Button
             display={{ base: "none", md: "inline-flex" }}
@@ -64,7 +64,7 @@ export default function WithSubnavigation() {
             fontWeight={600}
             color={"black"}
             bg={"yellow.500"}
-            href={'/signup'}
+            href={'/signin'}
             alignItems={"center"}
             _hover={{
               bg: "black",
@@ -72,7 +72,7 @@ export default function WithSubnavigation() {
             }}
             
           >
-            Sign Up
+            Sign in
           </Button>
           
         </Stack>

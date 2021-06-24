@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Checkbox, Flex, FormControl, FormLabel, Heading, Input, Link, Stack, Image, Text, InputGroup, InputRightElement } from '@chakra-ui/react';
+import { Button, Checkbox, Flex, FormControl, Heading, Input, Link, Stack, Image, Text, InputGroup, InputRightElement, useColorModeValue } from '@chakra-ui/react';
 import { FaEyeSlash } from 'react-icons/fa'
 import { FiEye } from 'react-icons/fi'
 import SignInSocial from '../SignInSocialLayout/SignInSocial';
@@ -9,19 +9,23 @@ export default function SignIn() {
   const handleClick = () => setShow(!show)
 
     return (
-      <Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }}>
-        <Flex p={8} flex={1} align={'center'} justify={'center'} order={2}>
+      <Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }} background={useColorModeValue('white', 'black')}>
+        <Flex p={8} flex={1} align={'center'} justify={'center'} order={2} sx={{
+          ".css-3ctlsy>*:not(style)~*:not(style)": {
+            marginInlineStart: "0rem",
+            WebkitMarginStart: "0rem"
+          },
+        }}
+        >
           <Stack spacing={4} w={'full'} maxW={'md'}>
             <Heading fontSize={'2xl'}>Sign in to your account</Heading>
             <Text fontSize={'lg'} color={'gray.400'}>Don't have an account? <Link color={'blue.400'} href="/signup">Sign Up</Link> 🕷️
             </Text>
               <FormControl id="email">
-                {/* <FormLabel>Email address</FormLabel> */}
                 <Input type="email" placeholder="Email Address" />
               </FormControl>
               <InputGroup size="md">
                 <FormControl id="password">
-                  {/* <FormLabel>Password</FormLabel> */}
                   <Input type={show ? "text" : "password"} placeholder="Password" />
                   <InputRightElement width="4.5rem" pt="6px">
                     <Button h="1.75rem" size="sm" onClick={handleClick}>

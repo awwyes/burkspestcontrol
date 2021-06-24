@@ -31,6 +31,7 @@ export default function Pricing () {
             'Free Updates',
           ],
         }}
+        color={useColorModeValue("white", "black")}
         icon={SiMicrosoft}
         button={
           <ActionButton variant="outline" borderWidth="2px">
