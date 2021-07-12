@@ -5,7 +5,7 @@ import Pricing from '../components/PricingLayout/Pricing'
 import NavBar from '../components/NavBarLayout/NavBar'
 import Features from '../components/FeaturesLayout/Features'
 import { Banner } from '../components/BannerLayout/Banner'
-import Carousel from '../components/CarouselLayout/Carousel'
+import Carousel from '../components/ImageCTALayout/Carousel'
 
 export default function Home() {
     return (

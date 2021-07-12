@@ -13,24 +13,24 @@ import { useEffect } from 'react';
 export default function Carousel() {
   const slides = [
     {
-      img: "https://images.pexels.com/photos/2878019/pexels-photo-2878019.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
-      label: "First Slide",
-      description: "This is a 1st description"
+      img: "https://media.istockphoto.com/photos/bed-bug-waste1-picture-id139897782",
+      label: "Got a bed bug issue?",
+      description: "This is a picture of a bed bug infestation"
     },
     {
-      img: "https://images.pexels.com/photos/2599537/pexels-photo-2599537.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      label: "Second Slide",
-      description: "This is a 2nd description"
+      img: "https://media.istockphoto.com/photos/common-ant-on-the-kitchen-table-close-to-food-need-for-pest-control-picture-id1274283238",
+      label: "Got Ants?",
+      description: "This is a picture of ants feeding"
     },
     {
-      img: "https://images.pexels.com/photos/2714581/pexels-photo-2714581.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      label: "Third Slide",
-      description: "This is a 3rd description"
+      img: "https://images.unsplash.com/photo-1622601038146-4b341e5f1146?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3636&q=80",
+      label: "Asian Beetles",
+      description: "This is a picture of lady bugs"
     },
     {
-      img: "https://imagegoeshere.com",
-      label: "Fourth Slide",
-      description: "This is a 4th description"
+      img: "https://images.unsplash.com/photo-1567044060510-7c84e39f995e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3450&q=80",
+      label: "Bee infestation",
+      description: "This is a picture of honey bees"
     },
   ];
 
