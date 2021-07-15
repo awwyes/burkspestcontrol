@@ -2,11 +2,16 @@ import { Flex, Box, FormControl, FormLabel, Input, InputGroup, InputRightElement
 import { Formik, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import React from 'react';
+import { useState } from 'react';
 
 export default function SignUp() {
   const [show, setShow] = React.useState(false)
   const handleClick = () => setShow(!show)
+  const [showConfirm, setShowConfirm] = useState(false)
+  const handleClickConfirm = () => setShowConfirm(!showConfirm)
+
   return (
+    <>
     <Formik
       initialValues={{ firstName: '', lastName: '', email: '', password: '', confirmPassword: '', acceptedTerms: false }}
       validationSchema={Yup.object({
@@ -35,14 +40,13 @@ export default function SignUp() {
         }, 400);
       }}
     >
-      <Form>
         <Flex
-          minH={'100%'}
-          w={'100%'}
+          minH={'100vh'}
+          minW={'100vw'}
           align={'center'}
           justify={'center'}
           bg={useColorModeValue('white', 'black')}>
-          <Stack spacing={8} mx={'auto'} maxW={'lg'} pt={8}>
+          <Stack spacing={8} mx={'auto'} w={"100%"} maxW={'lg'} mb={8}>
             <Stack align={'center'}>
               <Heading fontSize={'4xl'} color={useColorModeValue('black', 'yellow.500')}>Create your account</Heading>
               <Text fontSize={'lg'} color={useColorModeValue('black', 'yellow.500')}>
@@ -51,30 +55,30 @@ export default function SignUp() {
             </Stack>
             <Box
               rounded={'lg'}
-              bg={useColorModeValue('white', 'gray.900')}
+              bg={useColorModeValue('white', 'black')}
               boxShadow={'lg'}
               w={'100%'}
               p={8}>
               <Stack spacing={4}>
                 <FormControl id="firstName">
-                  <FormLabel htmlFor="firstName">First Name</FormLabel>
-                  <Input type="text" placeholder="First Name" />
+                  <FormLabel htmlFor="firstName" color={useColorModeValue('black', 'yellow.500')}>First Name</FormLabel>
+                  <Input type="text" placeholder="First Name" background={ useColorModeValue('white', 'black')} _placeholder={{ color: useColorModeValue('gray', 'white')}} />
                   <ErrorMessage name="firstName" />
                 </FormControl>
                 <FormControl id="lastName">
-                  <FormLabel htmlFor="lastName">Last Name</FormLabel>
-                  <Input type="text" placeholder="Last Name" />
+                  <FormLabel htmlFor="lastName" color={useColorModeValue('black', 'yellow.500')}>Last Name</FormLabel>
+                  <Input type="text" placeholder="Last Name" background={ useColorModeValue('white', 'black')} _placeholder={{ color: useColorModeValue('gray', 'white')}} />
                   <ErrorMessage name="lastName" />
                 </FormControl>
                 <FormControl id="email">
-                  <FormLabel htmlFor="email">Email Address</FormLabel>
-                  <Input type="email" placeholder="Email Address" />
+                  <FormLabel htmlFor="email" color={useColorModeValue('black', 'yellow.500')}>Email Address</FormLabel>
+                  <Input type="email" placeholder="Email Address" background={ useColorModeValue('white', 'black')} _placeholder={{ color: useColorModeValue('gray', 'white')}} />
                   <ErrorMessage name="email" />
                 </FormControl>
                 <InputGroup size="md">
                   <FormControl id="password">
-                    <FormLabel htmlFor="password">Password</FormLabel>
-                    <Input pr="4.5rem" type={show ? "text" : "password"} placeholder="Password" />
+                    <FormLabel htmlFor="password" color={useColorModeValue('black', 'yellow.500')}>Password</FormLabel>
+                    <Input pr="4.5rem" type={show ? "text" : "password"} placeholder="Password" background={ useColorModeValue('white', 'black')} _placeholder={{ color: useColorModeValue('gray', 'white')}} />
                     <InputRightElement w="4.5rem" pt="2.4rem">
                       <Button h="1.75rem" size="sm" onClick={handleClick} color={useColorModeValue('black', 'black')} _hover={{ bg: useColorModeValue('yellow.500', 'black'), color: useColorModeValue('black', 'yellow.500')}}>
                         {show ? "Hide" : "Show"}
@@ -85,11 +89,11 @@ export default function SignUp() {
                 </InputGroup>
                 <InputGroup size="md">
                   <FormControl id="confirmPassword">
-                    <FormLabel htmlFor="confirmPassword">Confirm</FormLabel>
-                    <Input pr="4.5rem" type={show ? "text" : "password"} placeholder="Confirm Password" />
+                    <FormLabel htmlFor="confirmPassword" color={useColorModeValue('black', 'yellow.500')}>Confirm</FormLabel>
+                    <Input pr="4.5rem" type={show ? "text" : "password"} placeholder="Confirm Password" background={ useColorModeValue('white', 'black')} _placeholder={{ color: useColorModeValue('gray', 'white')}} />
                     <InputRightElement w="4.5rem" pt="2.4rem">
-                      <Button h="1.75rem" size="sm" onClick={handleClick} color={useColorModeValue('black', 'black')} _hover={{ bg: useColorModeValue('yellow.500', 'black'), color: useColorModeValue('black', 'yellow.500')}}>
-                        {show ? "Hide" : "Show"}
+                      <Button h="1.75rem" size="sm" onClick={handleClickConfirm} color={useColorModeValue('black', 'black')} _hover={{ bg: useColorModeValue('yellow.500', 'black'), color: useColorModeValue('black', 'yellow.500')}}>
+                        {showConfirm ? "Hide" : "Show"}
                       </Button>
                     </InputRightElement>
                     <ErrorMessage name="confirmPassword" />
@@ -100,7 +104,7 @@ export default function SignUp() {
                     direction={{ base: 'column', sm: 'row' }}
                     align={'start'}
                     justify={'space-between'}>
-                    <Checkbox colorScheme="yellow">
+                    <Checkbox colorScheme="yellow" color={useColorModeValue('black', 'yellow.500')}>
                       Accept <Link href="/">Terms and Condition</Link>
                     </Checkbox>
                   </Stack>
@@ -118,7 +122,12 @@ export default function SignUp() {
             </Box>
           </Stack>
         </Flex>
-      </Form>
     </Formik>
+    <div className="container">
+      <footer style={{background: 'black', color: 'yellow', textAlign: 'center'}}>
+        <p>All rights reserved. Burks Pest Control, LLC</p>
+      </footer>
+    </div>
+    </>
   );
 }

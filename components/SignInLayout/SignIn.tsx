@@ -49,7 +49,7 @@ export default function SignIn() {
             </Stack>
           </Stack>
         </Flex>
-        <Flex flex={1} order={1} m={0}>
+        <Flex flex={1} order={1} m={0} ms={[0, "0 !important"]}>
           <Image
             alt={'Login Image'}
             objectFit={'cover'}
