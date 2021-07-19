@@ -14,7 +14,7 @@ const Feature = ({ title, text, icon }: FeatureProps) => {
       <Flex
         w={16}
         h={16}
-        align={'center'}
+        alignSelf={'center'}
         justify={'center'}
         color={'black'}
         rounded={'full'}
@@ -22,8 +22,8 @@ const Feature = ({ title, text, icon }: FeatureProps) => {
         mb={1}>
         {icon}
       </Flex>
-      <Text fontWeight={600}>{title}</Text>
-      <Text color={'gray.600'}>{text}</Text>
+      <Text fontWeight={600} alignSelf={'center'}>{title}</Text>
+      <Text color={'gray.600'} alignSelf={'center'}>{text}</Text>
     </Stack>
   );
 };
@@ -33,21 +33,21 @@ export default function SimpleThreeColumns() {
     <Box p={16}>
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
         <Feature
-          icon={<Icon as={GiHangingSpider} w={10} h={10} />}
+          icon={<Icon as={GiHangingSpider} w={10} h={16} />}
           title={'Lifetime Support'}
           text={
             'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...'
           }
         />
         <Feature
-          icon={<Icon as={GiRat} w={10} h={10} />}
+          icon={<Icon as={GiRat} w={10} h={16} />}
           title={'Unlimited Donations'}
           text={
             'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...'
           }
         />
         <Feature
-          icon={<Icon as={GiRattlesnake} w={10} h={10} />}
+          icon={<Icon as={GiRattlesnake} w={10} h={16} />}
           title={'Instant Delivery'}
           text={
             'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...'

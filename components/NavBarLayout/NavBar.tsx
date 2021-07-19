@@ -1,8 +1,10 @@
-import { Box, Flex, Text, IconButton, Button, Stack, Collapse, Icon, Link, Popover, PopoverTrigger,
-        PopoverContent, useColorModeValue, useBreakpointValue, useDisclosure, } from "@chakra-ui/react";
-import { HamburgerIcon, CloseIcon, ChevronDownIcon, ChevronRightIcon, } from "@chakra-ui/icons";
+import { Box, Flex, Text, IconButton, Button, Stack, Collapse, Icon, Link, Popover, 
+  PopoverTrigger, PopoverContent, useColorModeValue, useDisclosure } from "@chakra-ui/react";
+import { HamburgerIcon, CloseIcon, ChevronDownIcon, ChevronRightIcon, PhoneIcon } from "@chakra-ui/icons";
 import DarkModeSwitch from "../DarkModeSwitch";
 import Logo from '../LogoLayout/Logo';
+import { FaDollarSign } from "react-icons/fa";
+import NextLink from 'next/link';
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
@@ -48,33 +50,40 @@ export default function WithSubnavigation() {
           direction={"row"}
           spacing={6}
         >
-          <Button
-            as={"a"}
-            fontSize={"sm"}
-            fontWeight={400}
-            variant={'link'}
-            href={'https://burkspestcontrol.securepayments.cardpointe.com/pay?'}
-            color={useColorModeValue("black", "yellow.500")}
-          >
-            Pay Now
-          </Button>
-          <Button
-            display={{ base: "none", md: "inline-flex" }}
-            fontSize={"sm"}
-            fontWeight={600}
-            color={"black"}
-            bg={"yellow.500"}
-            href={'/signin'}
-            alignItems={"center"}
-            _hover={{
-              bg: "black",
-              color: "yellow.500"
-            }}
-            
-          >
-            Sign in
-          </Button>
-          
+          <NextLink href="tel:+1-423-424-9958">
+            <Button
+              display={{ base: "none", md: "inline-flex" }}
+              fontSize={"sm"}
+              fontWeight={600}
+              color={"black"}
+              bg={"yellow.500"}
+              leftIcon={<PhoneIcon />}
+              alignItems={"center"}
+              _hover={{
+                bg: "black",
+                color: "yellow.500"
+              }}
+            >
+              Call
+            </Button>
+          </NextLink>
+          <NextLink href="https://burkspestcontrol.securepayments.cardpointe.com/pay?">
+            <Button
+              display={{ base: "none", md: "inline-flex" }}
+              fontSize={"sm"}
+              fontWeight={600}
+              color={"black"}
+              bg={"yellow.500"}
+              leftIcon={<FaDollarSign />}
+              alignItems={"center"}
+              _hover={{
+                bg: "black",
+                color: "yellow.500"
+              }}
+            >
+              Pay
+            </Button>
+          </NextLink>
         </Stack>
         <DarkModeSwitch />
       </Flex>
