@@ -55,7 +55,7 @@ export default function Carousel() {
     ml: `-${currentSlide * 100}%`,
   };
 
-  const SLIDES_INTERVAL_TIME = 3000;
+  const SLIDES_INTERVAL_TIME = 1000;
   const ANIMATION_DIRECTION = "right";
 
   useEffect(() => {
