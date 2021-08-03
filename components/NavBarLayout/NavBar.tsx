@@ -1,5 +1,5 @@
 import { Box, Flex, Text, IconButton, Button, Stack, Collapse, Icon, Link, Popover, 
-  PopoverTrigger, PopoverContent, useColorModeValue, useDisclosure } from "@chakra-ui/react";
+  PopoverTrigger, PopoverContent, useColorModeValue, useDisclosure, Circle, Tooltip } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, ChevronDownIcon, ChevronRightIcon, PhoneIcon } from "@chakra-ui/icons";
 import DarkModeSwitch from "../DarkModeSwitch";
 import Logo from '../LogoLayout/Logo';
@@ -51,43 +51,40 @@ export default function WithSubnavigation() {
           spacing={6}
         >
           <NextLink href="tel:+1-423-424-9958">
-            <Button
-              display={{ base: "none", md: "inline-flex" }}
-              fontSize={"sm"}
-              fontWeight={600}
-              color={"black"}
-              bg={"yellow.500"}
-              leftIcon={<PhoneIcon />}
-              alignItems={"center"}
-              _hover={{
-                bg: "black",
-                color: "yellow.500"
-              }}
-            >
-              Call
-            </Button>
+              <Circle
+                size="40px"
+                bg={useColorModeValue('yellow.500', 'yellow.500')}
+                color={"black"}
+                alignItems={"center"}
+                label="Call Burks Pest Control Today!" 
+                fontSize={"md"}
+                _hover={{
+                  bg: useColorModeValue('black', 'black'),
+                  color: "yellow.500"
+                }}
+              >
+                <PhoneIcon />
+              </Circle>
           </NextLink>
           <NextLink href="https://burkspestcontrol.securepayments.cardpointe.com/pay?">
-            <Button
-              display={{ base: "none", md: "inline-flex" }}
-              fontSize={"sm"}
-              fontWeight={600}
-              color={"black"}
-              bg={"yellow.500"}
-              leftIcon={<FaDollarSign />}
-              alignItems={"center"}
-              _hover={{
-                bg: "black",
-                color: "yellow.500"
-              }}
-            >
-              Pay
-            </Button>
+              <Circle
+                size="40px"
+                bg={useColorModeValue('yellow.500', 'yellow.500')}
+                color={"black"}
+                alignItems={"center"}
+                label="Secure Payment to Burks Pest Control"
+                fontSize={'md'}
+                _hover={{
+                  bg: useColorModeValue('black', 'black'),
+                  color: "yellow.500"
+                }}
+              >
+                <FaDollarSign />
+              </Circle>
           </NextLink>
         </Stack>
         <DarkModeSwitch />
       </Flex>
-
       <Collapse in={isOpen} animateOpacity>
         <MobileNav />
       </Collapse>
