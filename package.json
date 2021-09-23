@@ -11,7 +11,6 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.2.0",
-    "react-square-payment-form": "^0.7.2",
     "yup": "^0.32.9"
   },
   "scripts": {
