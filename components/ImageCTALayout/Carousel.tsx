@@ -1,13 +1,5 @@
 import React, { useState } from 'react';
-import {
-    Box,
-    Stack,
-    HStack,
-    Flex,
-    Image,
-    Text,
-    useColorModeValue,
-  } from '@chakra-ui/react';
+import { Box, Stack, HStack, Flex, Image, Text, useColorModeValue } from '@chakra-ui/react';
 import { useEffect } from 'react';
   
 export default function Carousel() {

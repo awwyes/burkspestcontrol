@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 import { Box, SimpleGrid, Icon, Text, Stack, Flex } from '@chakra-ui/react';
-import { GiHangingSpider, GiLadybug, GiAnt, GiRattlesnake, GiRat } from 'react-icons/gi';
+import { GiHangingSpider, GiRattlesnake, GiRat } from 'react-icons/gi';
 
 interface FeatureProps {
   title: string;
