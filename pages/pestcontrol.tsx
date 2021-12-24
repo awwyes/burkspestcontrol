@@ -4,6 +4,7 @@ import PestControl from '../components/PestControlLayout/PestControl'
 import PestControlCTA from '../components/PestControlLayout/PestControlCTALayout/PestControlCTA'
 import PestControlFeature from '../components/PestControlLayout/PestControlFeature/PestControlFeature'
 import PestControlSeasonalFeature from '../components/PestControlLayout/PestControlSeasonalCTALayout/PestControlSeasonal'
+import Footer from '../components/FooterLayout/Footer'
 
 export default function PestControlPage() {
   return (
@@ -13,6 +14,7 @@ export default function PestControlPage() {
       <PestControlCTA />
       <PestControlFeature />
       <PestControlSeasonalFeature />
+      <Footer />
     </>
   );
 }

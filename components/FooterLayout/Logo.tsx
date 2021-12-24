@@ -2,7 +2,7 @@ import { chakra, HTMLChakraProps, useColorModeValue, useToken } from '@chakra-ui
 import * as React from 'react'
 
 export default function Logo(props: HTMLChakraProps<'svg'>) {
-    const [white, black] = useToken('colors', ['white', 'gray.800'])
+    const [white, black] = useToken('colors', ['white', 'black'])
     return (
         <chakra.svg
             color={useColorModeValue('blue.500', 'blue.300')}
