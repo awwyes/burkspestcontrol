@@ -12,6 +12,6 @@ export const BannerLink = (props: HTMLChakraProps<'a'>) => (
     borderColor={useColorModeValue("black", "yellow.500")}
     fontWeight="medium"
     rounded="base"
-    _hover={{ bg: 'whiteAlpha.200' }}
+    _hover={{ bg: useColorModeValue('black', 'yellow.500'), color: useColorModeValue('yellow.500', 'black') }}
   />
 )
