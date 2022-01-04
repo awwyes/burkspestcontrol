@@ -129,9 +129,9 @@ export default function Quote() {
             <Divider />
             <FormControl isRequired py={3}>
                 <HStack spacing={3}>
-                    <FormLabel htmlfor="firstName">First Name</FormLabel>
+                    <FormLabel htmlFor="firstName">First Name</FormLabel>
                     <Input name="firstName" label="First Name" w={60} />
-                    <FormLabel htmlfor="lastName">Last Name</FormLabel>
+                    <FormLabel htmlFor="lastName">Last Name</FormLabel>
                     <Input name="lastName" label="Last Name" w={60} />
                 </HStack>
             </FormControl>
@@ -141,12 +141,12 @@ export default function Quote() {
             </Heading>
             <Divider />
             <FormControl isRequired py={3}>
-              <FormLabel htmlfor="address">Address</FormLabel>
+              <FormLabel htmlFor="address">Address</FormLabel>
               <Input name="address" label="Address" mb={3} />
               <HStack spacing={2}>
                 <FormLabel htmlFor="city">City</FormLabel>
                 <Input name="city" label="City" w={60} />
-                <FormLabel htmlfor="state">State</FormLabel>
+                <FormLabel htmlFor="state">State</FormLabel>
                 <Select name="state" label="State" w={20}>
                   <option value="AL">AL</option>
                   <option value="TN" defaultValue={"TN"}>
@@ -156,14 +156,14 @@ export default function Quote() {
                 <FormLabel htmlFor="zipCode">Zip Code</FormLabel>
                 <Input name="zipCode" label="Zip Code" w={'206px'} />
               </HStack>
-                <FormLabel htmlfor="phone" py={3}>Phone</FormLabel>
+                <FormLabel htmlFor="phone" py={3}>Phone</FormLabel>
                 <Input name="phone" type="phone" w={80} />
-                <FormLabel htmlfor="email" py={3}>Email</FormLabel>
+                <FormLabel htmlFor="email" py={3}>Email</FormLabel>
                 <Input name="email" type="email" w={80} />
                 <FormLabel name="preferContact" py={3}>How would you prefer us to contact you?</FormLabel>
                 <Select
                     name="preferContact"
-                    selectProps={{
+                    selectprops={{
                         placeholder: "How would you prefer us to contact you?",
                     }}
                     w={80}
