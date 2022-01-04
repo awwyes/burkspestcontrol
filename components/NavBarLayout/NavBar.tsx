@@ -23,7 +23,7 @@ export default function WithSubnavigation() {
         align={"center"}
       >
         <Flex
-          flex={{ base: 1, md: "auto" }}
+          flex={{ base: 0, md: "auto" }}
           ml={{ base: -2 }}
           display={{ base: "flex", md: "none" }}
         >

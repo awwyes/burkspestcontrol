@@ -34,7 +34,7 @@ export default function PestControl() {
                                 fontSize={{ base: "1xl", sm: 'xl' }}
                                 color={useColorModeValue("yellow.500", "black")}
                             >
-                                Having pest issues between scheduled treatments? We’ll come back with a solution, free of charge until it’s resolved.
+                                Having Pest Issues? Need a real pro to give you a solution?
                             </chakra.span>
                         </chakra.span>
                         <Stack
@@ -54,6 +54,7 @@ export default function PestControl() {
                                     border="solid transparent"
                                     fontWeight="bold"
                                     rounded="md"
+                                    href="/residential/quote"
                                     color={useColorModeValue("black", "black")}
                                     bg={useColorModeValue("yellow.500", "yellow.500")}
                                     _hover={{

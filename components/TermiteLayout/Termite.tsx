@@ -46,7 +46,7 @@ export default function Termite() {
           fontSize={{ base: "lg", md: "xl" }}
           color={useColorModeValue("black", "gray.300")}
         >
-          Protect your home from termites with the proven combination of Cook’s Pest Control and the TERMITE® System.
+          Protect your home from termites with the proven combination of Burks Pest Control and the Annual Trelona Termite Baiting System .
         </chakra.p>
         <Stack
           direction={{ base: "column", sm: "row" }}
