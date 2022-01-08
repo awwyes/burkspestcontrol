@@ -2,8 +2,44 @@ import { Container, Flex, Box, Heading, Text, IconButton, Button, VStack, HStack
         FormLabel, Input, InputGroup, InputLeftElement, Textarea, useColorModeValue } from '@chakra-ui/react';
   import { MdPhone, MdEmail, MdLocationOn, MdOutlineEmail, } from 'react-icons/md';
   import { BsPerson, BsInstagram, BsTwitter, BsFacebook } from 'react-icons/bs';
-  
+  import React, { useState } from 'react';
+
   export default function ContactUs() {
+    const [fullname, setFullName]  = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+    const [submitted, setSubmitted] = useState(false);
+
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      console.log('Sending');
+
+      let data = {
+        fullname,
+        email,
+        message
+      }
+
+      fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json, text/plain, */*',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      }).then((res) => {
+        console.log('Response received');
+        if (res.status === 200) {
+          console.log('Response succeeded!');
+          setSubmitted(true);
+          setFullName('');
+          setEmail('')
+          setMessage('')
+        }
+      })
+    }
+    
+
     return (
       <Container bg={useColorModeValue('white','black')} maxW="full" mt={0} centerContent overflow="hidden">
         <Flex>
@@ -104,7 +140,9 @@ import { Container, Flex, Box, Heading, Text, IconButton, Button, VStack, HStack
                               pointerEvents="none"
                               children={<BsPerson color="gray.800" />}
                             />
-                            <Input type="text" size="md" />
+                            <Input type="text" size="md" value={fullname} onChange={(e) => {
+                              setFullName(e.target.value);
+                            }} />
                           </InputGroup>
                         </FormControl>
                         <FormControl id="name">
@@ -114,12 +152,19 @@ import { Container, Flex, Box, Heading, Text, IconButton, Button, VStack, HStack
                               pointerEvents="none"
                               children={<MdOutlineEmail color="gray.800" />}
                             />
-                            <Input type="text" size="md" />
+                            <Input type="email" size="md" name='email' value={email} onChange={(e) => {
+                              setEmail(e.target.value);
+                            }} />
                           </InputGroup>
                         </FormControl>
                         <FormControl id="name">
                           <FormLabel>Message</FormLabel>
                           <Textarea
+                            name='message'
+                            value={message}
+                            onChange={(e) => {
+                              setMessage(e.target.value);
+                            }}
                             borderColor="gray.300"
                             _hover={{
                               borderRadius: 'gray.300',
@@ -130,9 +175,11 @@ import { Container, Flex, Box, Heading, Text, IconButton, Button, VStack, HStack
                         <FormControl id="name" float="right">
                           <Button
                             variant="solid"
-                            bg="#0D74FF"
-                            color="white"
-                            _hover={{ color: useColorModeValue('black', 'white') }}>
+                            type="submit"
+                            onClick={(e)=>{handleSubmit(e)}}
+                            bg={useColorModeValue('yellow.500', 'yellow.500')}
+                            color={useColorModeValue('black', 'black')}
+                            _hover={{ color: useColorModeValue('yellow.500', 'yellow.500'), bg: useColorModeValue('black', 'black') }}>
                             Send Message
                           </Button>
                         </FormControl>
