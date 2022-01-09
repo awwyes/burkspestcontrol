@@ -82,7 +82,7 @@ export default function Carousel() {
               >
                 {sid + 1} / {slidesCount}
               </Text>
-              <Image src={slide.img} boxSize="full" backgroundSize="cover" />
+              <Image src={slide.img} boxSize="full" alt={slide.alt} backgroundSize="cover" />
               <Stack
                 p="8px 12px"
                 pos="absolute"
