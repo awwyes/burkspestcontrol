@@ -6,21 +6,25 @@ export default function Carousel() {
   const slides = [
     {
       img: "https://media.istockphoto.com/photos/bed-bug-waste1-picture-id139897782",
+      alt: "This is a picture of a bed bug infestation",
       label: "Got a bed bug issue?",
       description: "This is a picture of a bed bug infestation"
     },
     {
       img: "https://media.istockphoto.com/photos/common-ant-on-the-kitchen-table-close-to-food-need-for-pest-control-picture-id1274283238",
+      alt: "This is a picture of ants feeding",
       label: "Got Ants?",
       description: "This is a picture of ants feeding"
     },
     {
       img: "https://images.unsplash.com/photo-1622601038146-4b341e5f1146?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3636&q=80",
+      alt: "This is a picture of lady bugs",
       label: "Asian Beetles",
       description: "This is a picture of lady bugs"
     },
     {
       img: "https://images.unsplash.com/photo-1567044060510-7c84e39f995e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3450&q=80",
+      alt: "This is a picture of honey bees",
       label: "Bee infestation",
       description: "This is a picture of honey bees"
     },

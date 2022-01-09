@@ -1,7 +1,7 @@
 import { ReactElement } from 'react'
 import NavBar from '../NavBarLayout/NavBar'
 import Footer from '../FooterLayout/Footer'
-import { Container, Box, SimpleGrid, Image, Flex, Heading, Text, Stack, StackDivider, Icon, useColorModeValue } from '@chakra-ui/react'
+import { Container, Box, SimpleGrid, Flex, Heading, Text, Stack, StackDivider, Icon, useColorModeValue } from '@chakra-ui/react'
 import { FaHardHat }  from 'react-icons/fa'
 import { GiFamilyHouse, GiGloves } from 'react-icons/gi'
 import { BiCheckShield } from 'react-icons/bi'
