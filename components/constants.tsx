@@ -9,4 +9,4 @@ export const PRODUCTION_URL = 'https://burkspestcontrol.com';
  export const SEO_KEYWORDS =
    'burks pest control, burkspest control, burkspestcontrol, ooltewah tn, cleveland tn, ';
  export const SEO_OG_IMAGE = '../public/favicon.png';
- export const SEO_TWITTER_IMAGE = '../publick/twitter.png';
+ export const SEO_TWITTER_IMAGE = '../public/twitter.png';
