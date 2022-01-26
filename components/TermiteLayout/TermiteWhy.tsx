@@ -19,20 +19,21 @@ import { Container, Stack, Flex, Box, Heading, Text, useColorModeValue, } from '
               <Text
                 as={'span'}
                 position={'relative'}
+                fontFamily={'sans-serif'}
                 >
-                Why Sentricon?
+                Why Trelona?
               </Text>
             </Heading>
             <Text color={'gray.500'}>
-                Research indicates the Sentricon® System is the superior choice for termite protection and treatment. 
-                Our entomologists were impressed by the Sentricon® System’s unmatched effectiveness during early trials
-                and, subsequently, Burks Pest Control was chosen among the first authorized installers of Sentricon 
+                Research indicates the Trelona® System is the superior choice for termite protection and treatment. 
+                Our entomologists were impressed by the Trelona® System’s unmatched effectiveness during early trials
+                and, subsequently, Burks Pest Control was chosen among the first authorized installers of Trelona 
                 during the mid-1990s. Upon seeing a dramatic reduction in new termite infestations, Burks chose to make
-                Sentricon® our company’s exclusive method of termite protection.
+                Trelona® our company’s exclusive method of termite protection.
             </Text>
             <Text color={'gray.500'}>
-                The original Sentricon System® is the only termite product awarded the EPA’s Presidential Green Chemistry
-                Challenge Award. The U.S. Government trusts Sentricon to protect historical landmarks such as Independence
+                The original Trelona System® is the only termite product awarded the EPA’s Presidential Green Chemistry
+                Challenge Award. The U.S. Government trusts Trelona to protect historical landmarks such as Independence
                 Hall, the Statue of Liberty, and the White House. Doesn’t your home deserve the same kind of protection as
                 these national treasures? Call Burks Pest Control today for a free evaluation.
             </Text>
@@ -46,13 +47,12 @@ import { Container, Stack, Flex, Box, Heading, Text, useColorModeValue, } from '
             <Box
               position={'relative'}
               height={'300px'}
-              rounded={'2xl'}
+              borderRadius={'2xl'}
               boxShadow={'2xl'}
-              width={'full'}
               overflow={'hidden'}>
                 <iframe 
                     width="560" 
-                    height="560" 
+                    height="300"
                     src="https://www.youtube.com/embed/ECvftMCzh9I" 
                     title="YouTube video player" 
                     frameBorder="0" 

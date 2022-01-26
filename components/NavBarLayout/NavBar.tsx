@@ -263,11 +263,11 @@ const NAV_ITEMS: Array<NavItem> = [
     children: [
       {
         label: "Mosquito Control",
-        href: "#",
+        href: "/residential/mosquitos",
       },
       {
         label: "Beg bug Removal",
-        href: "#",
+        href: "/residential/bedbug",
       },
     ],
   },
