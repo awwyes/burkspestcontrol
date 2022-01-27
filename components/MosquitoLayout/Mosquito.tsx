@@ -1,4 +1,5 @@
 import { Button, Flex, Heading, Image, Stack, Text, Box, useColorModeValue, } from '@chakra-ui/react';
+import FreeQuoteButton from '../FreeQuoteButton/FreeQuoteButton';
   
   export default function Mosquito() {
     return (
@@ -24,7 +25,7 @@ import { Button, Flex, Heading, Image, Stack, Text, Box, useColorModeValue, } fr
                 Burks Mosquito Control will rapidly reduce the number of mosquitos around your home. <strong>Guaranteed.</strong> Ready to reclaim your yard and patio? Contact us today for a free quote.
             </Text>
             <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
-              <Button rounded={'full'} bg={useColorModeValue('yellow.500', 'yellow.500')} color={useColorModeValue('black', 'black')} _hover={{ bg: useColorModeValue('black', 'black'), color: useColorModeValue('yellow.500', 'yellow.500') }}>How It Works</Button>
+              <FreeQuoteButton />
             </Stack>
           </Stack>
         </Flex>

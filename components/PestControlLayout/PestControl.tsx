@@ -1,6 +1,7 @@
-import { Box, Flex, chakra, Stack, Link, Icon, useColorModeValue } from '@chakra-ui/react'
+import { Box, Flex, chakra, useColorModeValue } from '@chakra-ui/react'
 import * as React from 'react'
-import { IoIosArrowForward } from 'react-icons/io'
+import FreeQuoteButton from '../FreeQuoteButton/FreeQuoteButton'
+
 
 export default function PestControl() {
     return (
@@ -37,35 +38,7 @@ export default function PestControl() {
                                 Having Pest Issues? Need a real pro to give you a solution?
                             </chakra.span>
                         </chakra.span>
-                        <Stack
-                            justifyContent={{ base: "left", md: "center" }}
-                            direction={{ base: "column", sm: "row" }}
-                            spacing={2}
-                            mt={2}
-                        >
-                            <Box display="inline-flex" rounded="md" shadow="md">
-                                <Link
-                                    w="full"
-                                    display="inline-flex"
-                                    alignItems="center"
-                                    justifyContent="center"
-                                    px={5}
-                                    py={3}
-                                    border="solid transparent"
-                                    fontWeight="bold"
-                                    rounded="md"
-                                    href="/residential/quote"
-                                    color={useColorModeValue("black", "black")}
-                                    bg={useColorModeValue("yellow.500", "yellow.500")}
-                                    _hover={{
-                                        bg: useColorModeValue("black", "black"),
-                                        color: useColorModeValue("yellow.500", "yellow.500")
-                                    }}
-                                >
-                                    Free Quote &nbsp;<Icon as={IoIosArrowForward}  />
-                                </Link>
-                            </Box>
-                        </Stack>
+                    <FreeQuoteButton />
                 </Box>
             </Flex>
         </Flex>

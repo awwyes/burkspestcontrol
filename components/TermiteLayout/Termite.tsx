@@ -1,4 +1,5 @@
 import { Stack, Flex, Box, Image, useColorModeValue, chakra } from '@chakra-ui/react';
+import FreeQuoteButton from '../FreeQuoteButton/FreeQuoteButton';
   
 export default function Termite() {
   return (
@@ -53,27 +54,7 @@ export default function Termite() {
           mb={{ base: 4, md: 8 }}
           spacing={2}
         >
-          <Box display="inline-flex" rounded="md" shadow="md">
-            <chakra.a
-              display="inline-flex"
-              alignItems="center"
-              justifyContent="center"
-              px={5}
-              py={3}
-              border="solid transparent"
-              fontWeight="bold"
-              w="full"
-              rounded="md"
-              color={useColorModeValue("yellow.500", "black")}
-              bg={useColorModeValue("black", "yellow.500")}
-              _hover={{
-                bg: useColorModeValue("yellow.500", "black"),
-                color: useColorModeValue("black", 'yellow.500')
-              }}
-            >
-              Sign up for free
-            </chakra.a>
-          </Box>
+          <FreeQuoteButton />
         </Stack>
       </Box>
     </Flex>
