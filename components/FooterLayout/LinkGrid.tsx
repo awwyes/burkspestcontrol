@@ -6,19 +6,20 @@ export default function LinkGrid (props: SimpleGridProps) {
     return (
         <SimpleGrid columns={2} {...props}>
         <Box minW="130px">
-          <FooterHeading mb="4">Product</FooterHeading>
+          <FooterHeading mb="4">Services</FooterHeading>
           <Stack>
-            <Link>How it works</Link>
-            <Link>Pricing</Link>
-            <Link>Use Cases</Link>
+            <Link href='/residential/'>Pest Control</Link>
+            <Link href='/residential/termites'>Termites</Link>
+            <Link href='/residential/mosquitos'>Mosquitos</Link>
+            <Link href='/commercial'>Commercial</Link>
           </Stack>
         </Box>
         <Box minW="130px">
-          <FooterHeading mb="4">Legal</FooterHeading>
+          <FooterHeading mb="4">Customer Care</FooterHeading>
           <Stack>
-            <Link>Privacy</Link>
-            <Link>Terms</Link>
-            <Link>License</Link>
+            <Link href='https://www.facebook.com/BurksPestControl/'>Follow us on Facebook</Link>
+            <Link href='tel:+1-423-424-9958'>Call Us Today!</Link>
+            <Link href='/contactus'>Contact Us</Link>
           </Stack>
         </Box>
       </SimpleGrid>

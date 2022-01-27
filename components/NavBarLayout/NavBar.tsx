@@ -252,11 +252,11 @@ interface NavItem {
 const NAV_ITEMS: Array<NavItem> = [
   {
     label: "Pest Control",
-    href: "/pestcontrol",
+    href: '/residential/',
   },
   {
     label: "Termites",
-    href: "/termites",
+    href: "/residential/termites",
   },
   {
     label: "Specialize Services",
