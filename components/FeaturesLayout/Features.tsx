@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 import { Box, SimpleGrid, Icon, Text, Stack, Flex } from '@chakra-ui/react';
-import { GiHangingSpider, GiRattlesnake, GiRat } from 'react-icons/gi';
+import { GiHangingSpider, GiRattlesnake, GiRat, GiAnt } from 'react-icons/gi';
 
 interface FeatureProps {
   title: string;
@@ -31,7 +31,7 @@ const Feature = ({ title, text, icon }: FeatureProps) => {
 export default function SimpleThreeColumns() {
   return (
     <Box p={16}>
-      <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
+      <SimpleGrid columns={{ base: 1, md: 4 }} spacing={10}>
         <Feature
           icon={<Icon as={GiHangingSpider} w={10} h={16} />}
           title={'Lifetime Support'}
@@ -49,6 +49,13 @@ export default function SimpleThreeColumns() {
         <Feature
           icon={<Icon as={GiRattlesnake} w={10} h={16} />}
           title={'Instant Delivery'}
+          text={
+            'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...'
+          }
+        />
+        <Feature
+          icon={<Icon as={GiAnt} w={10} h={16} />}
+          title={'Full Coverage'}
           text={
             'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...'
           }
