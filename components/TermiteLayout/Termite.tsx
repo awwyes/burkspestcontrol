@@ -14,7 +14,7 @@ export default function Termite() {
         <Image
           w="full"
           shadow="2xl"
-          src="https://qspestcontrol.com.au/wp-content/uploads/2021/07/Temrites2.jpg"
+          src="/termites.gif"
           alt="Picture of active termites"
         />
       </Box>

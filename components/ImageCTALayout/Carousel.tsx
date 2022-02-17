@@ -5,13 +5,13 @@ import { useEffect } from 'react';
 export default function Carousel() {
   const slides = [
     {
-      img: "https://media.istockphoto.com/photos/bed-bug-waste1-picture-id139897782",
-      alt: "This is a picture of a bed bug infestation",
-      label: "Got a bed bug issue?",
-      description: "This is a picture of a bed bug infestation"
+      img: "/termites.jpg",
+      alt: "This is a picture of termites",
+      label: "Got a termite issue?",
+      description: "This is a picture of a termite infestation"
     },
     {
-      img: "https://media.istockphoto.com/photos/common-ant-on-the-kitchen-table-close-to-food-need-for-pest-control-picture-id1274283238",
+      img: "/ants.jpg",
       alt: "This is a picture of ants feeding",
       label: "Got Ants?",
       description: "This is a picture of ants feeding"
