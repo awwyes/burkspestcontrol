@@ -184,18 +184,6 @@ export default function ContactUs() {
                       icon={<BsFacebook size={"28px"} />}
                     />
                     <IconButton
-                      aria-label="instagram"
-                      variant="ghost"
-                      size="lg"
-                      href=""
-                      isRound={true}
-                      _hover={{
-                        bg: useColorModeValue("yellow.500", "yellow.500"),
-                        color: useColorModeValue("black", "black"),
-                      }}
-                      icon={<BsInstagram size="28px" />}
-                    />
-                    <IconButton
                       aria-label="twitter"
                       variant="ghost"
                       size="lg"
