@@ -5,7 +5,6 @@ import {
     List,
     ListIcon,
     ListItem,
-    Text,
     useColorModeValue,
     VStack,
   } from '@chakra-ui/react'
@@ -28,7 +27,7 @@ import {
   export const PricingCard = (props: PricingCardProps) => {
     const { data, icon, button, ...rest } = props
     const { features, price, name } = data
-    const accentColor = useColorModeValue('yellow.500', 'yellow.500')
+    const accentColor = useColorModeValue('yellow.500', 'black')
   
     return (
       <Card rounded={{ sm: 'xl' }} {...rest}>
@@ -42,9 +41,6 @@ import {
           <Heading size="3xl" fontWeight="inherit" lineHeight="0.9em">
             {price}
           </Heading>
-          <Text fontWeight="inherit" fontSize="2xl">
-            / yr
-          </Text>
         </Flex>
         <List spacing="4" mb="8" maxW="28ch" mx="auto">
           {features.map((feature, index) => (
