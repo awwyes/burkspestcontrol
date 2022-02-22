@@ -4,7 +4,7 @@ import { Copyright } from "./Copyright";
 import LinkGrid from "./LinkGrid";
 import Logo from "../LogoLayout/Logo";
 import SocialMediaLinks from "./SocialMediaLinks";
-import SubscribeForm from "./SubscribeForm";
+import SubscribeForm from "./Legal";
 
 export default function Footer() {
   return (

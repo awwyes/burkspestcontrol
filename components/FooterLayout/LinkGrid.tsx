@@ -18,7 +18,6 @@ export default function LinkGrid (props: SimpleGridProps) {
           <FooterHeading mb="4">Customer Care</FooterHeading>
           <Stack>
             <Link href='https://www.facebook.com/BurksPestControl/'>Follow us on Facebook</Link>
-            <Link href='tel:+1-423-424-9958'>Call Us Today!</Link>
             <Link href='/contactus'>Contact Us</Link>
           </Stack>
         </Box>
