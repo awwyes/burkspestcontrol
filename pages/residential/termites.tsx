@@ -1,8 +1,9 @@
 import React from 'react'
-import NavBar from '../../components/NavBarLayout/NavBar'
 import Termite from '../../components/TermiteLayout/Termite'
-import Footer from '../../components/FooterLayout/Footer'
-import TermiteWhy from '../../components/TermiteLayout/TermiteWhy';
+import TermiteWhy from '../../components/TermiteLayout/TermiteWhy'
+import dynamic from 'next/dynamic';
+const NavBar = dynamic(() => import('../../components/NavBarLayout/NavBar'));
+const Footer = dynamic(() => import('../../components/FooterLayout/Footer'));
 
 export default function TermitePage() {
   return (

@@ -1,6 +1,4 @@
 import { ReactElement } from 'react'
-import NavBar from '../NavBarLayout/NavBar'
-import Footer from '../FooterLayout/Footer'
 import { Container, Box, SimpleGrid, Flex, Heading, Text, Stack, StackDivider, Icon, useColorModeValue } from '@chakra-ui/react'
 import { FaHardHat }  from 'react-icons/fa'
 import { GiFamilyHouse, GiGloves } from 'react-icons/gi'
@@ -32,7 +30,6 @@ const Feature = ({ text, icon, iconBg }: FeatureProps) => {
 export default function Covid19() {
     return (
         <>
-        <NavBar />
           <Box background={useColorModeValue('white', 'black')}>
             <Container maxW={'5xl'} py={12}>
             <SimpleGrid columns={{ base: 1, md: 1 }} spacing={10}>
@@ -95,7 +92,6 @@ export default function Covid19() {
               </Stack>
             </SimpleGrid>
           </Container>
-          <Footer />
           </Box>
       </>
     );

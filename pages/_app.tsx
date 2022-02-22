@@ -1,4 +1,4 @@
-import { ChakraProvider, ColorModeProvider, CSSReset } from '@chakra-ui/react';
+import { ChakraProvider, CSSReset } from '@chakra-ui/react';
 import SEO from '../components/SEO/SEO'
 import theme from '../theme';
 

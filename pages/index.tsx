@@ -1,8 +1,9 @@
-import {Flex, Stack, useColorModeValue} from '@chakra-ui/react'
-import Footer from '../components/FooterLayout/Footer'
+import { Flex, Stack, useColorModeValue } from '@chakra-ui/react'
+import dynamic from 'next/dynamic';
+const NavBar = dynamic(() => import('../components/NavBarLayout/NavBar'));
+const Footer = dynamic(() => import('../components/FooterLayout/Footer'));
 import Testimonals from '../components/TestimonalsLayout/Testimonals'
 import Pricing from '../components/PricingLayout/Pricing'
-import NavBar from '../components/NavBarLayout/NavBar'
 import Features from '../components/FeaturesLayout/Features'
 import { Banner } from '../components/BannerLayout/Banner'
 import Carousel from '../components/ImageCTALayout/Carousel'

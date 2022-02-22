@@ -1,11 +1,14 @@
 import Quote from '../../components/ResidentialQuoteLayout/ResidentialQuote'
-import Navbar from '../../components/NavBarLayout/NavBar'
+import dynamic from 'next/dynamic';
+const NavBar = dynamic(() => import('../../components/NavBarLayout/NavBar'));
+const Footer = dynamic(() => import('../../components/FooterLayout/Footer'));
 
 export default function ResidentialQuote() {
     return (
         <>
-            <Navbar />
+            <NavBar />
             <Quote />
+            <Footer />
         </>
     )
 }

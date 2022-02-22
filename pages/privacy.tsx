@@ -1,6 +1,7 @@
 import React from 'react'
-import NavBar from '../components/NavBarLayout/NavBar'
-import Footer from '../components/FooterLayout/Footer'
+import dynamic from 'next/dynamic';
+const NavBar = dynamic(() => import('../components/NavBarLayout/NavBar'));
+const Footer = dynamic(() => import('../components/FooterLayout/Footer'));
 import PrivacyPolicy from '../components/PrivacyPolicyLayout/PrivacyPolicy'
 
 export default function PrivacyPage() {

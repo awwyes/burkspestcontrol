@@ -1,10 +1,11 @@
 import React from 'react'
-import NavBar from '../../components/NavBarLayout/NavBar'
+import dynamic from 'next/dynamic';
+const NavBar = dynamic(() => import('../../components/NavBarLayout/NavBar'));
+const Footer = dynamic(() => import('../../components/FooterLayout/Footer'));
 import PestControl from '../../components/PestControlLayout/PestControl'
 import PestControlCTA from '../../components/PestControlLayout/PestControlCTALayout/PestControlCTA'
 import PestControlFeature from '../../components/PestControlLayout/PestControlFeature/PestControlFeature'
 import PestControlSeasonalFeature from '../../components/PestControlLayout/PestControlSeasonalCTALayout/PestControlSeasonal'
-import Footer from '../../components/FooterLayout/Footer'
 
 export default function PestControlPage() {
   return (
