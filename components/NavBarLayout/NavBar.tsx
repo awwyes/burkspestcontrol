@@ -51,6 +51,7 @@ export default function WithSubnavigation() {
           spacing={6}
         >
           <NextLink href="tel:+1-423-424-9958">
+            <Tooltip label="Call Burks Pest Control Today!" aria-label="Click here to call Burks Pest Control Today">
               <Circle
                 size="40px"
                 bg={useColorModeValue('yellow.500', 'yellow.500')}
@@ -65,8 +66,10 @@ export default function WithSubnavigation() {
               >
                 <PhoneIcon />
               </Circle>
+            </Tooltip>
           </NextLink>
           <NextLink href="https://burkspestcontrol.securepayments.cardpointe.com/pay?">
+            <Tooltip label="Secure Payment to Burks Pest Control" aria-label="Click Here for a secure payment to Burks Pest Control">
               <Circle
                 size="40px"
                 bg={useColorModeValue('yellow.500', 'yellow.500')}
@@ -81,6 +84,7 @@ export default function WithSubnavigation() {
               >
                 <FaDollarSign />
               </Circle>
+            </Tooltip>
           </NextLink>
         </Stack>
         <DarkModeSwitch />

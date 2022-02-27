@@ -20,13 +20,13 @@ export default function PestControlFeature() {
             fontFamily={'sans-serif'}
             fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
             lineHeight={'110%'}
-            paddingBottom={12}
+            paddingBottom={6}
             color={useColorModeValue("black", "yellow.500")}
           >
             Burks Pest Control Process
           </Heading>
         </Stack>
-        <SimpleGrid columns={{ base: 1, md: 2 }} spacingX="10" spacingY={{ base: '8', md: '14' }} color={useColorModeValue("black", "yellow.500")}>
+        <SimpleGrid textAlign={'center'} columns={{ base: 1, md: 2 }} spacingX="10" spacingY={{ base: '8', md: '14' }} color={useColorModeValue("black", "yellow.500")}>
           <Feature title="Inspection" icon={<FcInspection />}>
             We identify conditions that encourage infestations and recommend a control program.
           </Feature>

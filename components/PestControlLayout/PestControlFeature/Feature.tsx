@@ -11,7 +11,7 @@ export const Feature = (props: FeatureProps) => {
   const { title, children, icon } = props
   return (
     <Stack spacing={{ base: '3', md: '6' }} direction={{ base: 'column', md: 'row' }}>
-      <Box fontSize="6xl">{icon}</Box>
+      <Box fontSize="6xl" alignSelf={{ base: 'center'}}>{icon}</Box>
       <Stack spacing="1">
         <Text fontWeight="extrabold" fontSize="lg">
           {title}
