@@ -9,6 +9,7 @@ export default function SatisfactionGuarantee() {
             <SimpleGrid columns={{ base: 1, md: 4 }} spacingX="10" spacingY={{ base: '8', md: '14' }}>
                 <Image
                     bgColor={useColorModeValue('yellow.500', 'white')}
+                    boxShadow={'2xl'}
                     borderRadius={'2xl'}
                     objectFit="contain"
                     boxSize="100%"
@@ -16,6 +17,7 @@ export default function SatisfactionGuarantee() {
                 />
                 <Image
                     bgColor={useColorModeValue('yellow.500', 'white')}
+                    boxShadow={'2xl'}
                     borderRadius={'2xl'}
                     objectFit="contain"
                     boxSize="100%"
@@ -23,6 +25,7 @@ export default function SatisfactionGuarantee() {
                 />
                 <Image
                     bgColor={useColorModeValue('yellow.500', 'white')}
+                    boxShadow={'2xl'}
                     borderRadius={'2xl'}
                     objectFit="contain"
                     boxSize="100%"
@@ -30,6 +33,7 @@ export default function SatisfactionGuarantee() {
                 />
                 <Image
                     bgColor={useColorModeValue('yellow.500', 'white')}
+                    boxShadow={'2xl'}
                     borderRadius={'2xl'}
                     objectFit="contain"
                     boxSize="100%"
