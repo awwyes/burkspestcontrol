@@ -21,7 +21,7 @@ export default function SatisfactionGuarantee() {
                     borderRadius={'2xl'}
                     objectFit="contain"
                     boxSize="100%"
-                    src={'/basf.png'}
+                    src={'/Basf.png'}
                 />
                 <Image
                     bgColor={useColorModeValue('yellow.500', 'white')}
