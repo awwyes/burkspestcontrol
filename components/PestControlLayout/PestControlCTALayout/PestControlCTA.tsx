@@ -11,9 +11,8 @@ export default function PestControlCTA() {
         mx="auto"
       >
       <Box
-        w={{ base: "full", md: 11 / 12, xl: 9 / 12 }}
+        w={{ base: "full", md: 'full', xl: 'full' }}
         mx="auto"
-        pr={{ md: 20 }}
       >
         <chakra.h2
           fontSize={{ base: "3xl", sm: "4xl" }}
@@ -74,15 +73,17 @@ export default function PestControlCTA() {
         >
         </Stack>
       </Box>
-      <Box w={{ base: "full", md: 10 / 18 }} mx="auto" textAlign="center">
-        <Image
-          h="xl"
-          w="3xl"
-          rounded="xl"
-          src="/IMG_8273.jpeg"
-          alt="EPS"
-        />
-      </Box>
+      <Flex>
+        <Box w={{ base: "full", md: 'full' }} mx="auto" mt={{ base: '24', sm: '0', md: '20' }} ml={{ base: '1', sm: '0', md: '1'}} textAlign="center">
+          <Image
+            h={{ base: 'sm' }}
+            w={{ base: '8xl', sm: '8xl' }}
+            rounded="xl"
+            src="/IMG_8273.jpeg"
+            alt="EPS"
+          />
+        </Box>
+      </Flex>
     </Flex>
     )
 }
