@@ -1,6 +1,6 @@
 import { Box, Flex, Text, IconButton, Button, Stack, Collapse, Icon, Link, Popover, 
   PopoverTrigger, PopoverContent, useColorModeValue, useDisclosure, Circle, Tooltip } from "@chakra-ui/react";
-import { HamburgerIcon, CloseIcon, ChevronDownIcon, ChevronRightIcon, PhoneIcon } from "@chakra-ui/icons";
+import { HamburgerIcon, CloseIcon, ChevronDownIcon, ChevronLeftIcon, PhoneIcon } from "@chakra-ui/icons";
 import DarkModeSwitch from "../DarkModeSwitch";
 import Logo from '../LogoLayout/Logo';
 import { FaDollarSign } from "react-icons/fa";
@@ -149,13 +149,13 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
       display={"block"}
       p={2}
       rounded={"md"}
-      _hover={{ bg: useColorModeValue("yellow.500", "gray.900") }}
+      _hover={{ bg: useColorModeValue("yellow.500", "black") }}
     >
       <Stack direction={"row"} align={"center"}>
         <Box>
           <Text
             transition={"all .3s ease"}
-            _groupHover={{ color: "yellow.500" }}
+            _groupHover={{ color: useColorModeValue("black", 'white') }}
             fontWeight={500}
           >
             {label}
@@ -171,7 +171,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
           align={"center"}
           flex={1}
         >
-          <Icon color={"yellow.500"} w={5} h={5} as={ChevronRightIcon} />
+          <Icon color={useColorModeValue("black", 'white')} w={5} h={5} as={ChevronLeftIcon} />
         </Flex>
       </Stack>
     </Link>

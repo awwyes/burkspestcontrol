@@ -10,7 +10,7 @@ export default function SatisfactionGuarantee() {
                 <Image
                     bgColor={useColorModeValue('yellow.500', 'white')}
                     borderRadius={'2xl'}
-                    objectFit="cover"
+                    objectFit="contain"
                     boxSize="100%"
                     src={'/bayer.png'}
                 />
