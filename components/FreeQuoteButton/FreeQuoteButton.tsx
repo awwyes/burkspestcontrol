@@ -1,8 +1,12 @@
 import { IoIosArrowForward } from "react-icons/io";
 import * as React from "react";
 import { Box, Stack, Link, Icon, useColorModeValue } from "@chakra-ui/react";
+interface FeatureProps {
+  text: string;
+}
 
-export default function FreeQuoteButton() {
+export default function FreeQuoteButton({text}: FeatureProps) {
+
   return (
     <Stack
       justifyContent={{ base: "left", md: "center" }}
@@ -29,7 +33,7 @@ export default function FreeQuoteButton() {
             color: useColorModeValue("yellow.500", "yellow.500"),
           }}
         >
-          Free Quote &nbsp;
+          {text} &nbsp;
           <Icon as={IoIosArrowForward} />
         </Link>
       </Box>

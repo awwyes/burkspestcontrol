@@ -1,15 +1,6 @@
-import {
-  Stack,
-  Flex,
-  Button,
-  Text,
-  VStack,
-  useBreakpointValue,
-  useColorModeValue,
-} from '@chakra-ui/react';
+import { Stack, Flex, Text, VStack, useBreakpointValue, useColorModeValue } from '@chakra-ui/react';
 import * as React from 'react'
 import FreeQuoteButton from '../FreeQuoteButton/FreeQuoteButton'
-
 
 export default function PestControl() {
     return (
@@ -45,10 +36,10 @@ export default function PestControl() {
             Having Pest Issues? Need a real pro to give you a solution?
           </Text>
           <Stack direction={'row'}>
-            <FreeQuoteButton />
+            <FreeQuoteButton text={'Free Quote'} />
           </Stack>
         </Stack>
       </VStack>
     </Flex>
-    )
+  );
 }

@@ -21,7 +21,7 @@ export default function SatisfactionGuarantee() {
                     borderRadius={'2xl'}
                     objectFit="contain"
                     boxSize="100%"
-                    src={'/Basf.png'}
+                    src={'/ensystex.jpeg'}
                 />
                 <Image
                     bgColor={useColorModeValue('yellow.500', 'white')}
@@ -29,7 +29,7 @@ export default function SatisfactionGuarantee() {
                     borderRadius={'2xl'}
                     objectFit="contain"
                     boxSize="100%"
-                    src={'/zoecon.png'}
+                    src={'/rockwell-labs.webp'}
                 />
                 <Image
                     bgColor={useColorModeValue('yellow.500', 'white')}

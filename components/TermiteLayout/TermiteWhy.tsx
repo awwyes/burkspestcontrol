@@ -26,16 +26,10 @@ import { Container, Stack, Flex, Box, Heading, Text, useColorModeValue, } from '
             </Heading>
             <Text color={'gray.500'}>
                 Research indicates the Trelona® System is the superior choice for termite protection and treatment. 
-                Our entomologists were impressed by the Trelona® System’s unmatched effectiveness during early trials
-                and, subsequently, Burks Pest Control was chosen among the first authorized installers of Trelona 
-                during the mid-1990s. Upon seeing a dramatic reduction in new termite infestations, Burks chose to make
-                Trelona® our company’s exclusive method of termite protection.
-            </Text>
-            <Text color={'gray.500'}>
-                The original Trelona System® is the only termite product awarded the EPA’s Presidential Green Chemistry
-                Challenge Award. The U.S. Government trusts Trelona to protect historical landmarks such as Independence
-                Hall, the Statue of Liberty, and the White House. Doesn’t your home deserve the same kind of protection as
-                these national treasures? Call Burks Pest Control today for a free evaluation.
+                Entomologist were impressed by the Trelona® System’s unmatched effectiveness during early trials
+                and, subsequently, Burks Pest Control was chosen among the first authorized installers of Trelona. 
+                Upon seeing a dramatic reduction in new termite infestations, Burks Pest Control chose to make
+                Trelona® our company’s exclusive method of termite protection. Call Burks Pest Control today for a free evaluation.
             </Text>
           </Stack>
           <Flex

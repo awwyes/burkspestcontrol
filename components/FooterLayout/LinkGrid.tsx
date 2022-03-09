@@ -15,10 +15,12 @@ export default function LinkGrid (props: SimpleGridProps) {
         </Stack>
       </Box>
       <Box minW="130px">
-        <FooterHeading mb="4">Customer Care</FooterHeading>
+        <FooterHeading mb="4">Social</FooterHeading>
         <Stack>
           <Link href='https://www.facebook.com/BurksPestControl/'>Follow us on Facebook</Link>
           <Link href='/contactus'>Contact Us</Link>
+          <Link href='https://www.tiktok.com/@burkspestcontrol/'>Follow us on TikTok</Link>
+          <Link href={'/residential/quote'}>Free Quote</Link>
         </Stack>
       </Box>
       <Box minW="130px">

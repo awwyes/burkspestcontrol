@@ -1,8 +1,10 @@
 import { Stack, Flex, Box, Image, useColorModeValue, chakra } from '@chakra-ui/react';
 import FreeQuoteButton from '../FreeQuoteButton/FreeQuoteButton';
+import TermiteWhy from './TermiteWhy';
   
 export default function Termite() {
   return (
+    <>
     <Flex
       direction={{ base: "column", md: "row" }}
       bg={useColorModeValue("white", "black")}
@@ -47,16 +49,18 @@ export default function Termite() {
           fontSize={{ base: "lg", md: "xl" }}
           color={useColorModeValue("black", "gray.300")}
         >
-          Protect your home from termites with the proven combination of Burks Pest Control and the Annual Trelona Termite Baiting System .
+          Protect your home from termites with the proven combination of Burks Pest Control and the Annual Trelona Termite Baiting System.
         </chakra.p>
         <Stack
           direction={{ base: "column", sm: "row" }}
           mb={{ base: 4, md: 8 }}
           spacing={2}
         >
-          <FreeQuoteButton />
+          <FreeQuoteButton text='Free Quote' />
         </Stack>
       </Box>
     </Flex>
+    <TermiteWhy />
+    </>
   );
 }
