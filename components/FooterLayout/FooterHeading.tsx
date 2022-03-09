@@ -5,7 +5,7 @@ import * as React from 'react'
 export default function FooterHeading (props: HeadingProps) {
     return (
         <Heading
-            as="h4"
+            as="h1"
             color={useColorModeValue('gray.600', 'gray.400')}
             fontSize="sm"
             fontWeight="semibold"
