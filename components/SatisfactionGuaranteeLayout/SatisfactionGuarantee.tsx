@@ -13,6 +13,7 @@ export default function SatisfactionGuarantee() {
                     borderRadius={'2xl'}
                     objectFit="contain"
                     boxSize="100%"
+                    willChange={"transform"}
                     _hover={{
                         transform: "translateY(-10px)"
                     }}
@@ -25,6 +26,7 @@ export default function SatisfactionGuarantee() {
                     borderRadius={'2xl'}
                     objectFit="contain"
                     boxSize="100%"
+                    willChange={"transform"}
                     _hover={{
                         transform: "translateY(-10px)"
                     }}
@@ -37,6 +39,7 @@ export default function SatisfactionGuarantee() {
                     borderRadius={'2xl'}
                     objectFit="contain"
                     boxSize="100%"
+                    willChange={"transform"}
                     _hover={{
                         transform: "translateY(-10px)"
                     }}
@@ -49,6 +52,7 @@ export default function SatisfactionGuarantee() {
                     borderRadius={'2xl'}
                     objectFit="contain"
                     boxSize="100%"
+                    willChange={"transform"}
                     _hover={{
                         transform: "translateY(-10px)"
                     }}
