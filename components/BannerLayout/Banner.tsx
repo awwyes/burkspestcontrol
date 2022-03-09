@@ -33,7 +33,7 @@ export const Banner = () => (
         </Text>
       </HStack>
       <BannerLink w={{ base: 'full', sm: 'auto' }} flexShrink={0}>
-        Learn More
+        Covid-19 Update
       </BannerLink>
       <CloseButton variant="md" onClick={onCloseBanner} />
     </Stack>
