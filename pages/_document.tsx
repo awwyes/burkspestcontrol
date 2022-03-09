@@ -22,7 +22,7 @@ export default class MyDocument extends Document {
                     `,
                         }}
                     />
-                    <link rel="apple-touch-icon" href="/example.png" sizes="180x180" />
+                    <link rel="apple-touch-icon" href="/BPCIcon.png" sizes="180x180" />
                 </Head>
                 <body>
                     <Main />
