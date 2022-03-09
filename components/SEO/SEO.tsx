@@ -1,8 +1,9 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import { SEO_TITLE, SEO_DESCRIPTION, SEO_KEYWORDS, SEO_OG_IMAGE, SEO_TWITTER_IMAGE, PRODUCTION_URL } from '../constants'
+import { SEO_VIEWPORT, SEO_TITLE, SEO_DESCRIPTION, SEO_KEYWORDS, SEO_OG_IMAGE, SEO_TWITTER_IMAGE, PRODUCTION_URL } from '../constants'
 
 export type SEOProps = {
+    viewport?: string;
     title?: string;
     description?: string;
     keywords?: string;
@@ -16,6 +17,7 @@ export type SEOProps = {
 }
 
 export const SEO = ({
+    viewport = SEO_VIEWPORT,
     description = SEO_DESCRIPTION,
     keywords = SEO_KEYWORDS,
     title = SEO_TITLE,
@@ -27,6 +29,7 @@ export const SEO = ({
 
     return(
         <Head>
+            <meta name="viewport" content={viewport} />
             <meta name="description" content={description} />
             <meta name="keywords" content={keywords} />
             <title>{title}</title>
