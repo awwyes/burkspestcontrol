@@ -13,6 +13,10 @@ export default function SatisfactionGuarantee() {
                     borderRadius={'2xl'}
                     objectFit="contain"
                     boxSize="100%"
+                    _hover={{
+                        transform: "translateY(-10px)"
+                    }}
+                    alt={"Bayer logo"}
                     src={'/bayer.png'}
                 />
                 <Image
@@ -21,6 +25,10 @@ export default function SatisfactionGuarantee() {
                     borderRadius={'2xl'}
                     objectFit="contain"
                     boxSize="100%"
+                    _hover={{
+                        transform: "translateY(-10px)"
+                    }}
+                    alt={"Ensystex logo"}
                     src={'/ensystex.jpeg'}
                 />
                 <Image
@@ -29,6 +37,10 @@ export default function SatisfactionGuarantee() {
                     borderRadius={'2xl'}
                     objectFit="contain"
                     boxSize="100%"
+                    _hover={{
+                        transform: "translateY(-10px)"
+                    }}
+                    alt={"Rockwell Labs logo"}
                     src={'/rockwell-labs.webp'}
                 />
                 <Image
@@ -37,6 +49,10 @@ export default function SatisfactionGuarantee() {
                     borderRadius={'2xl'}
                     objectFit="contain"
                     boxSize="100%"
+                    _hover={{
+                        transform: "translateY(-10px)"
+                    }}
+                    alt={"Aprehend logo"}
                     src={'/aprehend.png'}
                 />
             </SimpleGrid>
