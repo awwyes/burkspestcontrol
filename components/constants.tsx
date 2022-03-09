@@ -4,6 +4,7 @@ export const PRODUCTION_URL = 'https://burkspestcontrol.com';
  * SEO constants
  */
  export const SEO_VIEWPORT = 'width=device-width, initial-scale=1';
+ export const SEO_THEMECOLOR = "white";
  export const SEO_TITLE = 'Burks Pest Control';
  export const SEO_DESCRIPTION =
    'A growing open-source collection of hand-crafted Chakra UI templates ready to drop into your React project.';
