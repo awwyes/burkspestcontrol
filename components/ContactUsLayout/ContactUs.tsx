@@ -1,14 +1,12 @@
-import { Container, Flex, Box, Heading, Text, IconButton, Button,
-        VStack, HStack, Wrap, WrapItem, FormControl, FormLabel,
-        Input, InputGroup, InputLeftElement, Textarea, useColorModeValue,
-      } from "@chakra-ui/react";
-import { MdPhone, MdEmail, MdLocationOn, MdOutlineEmail } from "react-icons/md";
-import { BsPerson, BsInstagram, BsTwitter, BsFacebook } from "react-icons/bs";
+import { Box, Button, Flex, FormControl, FormLabel, Heading, IconButton, Input, InputGroup,
+  InputLeftElement, Link, Stack, Textarea, Tooltip, useColorModeValue, VStack } from '@chakra-ui/react';
+import { MdOutlineEmail } from "react-icons/md";
+import { BsPerson, BsTwitter, BsFacebook } from "react-icons/bs";
+import { FaTiktok } from 'react-icons/fa';
 import React, { useState } from "react";
-import NextLink from "next/link";
 
 export default function ContactUs() {
-  const [fullname, setFullName] = useState("");
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
@@ -18,7 +16,7 @@ export default function ContactUs() {
     console.log("Sending");
 
     let data = {
-      fullname,
+      name,
       email,
       message,
     };
@@ -33,9 +31,10 @@ export default function ContactUs() {
     }).then((res) => {
       console.log("Response received");
       if (res.status === 200) {
+        alert("Message has been sent!")
         console.log("Response succeeded!");
         setSubmitted(true);
-        setFullName("");
+        setName("");
         setEmail("");
         setMessage("");
       }
@@ -43,243 +42,177 @@ export default function ContactUs() {
   };
 
   return (
-    <Container
-      bg={useColorModeValue("white", "black")}
-      maxW="full"
-      mt={0}
-      centerContent
-      overflow="hidden"
-    >
-      <Flex>
-        <Box
-          bg={useColorModeValue("black", "black")}
-          color="white"
-          borderRadius="lg"
-          m={{ sm: 4, md: 16, lg: 10 }}
-          p={{ sm: 5, md: 5, lg: 16 }}
-        >
-          <Box p={4}>
-            <Wrap spacing={{ base: 20, sm: 3, md: 5, lg: 20 }}>
-              <WrapItem>
-                <Box>
-                  <Heading>Contact</Heading>
-                  <Text mt={{ sm: 3, md: 3, lg: 5 }} color="gray.500">
-                    Fill up the form below to contact
-                  </Text>
-                  <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
-                    <VStack pl={0} spacing={3} alignItems="flex-start">
-                      <NextLink href="tel:+1-423-424-9958">
-                        <Button
-                          size="md"
-                          height="48px"
-                          width="200px"
-                          _active={{
-                            bg: useColorModeValue("black", "black"),
-                            color: useColorModeValue(
-                              "yellow.500",
-                              "yellow.500"
-                            ),
-                          }}
-                          _hover={{
-                            bg: useColorModeValue("black", "black"),
-                            color: useColorModeValue(
-                              "yellow.500",
-                              "yellow.500"
-                            ),
-                          }}
-                          bg={useColorModeValue("black", "black")}
-                          color={useColorModeValue("yellow.500", "yellow.500")}
-                          leftIcon={
-                            <MdPhone
-                              color={useColorModeValue(
-                                "yellow.500",
-                                "yellow.500"
-                              )}
-                              size="20px"
-                            />
-                          }
-                        >
-                          +1 (423) 424-9958
-                        </Button>
-                      </NextLink>
-                      <NextLink href={"mailto:burkspestcontrol@gmail.com"}>
-                        <Button
-                          size="md"
-                          height="48px"
-                          width="200px"
-                          _active={{
-                            border: "0px solid #fffff",
-                            bg: useColorModeValue("black", "black"),
-                            color: useColorModeValue(
-                              "yellow.500",
-                              "yellow.500"
-                            ),
-                          }}
-                          _hover={{
-                            bg: useColorModeValue("black", "black"),
-                            color: useColorModeValue(
-                              "yellow.500",
-                              "yellow.500"
-                            ),
-                          }}
-                          bg={useColorModeValue("black", "black")}
-                          color={useColorModeValue("yellow.500", "yellow.500")}
-                          leftIcon={
-                            <MdEmail
-                              color={useColorModeValue(
-                                "yellow.500",
-                                "yellow.500"
-                              )}
-                              size="20px"
-                            />
-                          }
-                        >
-                          burkspestcontrol@gmail.com
-                        </Button>
-                      </NextLink>
-                      <Button
-                        size="md"
-                        height="48px"
-                        width="200px"
-                        _active={{
-                          bg: useColorModeValue("black", "black"),
-                          color: useColorModeValue("yellow.500", "yellow.500"),
+    <Flex
+      bg={useColorModeValue('white', 'black')}
+      align="center"
+      justify="center"
+      id="contact">
+      <Box
+        borderRadius="lg"
+        m={{ base: 5, md: 16, lg: 10 }}
+        p={{ base: 5, lg: 16 }}>
+        <Box>
+          <VStack spacing={{ base: 4, md: 8, lg: 20 }}>
+            <Heading
+              fontSize={{
+                base: '4xl',
+                md: '5xl',
+              }}
+              as={'h1'}
+              fontFamily={'sans-serif'}
+              color={useColorModeValue('black', 'yellow.500')}>
+              Get in Touch
+            </Heading>
+
+            <Stack
+              spacing={{ base: 4, md: 8, lg: 20 }}
+              direction={{ base: 'column', md: 'row' }}>
+              <Stack
+                align="center"
+                justify="space-around"
+                direction={{ base: 'row', md: 'column' }}>
+                
+                <Tooltip
+                  label={''}
+                  closeOnClick={false}
+                  hasArrow>
+                  <Link href='https://www.facebook.com/BurksPestControl/'>
+                  <IconButton
+                    aria-label="facebook"
+                    variant="ghost"
+                    size="lg"
+                    fontSize="3xl"
+                    icon={<BsFacebook />}
+                    color={useColorModeValue('black', 'yellow.500')}
+                    _hover={{
+                      bg: useColorModeValue('black', 'yellow.500'),
+                      color: useColorModeValue('yellow.500', 'black'),
+                    }}
+                    isRound
+                  />
+                  </Link>
+                </Tooltip>
+
+                <Link href="https://twitter.com/Burkspestcont">
+                  <IconButton
+                    aria-label="twitter"
+                    variant="ghost"
+                    size="lg"
+                    icon={<BsTwitter size="28px" />}
+                    color={useColorModeValue('black', 'yellow.500')}
+                    _hover={{
+                      bg: useColorModeValue('black', 'yellow.500'),
+                      color: useColorModeValue('yellow.500', 'black'),
+                    }}
+                    isRound
+                  />
+                </Link>
+
+                <Link href="#">
+                  <IconButton
+                    aria-label="tiktok"
+                    variant="ghost"
+                    size="lg"
+                    icon={<FaTiktok size="28px" />}
+                    color={useColorModeValue('black', 'yellow.500')}
+                    _hover={{
+                      bg: useColorModeValue('black', 'yellow.500'),
+                      color: useColorModeValue('yellow.500', 'black'),
+                    }}
+                    isRound
+                  />
+                </Link>
+              </Stack>
+
+              <Box
+                bg={useColorModeValue('black', 'white')}
+                borderRadius="lg"
+                p={8}
+                color={useColorModeValue('white', 'black')}
+                shadow="base">
+                <VStack spacing={5}>
+                  <FormControl id="name" action="/api/contact" isRequired>
+                    <FormLabel>Name</FormLabel>
+
+                    <InputGroup>
+                      <InputLeftElement children={<BsPerson />} />
+                      <Input 
+                        type="text" 
+                        name="name" 
+                        placeholder="Your Name"
+                        borderColor={useColorModeValue('yellow.500', 'gray.800')}
+                        borderWidth={'thin'}
+                        _placeholder={{ color: useColorModeValue('white', 'black')}} 
+                        color={useColorModeValue('black', 'black')} 
+                        value={name}
+                        onChange={(e) => {
+                          setName(e.target.value);
                         }}
-                        _hover={{
-                          bg: useColorModeValue("black", "black"),
-                          color: useColorModeValue("yellow.500", "yellow.500"),
+                      />
+                    </InputGroup>
+                  </FormControl>
+
+                  <FormControl id="email" action="/api/contact" isRequired>
+                    <FormLabel>Email</FormLabel>
+
+                    <InputGroup>
+                      <InputLeftElement children={<MdOutlineEmail />} />
+                      <Input
+                        type="email"
+                        name="email"
+                        placeholder="Your Email"
+                        borderColor={useColorModeValue('yellow.500', 'gray.800')}
+                        borderWidth={'thin'}
+                        _placeholder={{ color: useColorModeValue('white', 'black')}} 
+                        color={useColorModeValue('black', 'black')}
+                        value={email}
+                        onChange={(e) => {
+                          setEmail(e.target.value);
                         }}
-                        bg={useColorModeValue("black", "black")}
-                        color={useColorModeValue("yellow.500", "yellow.500")}
-                        leftIcon={
-                          <MdLocationOn
-                            color={useColorModeValue(
-                              "yellow.500",
-                              "yellow.500"
-                            )}
-                            size="20px"
-                          />
-                        }
-                      >
-                        Ooltewah, Tennessee
-                      </Button>
-                    </VStack>
-                  </Box>
-                  <HStack
-                    mt={{ lg: 10, md: 10 }}
-                    spacing={5}
-                    px={5}
-                    alignItems="flex-start"
-                  >
-                    <IconButton
-                      aria-label="facebook"
-                      variant="ghost"
-                      size="lg"
-                      href="https://www.facebook.com/BurksPestControl/"
-                      isRound={true}
-                      _hover={{
-                        bg: useColorModeValue("yellow.500", "yellow.500"),
-                        color: useColorModeValue("black", "black"),
+                      />
+                    </InputGroup>
+                  </FormControl>
+
+                  <FormControl id="message" action="/api/contact" isRequired>
+                    <FormLabel>Message</FormLabel>
+
+                    <Textarea
+                      name="message"
+                      placeholder="Your Message"
+                      rows={6}
+                      resize="none"
+                      borderColor={useColorModeValue('yellow.500', 'gray.800')}
+                      borderWidth={'thin'}
+                      _placeholder={{ color: useColorModeValue('white', 'black')}} 
+                      color={useColorModeValue('black', 'black')}
+                      value={message}
+                      onChange={(e) => {
+                        setMessage(e.target.value);
                       }}
-                      icon={<BsFacebook size={"28px"} />}
                     />
-                    <IconButton
-                      aria-label="twitter"
-                      variant="ghost"
-                      size="lg"
-                      href="https://twitter.com/Burkspestcont"
-                      isRound={true}
-                      _hover={{
-                        bg: useColorModeValue("yellow.500", "yellow.500"),
-                        color: useColorModeValue("black", "black"),
-                      }}
-                      icon={<BsTwitter size="28px" />}
-                    />
-                  </HStack>
-                </Box>
-              </WrapItem>
-              <WrapItem>
-                <Box bg="white" borderRadius="lg">
-                  <Box m={8} color="#0B0E3F">
-                    <VStack spacing={5}>
-                      <FormControl id="name" action="/api/contact">
-                        <FormLabel>Your Name</FormLabel>
-                        <InputGroup borderColor="#E0E1E7">
-                          <InputLeftElement
-                            pointerEvents="none"
-                            children={<BsPerson color="gray.800" />}
-                          />
-                          <Input
-                            type="text"
-                            size="md"
-                            value={fullname}
-                            onChange={(e) => {
-                              setFullName(e.target.value);
-                            }}
-                          />
-                        </InputGroup>
-                      </FormControl>
-                      <FormControl id="email" action="/api/contact">
-                        <FormLabel>Email</FormLabel>
-                        <InputGroup borderColor="#E0E1E7">
-                          <InputLeftElement
-                            pointerEvents="none"
-                            children={<MdOutlineEmail color="gray.800" />}
-                          />
-                          <Input
-                            type="email"
-                            size="md"
-                            name="email"
-                            value={email}
-                            onChange={(e) => {
-                              setEmail(e.target.value);
-                            }}
-                          />
-                        </InputGroup>
-                      </FormControl>
-                      <FormControl id="message" action="/api/contact">
-                        <FormLabel>Message</FormLabel>
-                        <Textarea
-                          name="message"
-                          value={message}
-                          onChange={(e) => {
-                            setMessage(e.target.value);
-                          }}
-                          borderColor="gray.300"
-                          _hover={{
-                            borderRadius: "gray.300",
-                          }}
-                          placeholder="message"
-                        />
-                      </FormControl>
-                      <FormControl id="name" float="right">
-                        <Button
-                          variant="solid"
-                          type="submit"
-                          onClick={(e) => {
-                            handleSubmit(e);
-                          }}
-                          bg={useColorModeValue("yellow.500", "yellow.500")}
-                          color={useColorModeValue("black", "black")}
-                          _hover={{
-                            color: useColorModeValue(
-                              "yellow.500",
-                              "yellow.500"
-                            ),
-                            bg: useColorModeValue("black", "black"),
-                          }}
-                        >
-                          Send Message
-                        </Button>
-                      </FormControl>
-                    </VStack>
-                  </Box>
-                </Box>
-              </WrapItem>
-            </Wrap>
-          </Box>
+                  </FormControl>
+
+                  <Button
+                    colorScheme="yellow.500"
+                    bg="yellow.500"
+                    color={useColorModeValue('black', 'black')}
+                    _hover={{
+                      bg: 'black',
+                      color: 'yellow.500'
+                    }}
+                    type="submit"
+                    onClick={(e) => {
+                      handleSubmit(e);
+                    }}
+                    isFullWidth>
+                    Send Message
+                  </Button>
+                </VStack>
+              </Box>
+            </Stack>
+          </VStack>
         </Box>
-      </Flex>
-    </Container>
+      </Box>
+    </Flex>
   );
 }

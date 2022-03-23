@@ -20,11 +20,15 @@ export type SEOProps = {
 export const SEO = ({
     viewport = SEO_VIEWPORT,
     themeColor = SEO_THEMECOLOR,
+    title = SEO_TITLE,
     description = SEO_DESCRIPTION,
     keywords = SEO_KEYWORDS,
-    title = SEO_TITLE,
+    ogTitle = SEO_TITLE,
+    ogDescription = SEO_DESCRIPTION,
     ogImage = SEO_OG_IMAGE,
     ogUrl = PRODUCTION_URL,
+    twitterTitle = SEO_TITLE,
+    twitterDescription = SEO_DESCRIPTION,
     twitterImage = SEO_TWITTER_IMAGE,
 }: SEOProps) => {
     const router = useRouter();
@@ -36,10 +40,10 @@ export const SEO = ({
             <meta name="description" content={description} />
             <meta name="keywords" content={keywords} />
             <title>{title}</title>
-            <meta property="og:title" content={title} />
-            <meta property="og:description" content={description} />
+            <meta property="og:title" content={ogTitle} />
+            <meta property="og:description" content={ogDescription} />
             <meta property="og:image" content={ogImage} />
-            <meta property="og:site_name" content={SEO_TITLE} />
+            <meta property="og:site_name" content={ogTitle} />
             <meta property="og:url" content={`${ogUrl}${router.asPath}`} />
             <meta property="og:type" content={'website'} />
             <meta name="twitter:title" content={title} />

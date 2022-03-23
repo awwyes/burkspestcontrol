@@ -25,10 +25,10 @@ export default function (req, res) {
       name: "Burks Pest Control",
       company: "Burks Pest Control"
     },
-    text: `Name: ${req.body.fullname} + Email: ${req.body.email} + Message: ${req.body.message}`,
-    html: `<div>Name: ${req.body.fullname}</div><br />
-                <p>Email: ${req.body.email}</p><br />
-                <div>Message: ${req.body.message}</div>`,
+    text: `Name: ${req.body.name} + Email: ${req.body.email} + Message: ${req.body.message}`,
+    html: `<div>Name: ${req.body.name}</div><br />
+           <p>Email: ${req.body.email}</p><br />
+           <div>Message: ${req.body.message}</div>`,
   };
 
   transporter.sendMail(mailData, function (err, info) {
