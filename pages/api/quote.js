@@ -1,4 +1,4 @@
-export default function (req, res) {
+export default function Quote (req, res) {
     require("dotenv").config();
 
     const USERNAME = process.env.username;

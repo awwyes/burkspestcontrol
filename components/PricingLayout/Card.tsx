@@ -18,10 +18,9 @@ export const Card = (props: CardProps) => {
       overflow="hidden"
       shadow="lg"
       maxW="md"
-      width="100%"
       {...rest}
     >
-      {isPopular && <CardBadge color={useColorModeValue("black", "black")}>Popular</CardBadge>}
+      {isPopular && <CardBadge>Popular</CardBadge>}
       {children}
     </Box>
   )

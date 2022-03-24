@@ -277,12 +277,11 @@ export default function Quote() {
                       <InputGroup>
                         <InputLeftAddon
                           bg={useColorModeValue("yellow.500", "yellow.500")}
-                          children={
-                            <PhoneIcon
-                              color={useColorModeValue("black", "black")}
-                            />
-                          }
-                        />
+                        > 
+                          <PhoneIcon
+                            color={useColorModeValue("black", "black")}
+                          />
+                        </InputLeftAddon>
                         <Input
                           type="tel"
                           name="phone_number"
@@ -377,18 +376,18 @@ export default function Quote() {
                         spacing={{ base: "12", md: "8" }}
                       >
                         <Stack direction="row" spacing="8">
-                          <Stack spacing="4" minW="44" flex="1">
+                          <Stack spacing="4" minW="40" flex="1">
                             <Stack spacing="3" shouldWrapChildren>
-                              <Checkbox size={'lg'} colorScheme={'yellow'} value={'Pest Control'}>Pest Control</Checkbox>
-                              <Checkbox size={'lg'} colorScheme={'yellow'} value={'Mosquito Control'}>Mosquito Control</Checkbox>
-                              <Checkbox size={'lg'} colorScheme={'yellow'} value={'Other'}>Other</Checkbox>
+                              <Checkbox size={'lg'} colorScheme={'yellow'} value={'Pest Control'} defaultChecked={null} onBlur={null} checked={null}>Pest Control</Checkbox>
+                              <Checkbox size={'lg'} colorScheme={'yellow'} value={'Mosquito Control'} defaultChecked={null} onBlur={null} checked={null}>Mosquito Control</Checkbox>
+                              <Checkbox size={'lg'} colorScheme={'yellow'} value={'Other'} defaultChecked={null} onBlur={null} checked={null}>Other</Checkbox>
                             </Stack>
                           </Stack>
                           <Stack spacing="4" minW="44" flex="1">
                             <Stack spacing="3" shouldWrapChildren>
-                              <Checkbox size={'lg'} colorScheme={'yellow'} value={'Termite Control'}>Termite Control</Checkbox>
-                              <Checkbox size={'lg'} colorScheme={'yellow'} value={'Bed Bug Removal'}>Bed Bug Removal</Checkbox>
-                              <Checkbox size={'lg'} colorScheme={'yellow'} value={'Not Sure'}>Not Sure</Checkbox>
+                              <Checkbox size={'lg'} colorScheme={'yellow'} value={'Termite Control'} defaultChecked={null} onBlur={null} checked={null}>Termite Control</Checkbox>
+                              <Checkbox size={'lg'} colorScheme={'yellow'} value={'Bed Bug Removal'} defaultChecked={null} onBlur={null} checked={null}>Bed Bug Removal</Checkbox>
+                              <Checkbox size={'lg'} colorScheme={'yellow'} value={'Not Sure'} defaultChecked={null} onBlur={null} checked={null}>Not Sure</Checkbox>
                             </Stack>
                           </Stack>
                         </Stack>

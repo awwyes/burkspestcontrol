@@ -37,7 +37,7 @@ export default function PestControlFeature() {
             We seal, caulk, and correct outside areas to block pests from gaining entry. We then establish a protective barrier around your home using exterior baits, granules, and other scientifically-proven products.
           </Feature>
           <Feature title="Monitoring & Prevention" icon={<FcOk />}>
-            As the seasons change, your home becomes more appealing to a variety of insects, spiders, and rodents. Your Burks professional consistently monitors your home's protective barrier to make sure pests can't get in.
+            As the seasons change, your home becomes more appealing to a variety of insects, spiders, and rodents. Your Burks professional consistently monitors your home&apos;s protective barrier to make sure pests can&apos;t get in.
           </Feature>
         </SimpleGrid>
       </Box>

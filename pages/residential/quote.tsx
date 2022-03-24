@@ -1,5 +1,5 @@
-import Quote from '../../components/ResidentialQuoteLayout/ResidentialQuote'
 import dynamic from 'next/dynamic';
+const Quote = dynamic(() => import('../../components/ResidentialQuoteLayout/ResidentialQuote'));
 const NavBar = dynamic(() => import('../../components/NavBarLayout/NavBar'));
 const Footer = dynamic(() => import('../../components/FooterLayout/Footer'));
 

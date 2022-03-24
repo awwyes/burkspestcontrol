@@ -9,7 +9,6 @@ export const CardBadge = (props: FlexProps) => {
       position="absolute"
       right={-20}
       top={6}
-      width="240px"
       transform="rotate(45deg)"
       py={2}
       justifyContent="center"

@@ -50,13 +50,12 @@ export default function WithSubnavigation() {
           direction={"row"}
           spacing={6}
         >
-          <NextLink href="tel:+1-423-424-9958">
+          <NextLink passHref href="tel:+1-423-424-9958">
               <Circle
                 size="40px"
                 bg={useColorModeValue('yellow.500', 'yellow.500')}
                 color={"black"}
                 alignItems={"center"}
-                label="Call Burks Pest Control Today!" 
                 fontSize={"md"}
                 _hover={{
                   bg: useColorModeValue('black', 'black'),
@@ -66,13 +65,12 @@ export default function WithSubnavigation() {
                 <PhoneIcon />
               </Circle>
           </NextLink>
-          <NextLink href="https://burkspestcontrol.securepayments.cardpointe.com/pay?">
+          <NextLink passHref href="https://burkspestcontrol.securepayments.cardpointe.com/pay?">
               <Circle
                 size="40px"
                 bg={useColorModeValue('yellow.500', 'yellow.500')}
                 color={"black"}
                 alignItems={"center"}
-                label="Secure Payment to Burks Pest Control"
                 fontSize={'md'}
                 _hover={{
                   bg: useColorModeValue('black', 'black'),
@@ -104,10 +102,8 @@ const DesktopNav = () => {
                 href={navItem.href ?? "/"}
                 fontSize={"sm"}
                 fontWeight={500}
-                color={useColorModeValue("black", "yellow.500")}
                 _hover={{
                   textDecoration: "none",
-                  color: useColorModeValue("gray.800", "white"),
                 }}
               >
                 {navItem.label}
@@ -118,7 +114,6 @@ const DesktopNav = () => {
               <PopoverContent
                 border={0}
                 boxShadow={"xl"}
-                bg={useColorModeValue("white", "black")}
                 p={4}
                 rounded={"xl"}
                 minW={"sm"}
@@ -212,7 +207,6 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
         {children && (
           <Icon
             as={ChevronDownIcon}
-            color={useColorModeValue("black", "yellow.500")}
             transition={"all .25s ease-in-out"}
             transform={isOpen ? "rotate(180deg)" : ""}
             w={6}
@@ -232,7 +226,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
         >
           {children &&
             children.map((child) => (
-              <Link key={child.label} py={2} color={useColorModeValue("black", "yellow.500")} href={child.href}>
+              <Link key={child.label} py={2} href={child.href}>
                 {child.label}
               </Link>
             ))}

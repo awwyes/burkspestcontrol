@@ -59,7 +59,7 @@ export default function Carousel() {
       ANIMATION_DIRECTION.toLowerCase() === "left" ? prevSlide() : nextSlide();
     }, SLIDES_INTERVAL_TIME);
     return () => clearInterval(automatedSlide);
-  }, []);
+  });
 
   return (
     <Flex
@@ -74,7 +74,6 @@ export default function Carousel() {
           {slides.map((slide, sid) => (
             <Box key={`slide-${sid}`} boxSize="full" shadow="md" flex="none">
               <Text
-                color={useColorModeValue("white", "yellow.500")}
                 fontSize="xs"
                 p="8px 12px"
                 pos="absolute"
@@ -90,7 +89,6 @@ export default function Carousel() {
                 textAlign="center"
                 w="full"
                 mb="8"
-                color={useColorModeValue("white", "yellow.500")}
               >
                 <Text fontSize="2xl">{slide.label}</Text>
                 <Text fontSize="lg">{slide.description}</Text>

@@ -3,7 +3,7 @@ import NextLink from "next/link"
 import * as React from 'react'
 
 export const ActionButton = (props: ButtonProps) => (
-  <NextLink href="https://burkspestcontrol.securepayments.cardpointe.com/pay?">
+  <NextLink passHref href="https://burkspestcontrol.securepayments.cardpointe.com/pay?">
     <Button
       bg="yellow.500"
       color="black"

@@ -19,7 +19,7 @@ export default function SignIn() {
         >
           <Stack spacing={4} w={'full'} maxW={'md'}>
             <Heading fontSize={'2xl'}>Sign in to your account</Heading>
-            <Text fontSize={'lg'} color={'gray.400'}>Don't have an account? <Link color={'blue.400'} href="/signup">Sign Up</Link> 🕷️
+            <Text fontSize={'lg'} color={'gray.400'}>Don&apos;t have an account? <Link color={'blue.400'} href="/signup">Sign Up</Link> 🕷️
             </Text>
               <FormControl id="email">
                 <Input type="email" placeholder="Email Address" />
@@ -27,7 +27,7 @@ export default function SignIn() {
               <InputGroup size="md">
                 <FormControl id="password">
                   <Input type={show ? "text" : "password"} placeholder="Password" />
-                  <InputRightElement width="4.5rem" pt="6px">
+                  <InputRightElement pt="6px">
                     <Button h="1.75rem" size="sm" onClick={handleClick}>
                       {show ? <FaEyeSlash /> : <FiEye />}
                     </Button>
@@ -39,7 +39,7 @@ export default function SignIn() {
                 direction={{ base: 'column', sm: 'row' }}
                 align={'start'}
                 justify={'space-between'}>
-                <Checkbox colorScheme="yellow">Remember me</Checkbox>
+                <Checkbox colorScheme="yellow" defaultChecked={null} onBlur={null} checked={null}>Remember me</Checkbox>
                 <Link color={'blue.500'}>Forgot password?</Link>
               </Stack>
               <Button colorScheme={'blue'} variant={'solid'}>

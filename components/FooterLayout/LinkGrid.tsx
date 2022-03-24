@@ -17,9 +17,9 @@ export default function LinkGrid (props: SimpleGridProps) {
       <Box minW="130px">
         <FooterHeading mb="4">Social</FooterHeading>
         <Stack as={'h2'}>
-          <Link href='https://www.facebook.com/BurksPestControl/'>Follow us on Facebook</Link>
-          <Link href='/contactus'>Contact Us</Link>
-          <Link href='https://www.tiktok.com/@burkspestcontrol/'>Follow us on TikTok</Link>
+          <Link href='https://www.facebook.com/BurksPestControl/'>Facebook</Link>
+          <Link href='https://twitter.com/Burkspestcont'>Twitter</Link>
+          <Link href='https://www.tiktok.com/@burkspestcontrol/'>TikTok</Link>
           <Link href={'/residential/quote'}>Free Quote</Link>
         </Stack>
       </Box>
@@ -28,6 +28,7 @@ export default function LinkGrid (props: SimpleGridProps) {
         <Stack as={'h2'}>
           <Link href="/privacy">Privacy</Link>
           <Link href="/termsofuse">Terms of Use</Link>
+          <Link href="/contactus">Contact Us</Link>
           <Link href='tel:+1-423-424-9958'>Call Us Today!</Link>
         </Stack>
       </Box>

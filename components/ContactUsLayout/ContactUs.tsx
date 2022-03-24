@@ -131,11 +131,13 @@ export default function ContactUs() {
                 color={useColorModeValue('white', 'black')}
                 shadow="base">
                 <VStack spacing={5}>
-                  <FormControl id="name" action="/api/contact" isRequired>
+                  <FormControl id="name" isRequired>
                     <FormLabel>Name</FormLabel>
 
                     <InputGroup>
-                      <InputLeftElement children={<BsPerson />} />
+                      <InputLeftElement>
+                        <BsPerson />
+                      </InputLeftElement>
                       <Input 
                         type="text" 
                         name="name" 
@@ -152,11 +154,13 @@ export default function ContactUs() {
                     </InputGroup>
                   </FormControl>
 
-                  <FormControl id="email" action="/api/contact" isRequired>
+                  <FormControl id="email" isRequired>
                     <FormLabel>Email</FormLabel>
 
                     <InputGroup>
-                      <InputLeftElement children={<MdOutlineEmail />} />
+                      <InputLeftElement>
+                        <MdOutlineEmail />
+                      </InputLeftElement>
                       <Input
                         type="email"
                         name="email"
@@ -173,7 +177,7 @@ export default function ContactUs() {
                     </InputGroup>
                   </FormControl>
 
-                  <FormControl id="message" action="/api/contact" isRequired>
+                  <FormControl id="message" isRequired>
                     <FormLabel>Message</FormLabel>
 
                     <Textarea

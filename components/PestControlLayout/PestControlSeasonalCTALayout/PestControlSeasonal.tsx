@@ -29,7 +29,7 @@ const PestControlSeasonalFeature = ({ title, text, icon }: PestControlSeasonalFe
 export default function SimpleThreeColumns() {
   return (
     <Box p={16} bg={useColorModeValue('white', 'black')}>
-        <Heading fontFamily={'sans-serif'} fontWeight={400} fontSize={'5xl'} align={'center'} mb={10}>Seasonal Pest Activity</Heading>
+        <Heading fontFamily={'sans-serif'} fontWeight={400} fontSize={'5xl'} mb={10}>Seasonal Pest Activity</Heading>
       <SimpleGrid columns={{ base: 1, md: 4 }} spacing={10}>
         <PestControlSeasonalFeature
             icon={<Icon as={GiFlowerPot} w={32} h={32} color={useColorModeValue('green.500', 'green.500')} />}

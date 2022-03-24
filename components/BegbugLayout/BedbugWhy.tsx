@@ -26,7 +26,7 @@ import { Container, Stack, Flex, Box, Heading, Text, useColorModeValue, } from '
             </Heading>
             <Text color={'gray.500'}>
                 Bed bugs are a common household pest that can be found in Tennessee and all over the world.
-                They've existed for hundreds of years and were almost completely extinct a few decades ago.
+                They&apos;ve existed for hundreds of years and were almost completely extinct a few decades ago.
                 However, the rise of affordable international travel helped bed bug populations rebound and stretch all over the globe.
                 Burks Pest Control is proud to be recognized as a leader in the bedbug removal in the pest control industry.
             </Text>

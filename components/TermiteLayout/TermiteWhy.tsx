@@ -45,7 +45,6 @@ import { Container, Stack, Flex, Box, Heading, Text, useColorModeValue, } from '
               boxShadow={'2xl'}
               overflow={'hidden'}>
                 <iframe 
-                    width="560" 
                     height="300"
                     src="https://www.youtube.com/embed/ECvftMCzh9I" 
                     title="YouTube video player" 

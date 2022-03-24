@@ -1,27 +1,30 @@
 import { Button, Flex, Heading } from '@chakra-ui/react';
 import { Step, Steps, useSteps } from 'chakra-ui-steps';
 
-const steps = [{ label: "How can we serve you?" }, { label: "Name & Company" }, { label: "Contact Information" }, { label: "Done" } ]
-
-export const ClickableSteps = () => {
-  const { nextStep, prevStep, reset, activeStep, setStep } = useSteps({
-    initalStep: 0,
-  })
-}
+const steps = [
+    { label: "How can we serve you?", }, 
+    { label: "Name & Company" }, 
+    { label: "Contact Information" }, 
+    { label: "Done" }
+];
 
 export default function CommericalStepper() {
+    const { nextStep, prevStep, reset, activeStep, setStep } = useSteps({
+        initialStep: 0,
+    })
+
     return (
-        <Flex flexDir="column" width="100%">
+        <Flex flexDir="column">
       <Steps onClickStep={(step) => setStep(step)} activeStep={activeStep}>
         {steps.map(({ label }, index) => (
           <Step label={label} key={label}>
               {/* This is where the contents on the page would change for the stepper */}
-            <Contents index={index} /> 
+            {/* <Contents index={index} />  */}
           </Step>
         ))}
       </Steps>
       {activeStep === steps.length ? (
-        <Flex px={4} py={4} width="100%" flexDirection="column">
+        <Flex px={4} py={4} flexDirection="column">
           <Heading fontSize="xl" textAlign="center">
             Woohoo! All steps completed!
           </Heading>
@@ -30,7 +33,7 @@ export default function CommericalStepper() {
           </Button>
         </Flex>
       ) : (
-        <Flex width="100%" justify="flex-end">
+        <Flex justify="flex-end">
           <Button
             isDisabled={activeStep === 0}
             mr={4}
