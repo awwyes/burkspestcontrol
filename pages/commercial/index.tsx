@@ -3,12 +3,12 @@ import dynamic from 'next/dynamic';
 const NavBar = dynamic(() => import('../../components/NavBarLayout/NavBar'));
 const Footer = dynamic(() => import('../../components/FooterLayout/Footer'));
 
+export default function CommercialPage() {
 
-export default function PestControlPage() {
   return (
     <>
       <NavBar />
-        <div>Insert components here</div>
+        <div>Something goes here</div>
       <Footer />
     </>
   );
