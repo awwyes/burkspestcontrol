@@ -1,7 +1,6 @@
 import { Flex, Heading, Icon, List, ListIcon, ListItem, useColorModeValue, VStack } from '@chakra-ui/react'
-  import * as React from 'react'
-  import { HiCheckCircle } from 'react-icons/hi'
-  import { Card, CardProps } from './Card'
+import { HiCheckCircle } from 'react-icons/hi'
+import { Card, CardProps } from './Card'
   
   export interface PricingCardData {
     features: string[]

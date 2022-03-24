@@ -1,6 +1,5 @@
-import React from 'react'
-import Termite from '../../components/TermiteLayout/Termite'
 import dynamic from 'next/dynamic';
+const Termite = dynamic(() => import('../../components/TermiteLayout/Termite'));
 const NavBar = dynamic(() => import('../../components/NavBarLayout/NavBar'));
 const Footer = dynamic(() => import('../../components/FooterLayout/Footer'));
 

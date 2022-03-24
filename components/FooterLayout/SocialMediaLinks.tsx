@@ -1,5 +1,4 @@
 import { ButtonGroup, ButtonGroupProps, IconButton } from '@chakra-ui/react'
-import * as React from 'react'
 import { FaFacebook, FaTiktok, FaTwitter } from 'react-icons/fa'
 
 export default function SocialMediaLinks (props: ButtonGroupProps) {

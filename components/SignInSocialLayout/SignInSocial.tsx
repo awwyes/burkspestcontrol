@@ -1,4 +1,3 @@
-import React from 'react'
 import { Center, Stack } from '@chakra-ui/react'
 import FacebookButton from './Facebook'
 import GoogleButton from './Google'

@@ -1,14 +1,13 @@
 import dynamic from 'next/dynamic';
+const Quote = dynamic(() => import('../../components/CommercialLayout/CommercialQuote/CommercialQuote'));
 const NavBar = dynamic(() => import('../../components/NavBarLayout/NavBar'));
 const Footer = dynamic(() => import('../../components/FooterLayout/Footer'));
-const Bedbug = dynamic(() => import('../../components/BegbugLayout/Bedbug'));
 
-
-export default function BedbugPage() {
+export default function ResidentialQuote() {
     return (
         <>
             <NavBar />
-            <Bedbug />
+            <Quote/>
             <Footer />
         </>
     )

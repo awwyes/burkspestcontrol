@@ -1,5 +1,4 @@
 import { Box, Circle, Flex, Image, HStack, Text, useColorModeValue } from '@chakra-ui/react'
-import * as React from 'react'
 import { QuoteIcon } from './QuoteIcon'
 
 export default function Testimonals () {

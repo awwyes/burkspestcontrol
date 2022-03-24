@@ -1,5 +1,4 @@
 import { Box, SimpleGrid, Stack, Heading, Flex, useColorModeValue } from '@chakra-ui/react'
-import * as React from 'react'
 import { FcInspection, FcHome, FcOk, FcPlus } from 'react-icons/fc'
 import { Feature } from './Feature'
 

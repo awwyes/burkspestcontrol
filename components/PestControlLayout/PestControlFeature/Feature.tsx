@@ -1,5 +1,4 @@
 import { Box, Stack, Text, useColorModeValue as mode } from '@chakra-ui/react'
-import * as React from 'react'
 
 interface FeatureProps {
   title: string

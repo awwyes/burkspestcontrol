@@ -4,7 +4,7 @@ interface FeatureProps {
   text: string;
 }
 
-export default function FreeQuoteButton({text}: FeatureProps) {
+export default function CommercialQuoteButton({text}: FeatureProps) {
 
   return (
     <Stack
@@ -24,7 +24,7 @@ export default function FreeQuoteButton({text}: FeatureProps) {
           border="solid transparent"
           fontWeight="bold"
           rounded="md"
-          href="/residential/quote"
+          href="/commercial/quote"
           color={useColorModeValue("black", "black")}
           bg={useColorModeValue("yellow.500", "yellow.500")}
           _hover={{

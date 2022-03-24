@@ -1,11 +1,11 @@
 import { Flex, Stack, useColorModeValue } from '@chakra-ui/react'
+import { Banner } from '../components/BannerLayout/Banner'
 import dynamic from 'next/dynamic';
 const NavBar = dynamic(() => import('../components/NavBarLayout/NavBar'));
 const Footer = dynamic(() => import('../components/FooterLayout/Footer'));
 const Testimonals = dynamic(() => import('../components/TestimonalsLayout/Testimonals'));
 const Pricing = dynamic(() => import('../components/PricingLayout/Pricing'));
 const Features = dynamic(() => import('../components/FeaturesLayout/Features'));
-import { Banner } from '../components/BannerLayout/Banner'
 const Carousel = dynamic(() => import('../components/ImageCTALayout/Carousel'));
 const SatisfactionGuarantee = dynamic(() => import('../components/SatisfactionGuaranteeLayout/SatisfactionGuarantee'));
 

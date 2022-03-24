@@ -1,5 +1,4 @@
 import { Box, Link, SimpleGrid, SimpleGridProps, Stack } from '@chakra-ui/react'
-import * as React from 'react'
 import FooterHeading from './FooterHeading'
 
 export default function LinkGrid (props: SimpleGridProps) {

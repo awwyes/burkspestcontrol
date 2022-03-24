@@ -2,7 +2,7 @@ import { PhoneIcon } from "@chakra-ui/icons";
 import { chakra, Box, Text, Stack, Input, Button, Select, Heading, Divider, GridItem, FormLabel,
   Checkbox, SimpleGrid, FormControl, InputGroup, CheckboxGroup, useColorModeValue, InputLeftAddon
 } from "@chakra-ui/react";
-import React, { useState } from "react";
+import { useState } from "react";
 import { states } from "../constants";
 
 export default function Quote() {

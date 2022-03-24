@@ -3,7 +3,7 @@ import { Box, Button, Flex, FormControl, FormLabel, Heading, IconButton, Input, 
 import { MdOutlineEmail } from "react-icons/md";
 import { BsPerson, BsTwitter, BsFacebook } from "react-icons/bs";
 import { FaTiktok } from 'react-icons/fa';
-import React, { useState } from "react";
+import { useState } from "react";
 
 export default function ContactUs() {
   const [name, setName] = useState("");

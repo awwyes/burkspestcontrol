@@ -1,6 +1,5 @@
 import { Button, ButtonProps, useColorModeValue } from '@chakra-ui/react'
 import NextLink from "next/link"
-import * as React from 'react'
 
 export const ActionButton = (props: ButtonProps) => (
   <NextLink passHref href="https://burkspestcontrol.securepayments.cardpointe.com/pay?">

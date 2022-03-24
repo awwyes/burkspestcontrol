@@ -1,5 +1,4 @@
 import { Box, BoxProps, Img, Text } from '@chakra-ui/react'
-import * as React from 'react'
 
 interface Props extends BoxProps {
   name: string

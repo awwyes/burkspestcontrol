@@ -1,4 +1,4 @@
-import { Container, Stack, Flex, Box, Heading, Text, useColorModeValue, } from '@chakra-ui/react';
+import { Container, Stack, Flex, Box, Heading, Text, useColorModeValue } from '@chakra-ui/react';
   
   export default function TermiteWhy() {
     return (

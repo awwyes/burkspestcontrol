@@ -1,5 +1,4 @@
 import { Box, BoxProps, useColorModeValue } from '@chakra-ui/react'
-import * as React from 'react'
 import { CardBadge } from './CardBadge'
 
 export interface CardProps extends BoxProps {

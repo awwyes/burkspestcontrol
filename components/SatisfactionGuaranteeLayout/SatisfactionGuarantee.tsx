@@ -1,5 +1,4 @@
 import { Box, SimpleGrid, Text, Image, useColorModeValue } from '@chakra-ui/react'
-import * as React from 'react'
 
 
 export default function SatisfactionGuarantee() {

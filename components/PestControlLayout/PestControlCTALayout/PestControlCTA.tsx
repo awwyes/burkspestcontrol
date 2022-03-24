@@ -1,5 +1,4 @@
 import { Box, Flex, chakra, Stack, Image, useColorModeValue } from '@chakra-ui/react'
-import * as React from 'react'
 
 export default function PestControlCTA() {
     return (

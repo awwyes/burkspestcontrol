@@ -1,5 +1,4 @@
 import { Box, SimpleGrid, useColorModeValue, createIcon } from '@chakra-ui/react'
-import * as React from 'react'
 import { GiAnts } from 'react-icons/gi'
 import { MdPestControl } from 'react-icons/md'
 import { ActionButton } from './ActionButton'

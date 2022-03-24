@@ -1,5 +1,4 @@
 import { Stack, Flex, Text, VStack, useBreakpointValue, useColorModeValue } from '@chakra-ui/react';
-import * as React from 'react'
 import FreeQuoteButton from '../FreeQuoteButton/FreeQuoteButton'
 
 export default function PestControl() {

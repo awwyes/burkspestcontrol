@@ -1,5 +1,4 @@
 import { Box, Stack, StackDivider, useColorModeValue } from "@chakra-ui/react";
-import * as React from "react";
 import { Copyright } from "./Copyright";
 import LinkGrid from "./LinkGrid";
 import Logo from "../LogoLayout/Logo";

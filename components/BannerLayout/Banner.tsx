@@ -1,6 +1,5 @@
 import { BellIcon } from '@chakra-ui/icons'
 import { Box, HStack, Icon, Stack, Text, useColorModeValue, CloseButton } from '@chakra-ui/react'
-import * as React from 'react'
 import { BannerLink } from './BannerLink'
 
 const onCloseBanner = () => {
