@@ -1,4 +1,5 @@
 import { extendTheme } from "@chakra-ui/react"
+import { StepsStyleConfig as Steps } from "chakra-ui-steps"
 
 const theme = extendTheme({
     config: {
@@ -104,6 +105,7 @@ const theme = extendTheme({
         widest: "0.1em",
     },
     components: {
+        Steps,
         Button: {
             // 1. We can update the base styles
             baseStyle: {

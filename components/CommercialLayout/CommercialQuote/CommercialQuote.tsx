@@ -1,12 +1,9 @@
-import dynamic from 'next/dynamic';
-const NavBar = dynamic(() => import('../../NavBarLayout/NavBar'));
-const Footer = dynamic(() => import('../../FooterLayout/Footer'));
+import CommercialStepper from '../CommercialStepper/CommercialStepper';
 
 export default function Quote() {
     return (
         <>
-            <NavBar />
-            <Footer />
+            <CommercialStepper />
         </>
     )
 }
