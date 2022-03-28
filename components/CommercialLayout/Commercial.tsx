@@ -6,7 +6,7 @@ export default function Commercial() {
     <Flex
       w={"full"}
       h={"80vh"}
-      backgroundImage={"/commercial.webp"}
+      backgroundImage={"/commercialpic.jpeg"}
       backgroundSize={"cover"}
       backgroundPosition={"center center"}
     >
