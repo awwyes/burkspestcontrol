@@ -1,5 +1,6 @@
+import dynamic from "next/dynamic";
 import { Stack, Flex, Text, VStack, useBreakpointValue, useColorModeValue } from "@chakra-ui/react";
-import CommercialQuoteButton from "./CommercialQuote/CommercialQuoteButton";
+const CommercialQuoteButton = dynamic(() => import ("./CommercialQuote/CommercialQuoteButton"));
 
 export default function Commercial() {
   return (

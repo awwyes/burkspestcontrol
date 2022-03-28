@@ -29,6 +29,9 @@ export default function CommercialStepper() {
         initialStep: 0,
     });
 
+    const yellow = useColorModeValue('yellow.500', 'yellow.500');
+    const black = useColorModeValue('black', 'black');
+
   return (
     <Flex flexDir="column" width="100%" bgColor={useColorModeValue('white', "black")}>
         <Container maxW={'8xl'}>
@@ -45,11 +48,11 @@ export default function CommercialStepper() {
             Woohoo! All steps completed!
           </Heading>
           <Button mx="auto" mt={6} size="sm" onClick={reset} 
-            bgColor={useColorModeValue('yellow.500', 'yellow.500')} 
-            color={useColorModeValue('black', 'black')} 
+            bgColor={yellow} 
+            color={black} 
             _hover={{
-              bgColor: useColorModeValue('black', 'black'),
-              color: useColorModeValue('yellow.500', 'yellow.500')
+              bgColor: {black},
+              color: {yellow}
           }}
           >
             Reset
@@ -62,18 +65,21 @@ export default function CommercialStepper() {
             mr={4}
             onClick={prevStep}
             size="sm"
-            bgColor={useColorModeValue('yellow.500', 'yellow.500')}
-            color={useColorModeValue('black', 'black')}
+            bgColor={yellow}
+            color={black}
             _hover={{
-              bgColor: useColorModeValue('black', 'black'),
-              color: useColorModeValue('yellow.500', 'yellow.500')
+              bgColor: {black},
+              color: {yellow}
             }}
           >
             Prev
           </Button>
-          <Button size="sm" onClick={nextStep} bgColor={useColorModeValue('yellow.500', 'yellow.500')} color={useColorModeValue('black', 'black')} _hover={{
-              bgColor: useColorModeValue('black', 'black'),
-              color: useColorModeValue('yellow.500', 'yellow.500')
+          <Button size="sm" onClick={nextStep} 
+            bgColor={yellow}
+            color={black} 
+            _hover={{
+              bgColor: {black},
+              color: {yellow}
           }}>
             {activeStep === steps.length - 1 ? "Submit Your Request" : "Continue"}
             <IoIosArrowForward />
