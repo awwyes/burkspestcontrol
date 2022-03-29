@@ -3,20 +3,21 @@ import { Box, Flex, chakra, Stack, Image, useColorModeValue } from '@chakra-ui/r
 export default function PestControlCTA() {
     return (
       <Flex
-        direction={{ base: "column", md: "row" }}
-        bg={useColorModeValue("white", "black")}
-        px={8}
-        py={8}
-        mx="auto"
-      >
+      direction={{ base: "column", md: "row" }}
+      bg={useColorModeValue("white", 'black')}
+      px={8}
+      py={8}
+      mx="auto"
+    >
       <Box
-        w={{ base: "full", md: 'full', xl: 'full' }}
+        w={{ base: "full", md: 11 / 19, xl: 9 / 12 }}
         mx="auto"
+        pr={{ md: 20 }}
       >
         <chakra.h2
           fontSize={{ base: "3xl", sm: "4xl" }}
-          fontFamily={'sans-serif'}
           fontWeight="regular"
+          fontFamily={'sans-serif'}
           lineHeight="shorter"
           color={useColorModeValue("yellow.500", "yellow.500")}
           mb={6}
@@ -24,7 +25,7 @@ export default function PestControlCTA() {
           <chakra.span display="block" fontFamily={'sans-serif'} fontSize={30}>Quarterly Treatments | EPS</chakra.span>
           <chakra.span
             display="block"
-            color={useColorModeValue("black", "gray.500")}
+            color={useColorModeValue("white", "gray.500")}
             fontSize={{ base: "1xl", sm: '2xl'}}
           >
             Seasonal protection from pests
@@ -35,7 +36,7 @@ export default function PestControlCTA() {
           fontSize={{ base: "xl", md: "lg" }}
           color={useColorModeValue("gray.800", "gray.300")}
         >
-            Our highly trained professionals are eager to develop a customized plan to help protect your home with EPS, our Extreme Pest Service.
+          Our highly trained professionals are eager to develop a customized plan to help protect your home with EPS, our Extreme Pest Service.
         </chakra.p>
         <chakra.p
           mb={6}
@@ -65,24 +66,16 @@ export default function PestControlCTA() {
         >
             If you have a pest problem between quarterly treatments, we’ll come back until it’s resolved, free of charge.
         </chakra.p>
-        <Stack
-          direction={{ base: "column", sm: "row" }}
-          mb={{ base: 4, md: 8 }}
-          spacing={2}
-        >
-        </Stack>
       </Box>
-      <Flex>
-        <Box w={{ base: "full", md: 'full' }} mx="auto" mt={{ base: '24', sm: '0', md: '20' }} ml={{ base: '1', sm: '0', md: '1'}} textAlign="center">
-          <Image
-            h={{ base: 'sm' }}
-            w={{ base: '8xl', sm: '8xl' }}
-            rounded="xl"
-            src="/IMG_8273.jpeg"
-            alt="EPS"
-          />
-        </Box>
-      </Flex>
+      <Box w={{ base: "full", md: 10 / 12 }} mx="auto" textAlign="center">
+        <Image
+          w="full"
+          rounded="lg"
+          shadow="2xl"
+          src="/IMG_8273.jpeg"
+          alt="EPS"
+        />
+      </Box>
     </Flex>
     )
 }
