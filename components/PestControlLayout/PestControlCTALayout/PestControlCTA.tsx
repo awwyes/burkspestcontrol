@@ -19,13 +19,13 @@ export default function PestControlCTA() {
           fontWeight="regular"
           fontFamily={'sans-serif'}
           lineHeight="shorter"
-          color={useColorModeValue("yellow.500", "yellow.500")}
+          color={useColorModeValue("black", "yellow.500")}
           mb={6}
         >
           <chakra.span display="block" fontFamily={'sans-serif'} fontSize={30}>Quarterly Treatments | EPS</chakra.span>
           <chakra.span
             display="block"
-            color={useColorModeValue("white", "gray.500")}
+            color={useColorModeValue("gray.500", "gray.500")}
             fontSize={{ base: "1xl", sm: '2xl'}}
           >
             Seasonal protection from pests
