@@ -3,7 +3,7 @@ import { Banner } from '../components/BannerLayout/Banner'
 import dynamic from 'next/dynamic';
 const NavBar = dynamic(() => import('../components/NavBarLayout/NavBar'));
 const Footer = dynamic(() => import('../components/FooterLayout/Footer'));
-const Testimonals = dynamic(() => import('../components/TestimonalsLayout/Testimonals'));
+// const Testimonals = dynamic(() => import('../components/TestimonalsLayout/Testimonals'));
 const Pricing = dynamic(() => import('../components/PricingLayout/Pricing'));
 const Features = dynamic(() => import('../components/FeaturesLayout/Features'));
 const Carousel = dynamic(() => import('../components/ImageCTALayout/Carousel'));
@@ -33,7 +33,7 @@ export default function Home() {
             </Flex>
             <Pricing />
             <Features />
-            <Testimonals />
+            {/* <Testimonals /> */}
             <SatisfactionGuarantee />
             <Footer />
         </Stack>
