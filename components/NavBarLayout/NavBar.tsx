@@ -8,11 +8,12 @@ import NextLink from 'next/link';
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
+  const backgroundColor = useColorModeValue("white", "black");
 
   return (
     <Box>
       <Flex
-        bg={useColorModeValue("white", "black")}
+        bg={backgroundColor}
         color={useColorModeValue("black", "yellow.500")}
         minH={"60px"}
         py={{ base: 2 }}
@@ -91,10 +92,12 @@ export default function WithSubnavigation() {
 }
 
 const DesktopNav = () => {
+  const backgroundColor = useColorModeValue("white", "black");
+
   return (
     <Stack direction={"row"} spacing={4}>
       {NAV_ITEMS.map((navItem) => (
-        <Box key={navItem.label} bgColor={useColorModeValue('white', 'black')}>
+        <Box key={navItem.label} bgColor={backgroundColor}>
           <Popover trigger={"hover"} placement={"bottom-start"}>
             <PopoverTrigger>
               <Link
@@ -170,9 +173,11 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
 };
 
 const MobileNav = () => {
+  const backgroundColor = useColorModeValue("white", "black");
+  
   return (
     <Stack
-      bg={useColorModeValue("white", "black")}
+      bg={backgroundColor}
       p={4}
       display={{ md: "none" }}
     >
