@@ -33,7 +33,7 @@ export default function EasyToUpgrade() {
     <Box p={4} bgColor={useColorModeValue('gray.100', 'black')}>
       <Box m={5}>
         <Heading as={'h1'} textAlign={'center'} fontFamily={'sans-serif'}>We Make It Easy To Upgrade To Burks Pest Control</Heading>
-        <Text as={'p'} textAlign={'center'} fontFamily={'sans-serif'}>Cook’s starts by performing an industry-specific audit to help identify areas for improvement.</Text>
+        <Text as={'p'} textAlign={'center'} fontFamily={'sans-serif'}>Burks Pest Control starts by performing an industry-specific audit to help identify areas for improvement.</Text>
       </Box>
       <SimpleGrid columns={{ base: 1, md: 4 }} spacing={10}>
         <Feature
