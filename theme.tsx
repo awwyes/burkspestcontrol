@@ -1,5 +1,20 @@
 import { extendTheme } from "@chakra-ui/react"
-import { StepsStyleConfig as Steps } from "chakra-ui-steps"
+import { StepsStyleConfig as Steps, StepsStyleConfig } from "chakra-ui-steps"
+
+const CustomSteps = {
+    ...StepsStyleConfig,
+    baseStyle: props => {
+      return {
+        ...StepsStyleConfig.baseStyle(props),
+        icon: {
+            color: 'black',
+          ...StepsStyleConfig.baseStyle(props).icon,
+          // your custom styles here
+          strokeWidth: '1px',
+        },
+      };
+    },
+  };
 
 const theme = extendTheme({
     config: {
@@ -105,7 +120,7 @@ const theme = extendTheme({
         widest: "0.1em",
     },
     components: {
-        Steps,
+        Steps: CustomSteps,
         Button: {
             // 1. We can update the base styles
             baseStyle: {

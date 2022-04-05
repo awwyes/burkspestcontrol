@@ -1,4 +1,4 @@
-import { Button, Container, Flex, Heading, useColorModeValue } from "@chakra-ui/react";
+import { Box, Button, Container, Flex, Heading, useColorModeValue } from "@chakra-ui/react";
 import { Step, Steps, useSteps } from "chakra-ui-steps";
 import { IoIosArrowForward } from "react-icons/io";
 import Step1 from "../CommercialQuote/CommercialQuoteStep1";
@@ -33,12 +33,13 @@ export default function CommercialStepper() {
     const black = useColorModeValue('black', 'black');
 
   return (
-    <Flex flexDir="column" width="100%" bgColor={useColorModeValue('white', "black")}>
+    <Box bgColor={useColorModeValue('white', "black")}>
+    <Flex flexDir="column" width="100%">
         <Container maxW={'8xl'}>
-        <Steps mt={10} onClickStep={(step) => setStep(step)} activeStep={activeStep} fontFamily={'sans-serif'}>
+        <Steps responsive={true} colorScheme={'yellow'} orientation={'vertical'} mt={10} onClickStep={(step) => setStep(step)} activeStep={activeStep} fontFamily={'sans-serif'}>
         {steps.map((label, _index) => (
           <Step label={label} key={label}>
-                {getStepContent(activeStep)}
+            {getStepContent(activeStep)}
           </Step>
         ))}
       </Steps>
@@ -88,5 +89,6 @@ export default function CommercialStepper() {
       )}
         </Container>
     </Flex>
+    </Box>
   );
 }

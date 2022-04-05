@@ -3,7 +3,7 @@ export const PRODUCTION_URL = 'https://burkspestcontrol.com';
 /**
  * SEO constants
  */
- export const SEO_VIEWPORT = 'width=device-width, initial-scale=1';
+ export const SEO_VIEWPORT = "width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86";
  export const SEO_THEMECOLOR = "white";
  export const SEO_TITLE = 'Burks Pest Control';
  export const SEO_DESCRIPTION =

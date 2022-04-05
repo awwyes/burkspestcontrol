@@ -6,12 +6,14 @@ export default function Step3() {
         <Flex>
             <Box bgColor={useColorModeValue('white', 'black')} ml={12}>
                 <FormLabel>Business Address *</FormLabel>
-                <Input id="business-address" placeholder="Business Address" />
+                <Input id="business-address" placeholder="Business Address" isRequired />
                 <FormLabel>City *</FormLabel>
                 <Input id="city" placeholder="City" />
                 <FormLabel>Phone *</FormLabel>
-                <Input id="phone" placeholder="Phone" />
+                <Input id="phone" placeholder="Phone" isRequired />
                 <FormLabel>Email *</FormLabel>
+                <Input id="email" placeholder="Email Address" isRequired />
+                <FormLabel>Preferred Time of Day</FormLabel>
                 <Select id="preferred-time">
                     <option value="6am-8am">6AM - 8AM</option>
                     <option value="8am-10am">8AM - 10AM</option>

@@ -5,11 +5,11 @@ export default function Step2() {
         <Flex>
              <Box bgColor={useColorModeValue('white', 'black')} ml={12}>
                 <FormLabel>First Name *</FormLabel>
-                <Input id="first-name" placeholder="First Name" />
+                <Input id="first-name" placeholder="First Name" isRequired />
                 <FormLabel>Last Name *</FormLabel>
-                <Input id="last-name" placeholder="Last Name" />
+                <Input id="last-name" placeholder="Last Name" isRequired />
                 <FormLabel>Company or Business *</FormLabel>
-                <Input id="company-name" placeholder="Company or Business Name" />
+                <Input id="company-name" placeholder="Company or Business Name" isRequired />
                 <FormLabel>Industry</FormLabel>
                 <Select id="industry" placeholder="Select Industry">
                     <option value="medical">Medical</option>

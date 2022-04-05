@@ -93,11 +93,12 @@ export default function WithSubnavigation() {
 
 const DesktopNav = () => {
   const backgroundColor = useColorModeValue("white", "black");
+  const yellowAndBlack = useColorModeValue('yellow.500', 'black');
 
   return (
     <Stack direction={"row"} spacing={4}>
       {NAV_ITEMS.map((navItem) => (
-        <Box key={navItem.label} bgColor={backgroundColor}>
+        <Box key={navItem.label} bg={backgroundColor}>
           <Popover trigger={"hover"} placement={"bottom-start"}>
             <PopoverTrigger>
               <Link
@@ -116,6 +117,7 @@ const DesktopNav = () => {
             {navItem.children && (
               <PopoverContent
                 border={0}
+                bgColor={yellowAndBlack}
                 boxShadow={"xl"}
                 p={4}
                 rounded={"xl"}

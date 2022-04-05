@@ -83,15 +83,16 @@ export default function Carousel() {
               </Text>
               <Image src={slide.img} boxSize="full" alt={slide.alt} backgroundSize="cover" />
               <Stack
-                p="8px 12px"
                 pos="absolute"
                 bottom="24px"
                 textAlign="center"
-                w="full"
-                mb="8"
+                w="100%"
+                mb="3"
               >
+                <Box backgroundColor={useColorModeValue('black', 'white')} color={useColorModeValue('white', 'black')} p={'3px'}>
                 <Text fontSize="2xl">{slide.label}</Text>
                 <Text fontSize="lg">{slide.description}</Text>
+                </Box>
               </Stack>
             </Box>
           ))}

@@ -6,7 +6,7 @@ import SocialMediaLinks from "./SocialMediaLinks";
 
 export default function Footer() {
   return (
-    <Box bg={useColorModeValue("gray.200", "black")}>
+    <Box bg={useColorModeValue("gray.200", "black")} w={'100%'}>
       <Box
         as="footer"
         role="contentinfo"

@@ -6,7 +6,7 @@ const Footer = dynamic(() => import('../components/FooterLayout/Footer'));
 // const Testimonals = dynamic(() => import('../components/TestimonalsLayout/Testimonals'));
 const Pricing = dynamic(() => import('../components/PricingLayout/Pricing'));
 const Features = dynamic(() => import('../components/FeaturesLayout/Features'));
-const Carousel = dynamic(() => import('../components/ImageCTALayout/Carousel'));
+const Carousel = dynamic(() => import('../components/CarouselLayout/Carousel'));
 const SatisfactionGuarantee = dynamic(() => import('../components/SatisfactionGuaranteeLayout/SatisfactionGuarantee'));
 
 export default function Home() {
