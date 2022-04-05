@@ -61,6 +61,9 @@ export default function Carousel() {
     return () => clearInterval(automatedSlide);
   });
 
+  const blackAndWhite = useColorModeValue('black', 'white');
+  const whiteAndBlack = useColorModeValue('white', 'black');
+
   return (
     <Flex
       w="full"
@@ -89,7 +92,7 @@ export default function Carousel() {
                 w="100%"
                 mb="3"
               >
-                <Box backgroundColor={useColorModeValue('black', 'white')} color={useColorModeValue('white', 'black')} p={'3px'}>
+                <Box backgroundColor={blackAndWhite} color={whiteAndBlack} p={'3px'}>
                 <Text fontSize="2xl">{slide.label}</Text>
                 <Text fontSize="lg">{slide.description}</Text>
                 </Box>
