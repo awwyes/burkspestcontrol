@@ -62,6 +62,7 @@ export default function Carousel() {
   });
 
   const whiteAndBlack = useColorModeValue('white', 'black');
+  const blackAndBlack = useColorModeValue('black', 'black');
 
   return (
     <Flex
@@ -91,7 +92,7 @@ export default function Carousel() {
                 w="100%"
                 mb="3"
               >
-                <Box bgGradient="linear(to-b, transparent, white, white, white, white, white, transparent)" color={useColorModeValue('black', 'black')} p={'3px'}>
+                <Box bgGradient="linear(to-b, transparent, white, white, white, white, white, transparent)" color={blackAndBlack} p={'3px'}>
                 <Text fontSize="2xl">{slide.label}</Text>
                 <Text fontSize="lg">{slide.description}</Text>
                 </Box>

@@ -14,7 +14,8 @@ const onCloseBanner = () => {
   isHidden = !isHidden;
 }
 
-export const Banner = () => (
+export default function Banner() {
+  return(
   <Box as="section" pt="0" pb="0">
     <Stack
       direction={{ base: 'column', sm: 'row' }}
@@ -37,4 +38,5 @@ export const Banner = () => (
       <CloseButton variant="md" onClick={onCloseBanner} />
     </Stack>
   </Box>
-)
+  )
+}
