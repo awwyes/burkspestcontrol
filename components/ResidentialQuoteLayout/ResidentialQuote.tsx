@@ -166,7 +166,7 @@ export default function Quote() {
                     >
                       Contact Information <strong>*</strong>
                     </Heading>
-                    <Divider as={GridItem} colSpan={6} borderColor={"white"} />
+                    <Divider as={GridItem} colSpan={6} opacity={'0.6'} borderColor={"lightgray"} />
                     <FormControl as={GridItem} colSpan={6}>
                       <FormLabel
                         htmlFor="street_address"
@@ -355,7 +355,7 @@ export default function Quote() {
                     >
                       Current Pest Issues <strong>*</strong>
                     </Heading>
-                    <Divider as={GridItem} colSpan={6} borderColor={"white"} />
+                    <Divider as={GridItem} colSpan={6} opacity={'0.6'} borderColor={"lightgray"} />
                     <Heading
                       as={GridItem}
                       colSpan={6}

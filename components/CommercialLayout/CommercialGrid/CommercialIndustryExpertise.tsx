@@ -84,7 +84,7 @@ export default function IndustryExpertise() {
           icon={<Icon as={GiHospital} w={"62px"} h={"62px"} />}
         />
         <Feature
-          heading={"Entertainment/Retail"}
+          heading={"Retail"}
           icon={<Icon as={MdStoreMallDirectory} w={"62px"} h={"62px"} />}
         />
         <Feature
@@ -96,7 +96,7 @@ export default function IndustryExpertise() {
           icon={<Icon as={RiHotelLine} w={"62px"} h={"62px"} />}
         />
         <Feature
-          heading={"Manufacturing/Warehouse"}
+          heading={"Warehouse"}
           icon={<Icon as={FaWarehouse} w={"62px"} h={"62px"} />}
         />
         <Feature

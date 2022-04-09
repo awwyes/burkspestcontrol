@@ -61,13 +61,12 @@ export default function Carousel() {
     return () => clearInterval(automatedSlide);
   });
 
-  const blackAndWhite = useColorModeValue('black', 'white');
   const whiteAndBlack = useColorModeValue('white', 'black');
 
   return (
     <Flex
       w="full"
-      bg={useColorModeValue('white', 'black')}
+      bg={whiteAndBlack}
       p={0}
       alignItems="center"
       justifyContent="center"
@@ -92,7 +91,7 @@ export default function Carousel() {
                 w="100%"
                 mb="3"
               >
-                <Box backgroundColor={blackAndWhite} color={whiteAndBlack} p={'3px'}>
+                <Box bgGradient="linear(to-b, transparent, white, white, white, white, white, transparent)" color={useColorModeValue('black', 'black')} p={'3px'}>
                 <Text fontSize="2xl">{slide.label}</Text>
                 <Text fontSize="lg">{slide.description}</Text>
                 </Box>
