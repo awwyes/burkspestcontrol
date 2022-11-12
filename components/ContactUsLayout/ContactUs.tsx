@@ -1,4 +1,4 @@
-import { Box, Button, Flex, FormControl, FormLabel, Heading, IconButton, Input, InputGroup,
+import { Box, Button, Flex, FormControl, FormErrorMessage, FormLabel, Heading, IconButton, Input, InputGroup,
   InputLeftElement, Link, Stack, Textarea, Tooltip, useColorModeValue, VStack } from '@chakra-ui/react';
 import { MdOutlineEmail } from "react-icons/md";
 import { BsPerson, BsTwitter, BsFacebook } from "react-icons/bs";
@@ -13,7 +13,7 @@ export default function ContactUs() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Sending");
+    console.log("Sending...");
 
     let data = {
       name,
@@ -32,11 +32,12 @@ export default function ContactUs() {
       console.log("Response received");
       if (res.status === 200) {
         alert("Message has been sent!")
-        console.log("Response succeeded!");
         setSubmitted(true);
         setName("");
         setEmail("");
         setMessage("");
+      } else {
+        alert("Error please try again");
       }
     });
   };
@@ -108,7 +109,7 @@ export default function ContactUs() {
                   />
                 </Link>
 
-                <Link href="#">
+                <Link href="https://www.tiktok.com/@burkspestcontrol">
                   <IconButton
                     aria-label="tiktok"
                     variant="ghost"
@@ -131,86 +132,83 @@ export default function ContactUs() {
                 color={useColorModeValue('white', 'black')}
                 shadow="base">
                 <VStack spacing={5}>
-                  <FormControl id="name" isRequired>
-                    <FormLabel>Name</FormLabel>
+                    <FormControl id="name" isRequired>
+                      <FormLabel htmlFor='name'>Name</FormLabel>
+                      <InputGroup>
+                        <InputLeftElement>
+                          <BsPerson />
+                        </InputLeftElement>
+                        <Input 
+                          type="text" 
+                          name="name"
+                          placeholder="Your Name"
+                          borderColor={useColorModeValue('yellow.500', 'gray.800')}
+                          borderWidth={'thin'}
+                          _placeholder={{ color: useColorModeValue('white', 'black')}} 
+                          color={useColorModeValue('white', 'black')} 
+                          value={name}
+                          onChange={(e) => {
+                            setName(e.target.value);
+                          }}
+                        />
+                      </InputGroup>
+                    </FormControl>
 
-                    <InputGroup>
-                      <InputLeftElement>
-                        <BsPerson />
-                      </InputLeftElement>
-                      <Input 
-                        type="text" 
-                        name="name" 
-                        placeholder="Your Name"
+                    <FormControl id="email" isRequired>
+                      <FormLabel>Email</FormLabel>
+                      <InputGroup>
+                        <InputLeftElement>
+                          <MdOutlineEmail />
+                        </InputLeftElement>
+                        <Input
+                          type="email"
+                          name="email"
+                          placeholder="Your Email"
+                          borderColor={useColorModeValue('yellow.500', 'gray.800')}
+                          borderWidth={'thin'}
+                          _placeholder={{ color: useColorModeValue('white', 'black')}} 
+                          color={useColorModeValue('white', 'black')}
+                          value={email}
+                          onChange={(e) => {
+                            setEmail(e.target.value);
+                          }}
+                        />
+                      </InputGroup>
+                    </FormControl>
+
+                    <FormControl id="message" isRequired>
+                      <FormLabel>Message</FormLabel>
+                      <Textarea
+                        name="message"
+                        placeholder="Your Message"
+                        rows={6}
+                        resize="none"
                         borderColor={useColorModeValue('yellow.500', 'gray.800')}
                         borderWidth={'thin'}
                         _placeholder={{ color: useColorModeValue('white', 'black')}} 
-                        color={useColorModeValue('black', 'black')} 
-                        value={name}
+                        color={useColorModeValue('white', 'black')}
+                        value={message}
                         onChange={(e) => {
-                          setName(e.target.value);
+                          setMessage(e.target.value);
                         }}
                       />
-                    </InputGroup>
-                  </FormControl>
+                    </FormControl>
 
-                  <FormControl id="email" isRequired>
-                    <FormLabel>Email</FormLabel>
-
-                    <InputGroup>
-                      <InputLeftElement>
-                        <MdOutlineEmail />
-                      </InputLeftElement>
-                      <Input
-                        type="email"
-                        name="email"
-                        placeholder="Your Email"
-                        borderColor={useColorModeValue('yellow.500', 'gray.800')}
-                        borderWidth={'thin'}
-                        _placeholder={{ color: useColorModeValue('white', 'black')}} 
-                        color={useColorModeValue('black', 'black')}
-                        value={email}
-                        onChange={(e) => {
-                          setEmail(e.target.value);
-                        }}
-                      />
-                    </InputGroup>
-                  </FormControl>
-
-                  <FormControl id="message" isRequired>
-                    <FormLabel>Message</FormLabel>
-
-                    <Textarea
-                      name="message"
-                      placeholder="Your Message"
-                      rows={6}
-                      resize="none"
-                      borderColor={useColorModeValue('yellow.500', 'gray.800')}
-                      borderWidth={'thin'}
-                      _placeholder={{ color: useColorModeValue('white', 'black')}} 
+                    <Button
+                      colorScheme="yellow.500"
+                      bg="yellow.500"
                       color={useColorModeValue('black', 'black')}
-                      value={message}
-                      onChange={(e) => {
-                        setMessage(e.target.value);
+                      _hover={{
+                        bg: 'black',
+                        color: 'yellow.500'
                       }}
-                    />
-                  </FormControl>
-
-                  <Button
-                    colorScheme="yellow.500"
-                    bg="yellow.500"
-                    color={useColorModeValue('black', 'black')}
-                    _hover={{
-                      bg: 'black',
-                      color: 'yellow.500'
-                    }}
-                    type="submit"
-                    onClick={(e) => {
-                      handleSubmit(e);
-                    }}
-                    isFullWidth>
-                    Send Message
-                  </Button>
+                      type="submit"
+                      onClick={(e) => {
+                        handleSubmit(e);
+                      }}
+                      isFullWidth>
+                      Send Message
+                    </Button>
                 </VStack>
               </Box>
             </Stack>

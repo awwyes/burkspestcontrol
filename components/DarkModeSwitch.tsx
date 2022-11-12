@@ -1,7 +1,7 @@
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import { useColorMode, Box, IconButton, useColorModeValue, Tooltip } from '@chakra-ui/react';
 
-const DarkModeSwitch = () => {
+export default function DarkModeSwitch() {
     const {colorMode, toggleColorMode} = useColorMode()
     return (
         <Box textAlign="right" py={4} ml={5} mr={3}>
@@ -23,5 +23,3 @@ const DarkModeSwitch = () => {
         </Box>
     )
 }
-
-export default DarkModeSwitch

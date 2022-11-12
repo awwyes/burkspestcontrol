@@ -20,7 +20,7 @@ export default function Quote() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Sending Info");
+    console.log("Sending...");
 
     let data = {
       firstName,
@@ -32,7 +32,7 @@ export default function Quote() {
       phone,
       email,
       preferContact,
-      serviceOptions,
+      serviceOptions
     };
 
     fetch("/api/quote", {
@@ -45,8 +45,20 @@ export default function Quote() {
     }).then((res) => {
       console.log("Response received");
       if (res.status === 200) {
-        console.log("Response succeeded!");
+        alert("Message has been sent!")
         setSubmitted(true);
+        setFirstName("");
+        setLastName("");
+        setAddress("");
+        setCity("");
+        setState("Tennessee");
+        setZipCode("");
+        setPhone("");
+        setEmail("");
+        setPreferContact("");
+        setServiceOptions([]);
+      } else {
+        alert('Error please try again');
       }
     });
   };
@@ -89,12 +101,7 @@ export default function Quote() {
             spacing={{ md: 6 }}
           >
             <GridItem mt={[5, null, 0]} colSpan={{ md: 2 }}>
-              <chakra.form
-                method="POST"
-                shadow="base"
-                rounded={[null, "md"]}
-                overflow={{ sm: "hidden" }}
-              >
+              <FormControl>
                 <Stack
                   px={4}
                   py={5}
@@ -106,13 +113,13 @@ export default function Quote() {
                   spacing={6}
                 >
                   <Heading fontSize="lg" fontWeight="medium" lineHeight="6" fontFamily={"sans-serif"}>
-                    Name <strong>*</strong>
+                    Name
                   </Heading>
                   <Divider />
                   <SimpleGrid columns={6} spacing={6}>
-                    <FormControl as={GridItem} colSpan={[6, 3]}>
+                    <FormControl as={GridItem} colSpan={[6, 3]} isRequired>
                       <FormLabel
-                        htmlFor="first_name"
+                        htmlFor="firstName"
                         fontSize="sm"
                         fontWeight="md"
                         color={useColorModeValue("gray.700", "gray.50")}
@@ -121,9 +128,9 @@ export default function Quote() {
                       </FormLabel>
                       <Input
                         type="text"
-                        name="first_name"
-                        id="first_name"
-                        autoComplete="given-name"
+                        name="firstName"
+                        id="firstName"
+                        autoComplete="firstName"
                         mt={1}
                         focusBorderColor="gray.300"
                         shadow="sm"
@@ -133,9 +140,9 @@ export default function Quote() {
                         isRequired
                       />
                     </FormControl>
-                    <FormControl as={GridItem} colSpan={[6, 3]}>
+                    <FormControl as={GridItem} colSpan={[6, 3]} isRequired>
                       <FormLabel
-                        htmlFor="last_name"
+                        htmlFor="lastName"
                         fontSize="sm"
                         fontWeight="md"
                         color={useColorModeValue("gray.700", "gray.50")}
@@ -144,9 +151,9 @@ export default function Quote() {
                       </FormLabel>
                       <Input
                         type="text"
-                        name="last_name"
-                        id="last_name"
-                        autoComplete="family-name"
+                        name="lastName"
+                        id="lastName"
+                        autoComplete="lastName"
                         mt={1}
                         focusBorderColor="brand.400"
                         shadow="sm"
@@ -164,12 +171,12 @@ export default function Quote() {
                       lineHeight="6"
                       fontFamily={"sans-serif"}
                     >
-                      Contact Information <strong>*</strong>
+                      Contact Information
                     </Heading>
                     <Divider as={GridItem} colSpan={6} opacity={'0.6'} borderColor={"lightgray"} />
-                    <FormControl as={GridItem} colSpan={6}>
+                    <FormControl as={GridItem} colSpan={6} isRequired>
                       <FormLabel
-                        htmlFor="street_address"
+                        htmlFor="address"
                         fontSize="sm"
                         fontWeight="md"
                         color={useColorModeValue("gray.700", "gray.50")}
@@ -178,9 +185,9 @@ export default function Quote() {
                       </FormLabel>
                       <Input
                         type="text"
-                        name="street_address"
-                        id="street_address"
-                        autoComplete="street-address"
+                        name="address"
+                        id="address"
+                        autoComplete="address"
                         mt={1}
                         focusBorderColor="brand.400"
                         shadow="sm"
@@ -190,7 +197,7 @@ export default function Quote() {
                         isRequired
                       />
                     </FormControl>
-                    <FormControl as={GridItem} colSpan={[6, 3, null, 2]}>
+                    <FormControl as={GridItem} colSpan={[6, 3, null, 2]} isRequired>
                       <FormLabel
                         htmlFor="city"
                         fontSize="sm"
@@ -213,7 +220,7 @@ export default function Quote() {
                         isRequired
                       />
                     </FormControl>
-                    <FormControl as={GridItem} colSpan={[6, 3, null, 1]}>
+                    <FormControl as={GridItem} colSpan={[6, 3, null, 1]} isRequired>
                       <FormLabel
                         htmlFor="state"
                         fontSize="sm"
@@ -242,9 +249,9 @@ export default function Quote() {
                         ))}
                       </Select>
                     </FormControl>
-                    <FormControl as={GridItem} colSpan={[6, 3, null, 2]}>
+                    <FormControl as={GridItem} colSpan={[6, 3, null, 2]} isRequired>
                       <FormLabel
-                        htmlFor="postal_code"
+                        htmlFor="zipCode"
                         fontSize="sm"
                         fontWeight="md"
                         color={useColorModeValue("gray.700", "gray.50")}
@@ -253,9 +260,9 @@ export default function Quote() {
                       </FormLabel>
                       <Input
                         type="text"
-                        name="postal_code"
-                        id="postal_code"
-                        autoComplete="postal-code"
+                        name="zipCode"
+                        id="zipCode"
+                        autoComplete="zipCode"
                         mt={1}
                         focusBorderColor="brand.400"
                         shadow="sm"
@@ -265,9 +272,9 @@ export default function Quote() {
                         isRequired
                       />
                     </FormControl>
-                    <FormControl as={GridItem} colSpan={[6, 4]}>
+                    <FormControl as={GridItem} colSpan={[6, 4]} isRequired>
                       <FormLabel
-                        htmlFor="phone_number"
+                        htmlFor="phone"
                         fontSize="sm"
                         fontWeight="md"
                         color={useColorModeValue("gray.700", "gray.50")}
@@ -276,6 +283,7 @@ export default function Quote() {
                       </FormLabel>
                       <InputGroup>
                         <InputLeftAddon
+                        height={10}
                           bg={useColorModeValue("yellow.500", "yellow.500")}
                         > 
                           <PhoneIcon
@@ -284,22 +292,22 @@ export default function Quote() {
                         </InputLeftAddon>
                         <Input
                           type="tel"
-                          name="phone_number"
-                          id="phone_number"
+                          name="phone"
+                          id="phone"
                           autoComplete="phone"
-                          mt={1}
                           focusBorderColor="brand.400"
                           shadow="sm"
                           size="sm"
+                          height={10}
                           w="full"
                           rounded="md"
                           isRequired
                         />
                       </InputGroup>
                     </FormControl>
-                    <FormControl as={GridItem} colSpan={[6, 4]}>
+                    <FormControl as={GridItem} colSpan={[6, 4]} isRequired>
                       <FormLabel
-                        htmlFor="email_address"
+                        htmlFor="email"
                         fontSize="sm"
                         fontWeight="md"
                         color={useColorModeValue("gray.700", "gray.50")}
@@ -307,9 +315,9 @@ export default function Quote() {
                         Email address
                       </FormLabel>
                       <Input
-                        type="text"
-                        name="email_address"
-                        id="email_address"
+                        type="email"
+                        name="email"
+                        id="email"
                         autoComplete="email"
                         mt={1}
                         focusBorderColor="brand.400"
@@ -320,7 +328,7 @@ export default function Quote() {
                         isRequired
                       />
                     </FormControl>
-                    <FormControl as={GridItem} colSpan={[6, 3, null, 4]}>
+                    <FormControl as={GridItem} colSpan={[6, 3, null, 4]} isRequired>
                       <FormLabel
                         htmlFor="preferContact"
                         fontSize="sm"
@@ -353,20 +361,22 @@ export default function Quote() {
                       lineHeight="6"
                       fontFamily={"sans-serif"}
                     >
-                      Current Pest Issues <strong>*</strong>
+                      Current Pest Issues
                     </Heading>
                     <Divider as={GridItem} colSpan={6} opacity={'0.6'} borderColor={"lightgray"} />
-                    <Heading
-                      as={GridItem}
-                      colSpan={6}
-                      fontSize="sm"
-                      fontWeight="medium"
-                      lineHeight="6"
-                      fontFamily={"sans-serif"}
+                    <FormControl as={GridItem} colSpan={[6, 3, null, 4]}>
+                    <FormLabel
+                        htmlFor="serviceOptions"
+                        fontSize="md"
+                        fontWeight="md"
+                        color={useColorModeValue("gray.700", "gray.50")}
+                      >
+                        How would you prefer us to contact you?
+                      </FormLabel>
+                    <CheckboxGroup
+                      value={serviceOptions}
+                      onChange={setServiceOptions}
                     >
-                      Burks Service Options <strong>*</strong>
-                    </Heading>
-                    <CheckboxGroup>
                       <Stack
                         direction={{
                           base: "column-reverse",
@@ -378,21 +388,22 @@ export default function Quote() {
                         <Stack direction="row" spacing="8">
                           <Stack spacing="4" minW="40" flex="1">
                             <Stack spacing="3" shouldWrapChildren>
-                              <Checkbox size={'lg'} colorScheme={'yellow'} value={'Pest Control'} defaultChecked={null} onBlur={null} checked={null}>Pest Control</Checkbox>
-                              <Checkbox size={'lg'} colorScheme={'yellow'} value={'Mosquito Control'} defaultChecked={null} onBlur={null} checked={null}>Mosquito Control</Checkbox>
-                              <Checkbox size={'lg'} colorScheme={'yellow'} value={'Other'} defaultChecked={null} onBlur={null} checked={null}>Other</Checkbox>
+                              <Checkbox size={'lg'} colorScheme={'yellow'} value={'Pest Control'}>Pest Control</Checkbox>
+                              <Checkbox size={'lg'} colorScheme={'yellow'} value={'Mosquito Control'}>Mosquito Control</Checkbox>
+                              <Checkbox size={'lg'} colorScheme={'yellow'} value={'Other'}>Other</Checkbox>
                             </Stack>
                           </Stack>
                           <Stack spacing="4" minW="44" flex="1">
                             <Stack spacing="3" shouldWrapChildren>
-                              <Checkbox size={'lg'} colorScheme={'yellow'} value={'Termite Control'} defaultChecked={null} onBlur={null} checked={null}>Termite Control</Checkbox>
-                              <Checkbox size={'lg'} colorScheme={'yellow'} value={'Bed Bug Removal'} defaultChecked={null} onBlur={null} checked={null}>Bed Bug Removal</Checkbox>
-                              <Checkbox size={'lg'} colorScheme={'yellow'} value={'Not Sure'} defaultChecked={null} onBlur={null} checked={null}>Not Sure</Checkbox>
+                              <Checkbox size={'lg'} colorScheme={'yellow'} value={'Termite Control'}>Termite Control</Checkbox>
+                              <Checkbox size={'lg'} colorScheme={'yellow'} value={'Bed Bug Removal'}>Bed Bug Removal</Checkbox>
+                              <Checkbox size={'lg'} colorScheme={'yellow'} value={'Not Sure'}>Not Sure</Checkbox>
                             </Stack>
                           </Stack>
                         </Stack>
                       </Stack>
                     </CheckboxGroup>
+                    </FormControl>
                   </SimpleGrid>
                 </Stack>
                 <Box
@@ -403,17 +414,23 @@ export default function Quote() {
                   textAlign={"center"}
                 >
                   <Button
-                    type="submit"
                     colorScheme="brand"
-                    _focus={{ shadow: "" }}
-                    fontWeight="md"
                     bg={useColorModeValue("yellow.500", "yellow.500")}
                     color={useColorModeValue("black", "black")}
+                    _hover={{
+                      bg: 'black',
+                      color: 'yellow.500'
+                    }}
+                    type="submit"
+                    onClick={(e) => {
+                      handleSubmit(e);
+                    }}
+                    fontWeight="md"
                   >
                     Get My Quote
                   </Button>
                 </Box>
-              </chakra.form>
+              </FormControl>
             </GridItem>
           </SimpleGrid>
         </Box>
