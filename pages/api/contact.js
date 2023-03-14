@@ -6,14 +6,16 @@ export default async function Contact (req, res) {
 
   let nodemailer = require("nodemailer");
   const transporter = nodemailer.createTransport({
+    host: "smtp.mail.yahoo.com",
     port: 465,
-    service: 'gmail',
-    host: "smtp.gmail.com",
+    service: 'yahoo',
+    secure: false,
     auth: {
       user: USERNAME,
       pass: PASSWORD,
     },
-    secure: true,
+    debug: false,
+    logger: true
   });
 
   const mailData = {

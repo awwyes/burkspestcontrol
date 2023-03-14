@@ -6,14 +6,16 @@ export default function Quote (req, res) {
 
     let nodemailer = require("nodemailer");
     const transporter = nodemailer.createTransport({
-    port: 465,
-    service: 'gmail',
-    host: "smtp.gmail.com",
-    auth: {
-      user: USERNAME,
-      pass: PASSWORD,
-    },
-    secure: true,
+      host: "smtp.mail.yahoo.com",
+      port: 465,
+      service: 'yahoo',
+      secure: false,
+      auth: {
+        user: USERNAME,
+        pass: PASSWORD,
+      },
+      debug: false,
+      logger: true
   });
 
   const mailData = {
