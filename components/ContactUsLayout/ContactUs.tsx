@@ -206,7 +206,7 @@ export default function ContactUs() {
                       onClick={(e) => {
                         handleSubmit(e);
                       }}
-                      isFullWidth>
+                      width="100%">
                       Send Message
                     </Button>
                 </VStack>
